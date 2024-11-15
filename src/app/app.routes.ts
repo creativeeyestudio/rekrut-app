@@ -25,6 +25,11 @@ export const routes: Routes = [
         path: 'update',
         loadComponent: () => import('./pages/profile/update/update.page').then( m => m.UpdatePage)
       },
+      {
+        path: 'hobbies-update',
+        loadComponent: () => import('./pages/profile/hobbies-update/hobbies-update.page').then( m => m.HobbiesUpdatePage)
+      }
     ]
-  }
+  },
+
 ];
