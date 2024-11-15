@@ -1,8 +1,17 @@
 <ion-content [fullscreen]="true">
-  <ion-item>
-    <ion-thumbnail slot="start">
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-    </ion-thumbnail>
-    <ion-label>Item Thumbnail</ion-label>
-  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-icon aria-hidden="true" name="call-outline" slot="end"></ion-icon>
+      <ion-thumbnail slot="start">
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+      </ion-thumbnail>
+      <ion-label>
+        <span>Nom prénom</span><br />
+        <span>Entreprise</span><br />
+        <span>Vu il y a 58 minutes</span>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-input label="Ecrire..." class="new-text" labelPlacement="floating" fill="outline"></ion-input>
 </ion-content>
