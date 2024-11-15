@@ -1,0 +1,39 @@
+ion-content {
+    --background: #000 url('../../../assets/images/bg-home.jpg') center / cover no-repeat;
+}
+
+.last-notif {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    
+    ion-item {
+        --color: #fff;
+        --background: rgba($color: #000000, $alpha: 0);
+        --border-style: none;
+    }
+
+    ion-thumbnail {
+        --border-radius: 3rem;
+    }
+}
+
+.icons-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  /* Espacement entre les icônes */
+    right: 20px;  /* Distance du bord droit */
+}
+
+.pos-top {
+    top: 20px; /* Position en haut */
+}
+
+.pos-bottom {
+    bottom: 20px; /* Position en bas */
+}
+
+ion-icon {
+    color: #ffffff; /* Couleur des icônes */
+}
