@@ -1,0 +1,7 @@
+{
+  "name": "rekrut",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
