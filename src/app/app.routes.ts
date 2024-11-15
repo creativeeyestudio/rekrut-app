@@ -13,9 +13,18 @@ export const routes: Routes = [
   {
     path: 'register',
     loadComponent: () => import('./pages/register/register.page').then( m => m.RegisterPage)
-  },  {
-    path: 'profile',
-    loadComponent: () => import('./pages/profile/profile.page').then( m => m.ProfilePage)
   },
-
+  {
+    path: 'profile',
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('./pages/profile/profile.page').then(m => m.ProfilePage)
+      },
+      {
+        path: 'update',
+        loadComponent: () => import('./pages/profile/update/update.page').then( m => m.UpdatePage)
+      },
+    ]
+  }
 ];
