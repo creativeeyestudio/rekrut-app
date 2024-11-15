@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { addIcons } from 'ionicons';
 import { flagOutline, heartOutline, informationCircleOutline, sendOutline } from 'ionicons/icons';
+import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,7 @@ import { flagOutline, heartOutline, informationCircleOutline, sendOutline } from
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  constructor(public global: GlobalService) { }
 
   ngOnInit() {
     addIcons({heartOutline, informationCircleOutline, flagOutline, sendOutline})
