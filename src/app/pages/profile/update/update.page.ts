@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
   selector: 'app-update',
@@ -12,8 +13,12 @@ import { IonicModule } from '@ionic/angular';
 })
 export class UpdatePage implements OnInit {
 
-  constructor() { }
+  constructor(public global: GlobalService) { }
 
   ngOnInit() {}
+
+  public submitForm() {
+    this.global.navigate('/profile');
+  }
 
 }

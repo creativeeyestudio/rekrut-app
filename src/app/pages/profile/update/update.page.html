@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>update</ion-title>
+    <ion-title>Modifier le profil</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">update</ion-title>
+      <ion-title size="large">Modifier le profil</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -35,6 +35,6 @@
     <ion-checkbox labelPlacement="end">En m’inscrivant, j’accepte les conditions générales d’utilisation.</ion-checkbox>
   </ion-item>
   <ion-item>
-    <ion-button>Sauvegarder</ion-button>
+    <ion-button (click)="submitForm()">Sauvegarder</ion-button>
   </ion-item>
 </ion-content>
