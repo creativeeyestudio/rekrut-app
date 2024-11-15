@@ -2,13 +2,20 @@ ion-content {
     --background: #000 url('../../../assets/images/bg-home.jpg') center / cover no-repeat;
 }
 
-.icon-container {
+.icons-list {
     position: absolute;
-    bottom: 20px; /* Distance du bas de l'écran */
-    right: 20px;  /* Distance du bord droit */
     display: flex;
     flex-direction: column;
     gap: 20px;  /* Espacement entre les icônes */
+    right: 20px;  /* Distance du bord droit */
+}
+
+.pos-top {
+    top: 20px; /* Position en haut */
+}
+
+.pos-bottom {
+    bottom: 20px; /* Position en bas */
 }
 
 ion-icon {

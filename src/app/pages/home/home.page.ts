@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { addIcons } from 'ionicons';
-import { flagOutline, heartOutline, informationCircleOutline } from 'ionicons/icons';
+import { flagOutline, heartOutline, informationCircleOutline, sendOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +18,7 @@ export class HomePage implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    addIcons({heartOutline, informationCircleOutline, flagOutline})
+    addIcons({heartOutline, informationCircleOutline, flagOutline, sendOutline})
   }
 
 }
