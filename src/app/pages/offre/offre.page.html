@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>offre</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-item>
+      <ion-icon name="chevron-back-outline" slot="start" (click)="this.global.goBack()"></ion-icon>
+      <ion-thumbnail slot="start">
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+      </ion-thumbnail>
+      <ion-label>
+        <strong>Nom du poste</strong><br />
+        <span>
+          Lieu : <span>Paris</span>
+        </span><br />
+        <span>Salaire : 35000 € / an</span>
+      </ion-label>
+    </ion-item>
+  </ion-header>
+  <div class="desc">
+    <ion-label>
+      <strong>Description du poste</strong>
+    </ion-label>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam lacus suspendisse faucibus interdum. Eget est lorem ipsum dolor sit amet. Lobortis feugiat vivamus at augue. Enim nunc faucibus a pellentesque sit amet porttitor eget. </p>
+    <p>Malesuada fames ac turpis egestas integer. Aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh. Cras ornare arcu dui vivamus arcu felis bibendum. In eu mi bibendum neque egestas congue quisque egestas. </p>
+    <p>A arcu cursus vitae congue mauris rhoncus aenean vel. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis. Nunc vel risus commodo viverra maecenas accumsan lacus vel. </p>
+    <p>Scelerisque varius morbi enim nunc. Vehicula ipsum a arcu cursus vitae congue mauris rhoncus aenean. Ultrices dui sapien eget mi proin sed libero enim. Pellentesque sit amet porttitor eget. Quam viverra orci sagittis eu volutpat odio. Dui accumsan sit amet nulla. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Fringilla urna porttitor rhoncus dolor purus.</p>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" shape="round" color="success">Postuler</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" shape="round" color="danger">Signaler</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

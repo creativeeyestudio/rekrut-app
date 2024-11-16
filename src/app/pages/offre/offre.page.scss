@@ -1,0 +1,22 @@
+ion-header {
+    ion-thumbnail {
+        --border-radius: 3rem;
+    }
+    
+    ion-item {
+        --padding-bottom: 15px;
+        --padding-top: 15px;
+        --padding-start: 15px;
+        --padding-end: 15px;
+        --border-style: none;
+        --background: rgba(49, 131, 245, 0.05);
+    }
+}
+
+ion-grid {
+    --ion-grid-padding: 0;
+}
+
+.desc {
+    padding: 20px;
+}
