@@ -5,8 +5,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
   <ion-menu contentId="content-page">
-    <ion-header>
+    <ion-header [translucent]="true">
       <ion-toolbar>
         <ion-menu-toggle>
           <ion-icon name="chevron-back-outline" slot="start"></ion-icon>
@@ -14,6 +15,7 @@
         <ion-title>Paramètres</ion-title>
       </ion-toolbar>
     </ion-header>
+
     <ion-content class="ion-padding">
       <ion-list>
         <ion-item (click)="this.globalService.navigate('/profile/update')">
@@ -26,60 +28,49 @@
   </ion-menu>
 
   <div class="ion-page" id="content-page">
-    <ion-header collapse="condense">
-      <ion-toolbar>
-        <ion-title size="large">Profil</ion-title>
-      </ion-toolbar>
-    </ion-header>
 
     <ion-grid>
-      <ion-row>
-        <ion-col class="ion-text-end">
-          <ion-menu-toggle>
-            <ion-icon name="settings-outline"></ion-icon>
-          </ion-menu-toggle>
+      <!-- Thumbnail -->
+      <ion-row class="infos-profile">
+        <ion-col size="10">
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+            </ion-thumbnail>
+            <ion-label>Item Avatar</ion-label>
+          </ion-item>
         </ion-col>
-      </ion-row>
-      <ion-row>
-        <!-- Photo -->
-        <ion-col size="4">
-          <ion-avatar>
-            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-          </ion-avatar>
-        </ion-col>
-        <!-- Nom -->
-        <ion-col size="8">
-          <ion-label>Item Avatar</ion-label>
+
+        <ion-col size="2">
+          <ion-item>
+            <ion-menu-toggle slot="end">
+              <ion-icon name="settings-outline"></ion-icon>
+            </ion-menu-toggle>
+          </ion-item>
         </ion-col>
       </ion-row>
 
       <!-- Titre Bord -->
-      <ion-row>
+      <ion-row class="title">
         <ion-col size="12">
-          <ion-label>Tableau de bord</ion-label>
+          <ion-item>
+            <ion-label><strong>Tableau de bord</strong></ion-label>
+          </ion-item>
         </ion-col>
       </ion-row>
 
       <!-- Boutons -->
-      <ion-row>
-        <ion-col>
-          <ion-button (click)="globalService.navigate('/profile/hobbies-update')">Modifier le profil</ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button>Partager le profil</ion-button>
-        </ion-col>
-      </ion-row>
-
-      <!-- Toggle visibility -->
-      <ion-row>
-        <ion-col>
-          <ion-icon name="grid-outline"></ion-icon>
-        </ion-col>
-        <ion-col>
-          <ion-icon name="logo-ionic"></ion-icon>
-        </ion-col>
-      </ion-row>
-
+      <div class="buttons">
+        <ion-row>
+          <ion-col>
+            <ion-button (click)="globalService.navigate('/profile/hobbies-update')">Modifier le profil</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button>Partager le profil</ion-button>
+          </ion-col>
+        </ion-row>  
+      </div>
+      
       <ion-row class="ion-text-center">
         <ion-col>
           <ion-label>Partager votre CV Vidéo</ion-label><br />
