@@ -34,7 +34,8 @@ export const routes: Routes = [
   {
     path: 'home',
     loadComponent: () => import('./pages/home/home.page').then( m => m.HomePage)
-  },  {
+  },
+  {
     path: 'contact',
     loadComponent: () => import('./pages/contact/contact.page').then( m => m.ContactPage)
   },
@@ -42,7 +43,17 @@ export const routes: Routes = [
     path: 'notifications',
     loadComponent: () => import('./pages/notifications/notifications.page').then( m => m.NotificationsPage)
   },
-
-
-
+  {
+    path: 'entreprises',
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('./pages/entreprises/entreprises.page').then( m => m.EntreprisesPage)
+      },
+      {
+        path: ':id',
+        loadComponent: () => import('./pages/entreprises/infos/infos.page').then( m => m.InfosPage)
+      },
+    ]
+  }
 ];

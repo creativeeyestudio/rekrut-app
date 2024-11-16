@@ -1,0 +1,27 @@
+ion-thumbnail {
+    --border-radius: 3rem;
+}
+
+ion-item {
+    --padding-bottom: 15px;
+    --padding-top: 15px;
+    --padding-start: 15px;
+    --padding-end: 15px;
+    --border-style: none;
+}
+
+.title-label {
+    --padding-top: 10px;
+    --padding-bottom: 0px;
+    --border-style: none;
+    font-weight: bold;
+}
+
+ion-list {
+    padding: 20px 0;
+    ion-item {
+        &:nth-child(odd) {
+            --background: rgba(49, 131, 245, 0.05);
+        }
+    }
+}
