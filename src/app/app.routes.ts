@@ -55,5 +55,9 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/entreprises/infos/infos.page').then( m => m.InfosPage)
       },
     ]
+  },  {
+    path: 'offre',
+    loadComponent: () => import('./pages/offre/offre.page').then( m => m.OffrePage)
   }
+
 ];
