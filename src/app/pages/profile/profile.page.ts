@@ -5,7 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { GlobalService } from 'src/app/services/global.service';
 
 import { addIcons } from 'ionicons';
-import { logoIonic, settingsOutline } from 'ionicons/icons';
+import { chevronBackOutline, logoIonic, settingsOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-profile',
@@ -17,7 +17,7 @@ import { logoIonic, settingsOutline } from 'ionicons/icons';
 export class ProfilePage implements OnInit {
 
   constructor(public globalService: GlobalService) {
-    addIcons({ logoIonic, settingsOutline });
+    addIcons({ logoIonic, settingsOutline, chevronBackOutline });
   }
 
   ngOnInit() {
