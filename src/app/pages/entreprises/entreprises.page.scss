@@ -1,0 +1,18 @@
+ion-list {
+    padding: 20px 0;
+    ion-item {
+        --padding-bottom: 15px;
+        --padding-top: 15px;
+        --padding-start: 15px;
+        --padding-end: 15px;
+        --border-style: none;
+
+        &:nth-child(odd) {
+            --background: rgba(49, 131, 245, 0.05);
+        }
+    }
+}
+
+ion-thumbnail {
+    --border-radius: 3rem;
+}
