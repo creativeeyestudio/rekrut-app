@@ -1,24 +1,20 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>offre</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-item>
-      <ion-icon name="chevron-back-outline" slot="start" (click)="this.global.goBack()"></ion-icon>
-      <ion-thumbnail slot="start">
-        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-      </ion-thumbnail>
-      <ion-label>
-        <strong>Nom du poste</strong><br />
-        <span>
-          Lieu : <span>Paris</span>
-        </span><br />
-        <span>Salaire : 35000 € / an</span>
-      </ion-label>
-    </ion-item>
+    <ion-toolbar>
+      <ion-item>
+        <ion-icon name="chevron-back-outline" slot="start" (click)="this.global.goBack()"></ion-icon>
+        <ion-thumbnail slot="start">
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+        </ion-thumbnail>
+        <ion-label>
+          <strong>Nom du poste</strong><br />
+          <span>
+            Lieu : <span>Paris</span>
+          </span><br />
+          <span>Salaire : 35000 € / an</span>
+        </ion-label>
+      </ion-item>
+    </ion-toolbar>
   </ion-header>
   <div class="desc">
     <ion-label>
