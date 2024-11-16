@@ -1,0 +1,32 @@
+ion-thumbnail {
+    --border-radius: 3rem;
+}
+
+.infos-profile {
+    padding: 44px 0 0;
+    align-items: center;
+
+    ion-col {
+        --padding-start: 0px;
+        --padding-end: 0px;
+    }
+
+    ion-item {
+        --padding-start: 15px;
+        --padding-end: 15px;
+        --border-style: none;
+    }
+}
+
+.title {
+    ion-item {
+        --padding-top: 15px;
+        --padding-bottom: 15px;
+        --padding-start: 0px;
+        --border-style: none;
+    }
+}
+
+.buttons {
+    padding-bottom: 20px;
+}
