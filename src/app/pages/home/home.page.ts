@@ -16,11 +16,12 @@ import { GlobalService } from 'src/app/services/global.service';
 })
 export class HomePage implements OnInit {
 	@ViewChildren('cardElement') cardElements!: QueryList<ElementRef>;
+	isLiked: boolean = false;
 
 	videos = [
-		{ id: 1, url: 'assets/videos/video1.mp4' },
-		{ id: 2, url: 'assets/videos/video2.mp4' },
-		{ id: 3, url: 'assets/videos/video3.mp4' },
+		{ id: 1, url: 'assets/videos/video1.mp4', isLiked: false },
+		{ id: 2, url: 'assets/videos/video2.mp4', isLiked: false },
+		{ id: 3, url: 'assets/videos/video3.mp4', isLiked: false },
 	];
 
 	constructor(public global: GlobalService, private gestureCtrl: GestureController) { }
@@ -71,6 +72,10 @@ export class HomePage implements OnInit {
 
 	removeCard(index: number) {
 		this.videos.splice(index, 1);
+	}
+
+	toggleLike(index: number) {
+		this.videos[index].isLiked = !this.videos[index].isLiked;
 	}
 
 }

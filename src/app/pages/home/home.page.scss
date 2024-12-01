@@ -36,6 +36,12 @@ ion-content {
 
 ion-icon {
     color: #ffffff; /* Couleur des icônes */
+    border-radius: 4rem;
+    padding: .5rem;
+
+    &.liked {
+        background-color: red;
+    }
 }
 
 .video-container {
