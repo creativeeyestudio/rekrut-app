@@ -1,4 +1,5 @@
 <ion-content [fullscreen]="true">
+  <!-- Dernières notifs -->
   <div class="last-notif">
     <ion-item>
       <ion-thumbnail slot="start">
@@ -11,13 +12,21 @@
     </ion-item>
   </div>
 
+  <!-- Bouton nouveau contact -->
   <div class="icons-list pos-top">
     <ion-icon size="large" name="send-outline" (click)="this.global.navigate('/contact')"></ion-icon>
   </div>
+  <!-- FIN Bouton nouveau contact -->
 
-  <div class="icons-list pos-bottom">
-    <ion-icon size="large" name="heart-outline" (click)="this.global.navigate('/notifications')"></ion-icon>
-    <ion-icon size="large" name="information-circle-outline"></ion-icon>
-    <ion-icon size="large" name="flag-outline"></ion-icon>
+  <!-- Cards (Vidéo Swipe) -->
+  <div class="video-container">
+    <div *ngFor="let video of videos; let i = index" class="video-card" #cardElement>
+      <video [src]="video.url" autoplay muted loop></video>
+      <div class="icons-list pos-bottom">
+        <ion-icon size="large" name="heart-outline" (click)="this.global.navigate('/notifications')"></ion-icon>
+        <ion-icon size="large" name="information-circle-outline"></ion-icon>
+        <ion-icon size="large" name="flag-outline"></ion-icon>
+      </div>
+    </div>
   </div>
 </ion-content>
