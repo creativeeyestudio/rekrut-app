@@ -24,9 +24,16 @@
       <div class="icons-list pos-bottom">
         <!-- <ion-icon size="large" name="heart-outline" (click)="this.global.navigate('/notifications')"></ion-icon> -->
         <ion-icon size="large" name="heart-outline" [ngClass]="{'liked': video.isLiked}" (click)="toggleLike(i)"></ion-icon>
-        <ion-icon size="large" name="information-circle-outline"></ion-icon>
+        <ion-icon size="large" name="information-circle-outline" id="fiche-{{i}}"></ion-icon>
         <ion-icon size="large" name="flag-outline"></ion-icon>
       </div>
+      <ion-alert
+        trigger="fiche-{{i}}"
+        header="Nom de l'entreprise {{i}}"
+        subHeader="Sous-titre optionnel"
+        message="Contenu."
+        [buttons]="alertButtons"
+      ></ion-alert>
     </div>
   </div>
 </ion-content>
