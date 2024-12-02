@@ -24,7 +24,7 @@ export class HomePage implements OnInit {
 		{ id: 3, url: 'assets/videos/video3.mp4', isLiked: false },
 	];
 
-	alertButtons = ['Fermer'];
+	alertButtons = ['Contacter', 'Fermer'];
 
 	constructor(public global: GlobalService, private gestureCtrl: GestureController) { }
 
