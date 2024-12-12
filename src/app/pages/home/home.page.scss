@@ -51,10 +51,14 @@ ion-icon {
     overflow: hidden;
 }
 
+swiper-container {
+    height: 100%;
+}
+
 .video-card {
-    position: absolute;
-    top: 0;
-    left: 0;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
     width: 100%;
     max-width: 400px;
     height: 100%;

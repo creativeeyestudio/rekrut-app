@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, OnInit, QueryList, ViewChildren, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule, GestureController } from '@ionic/angular';
@@ -7,13 +7,18 @@ import { addIcons } from 'ionicons';
 import { flagOutline, heartOutline, informationCircleOutline, sendOutline } from 'ionicons/icons';
 import { GlobalService } from 'src/app/services/global.service';
 
+import { register } from "swiper/element/bundle";
+register();
+
 @Component({
 	selector: 'app-home',
 	templateUrl: './home.page.html',
 	styleUrls: ['./home.page.scss'],
 	standalone: true,
-	imports: [IonicModule, CommonModule, FormsModule]
+	imports: [IonicModule, CommonModule, FormsModule],
+	schemas: [CUSTOM_ELEMENTS_SCHEMA], 
 })
+
 export class HomePage implements OnInit {
 	@ViewChildren('cardElement') cardElements!: QueryList<ElementRef>;
 	isLiked: boolean = false;
@@ -26,10 +31,11 @@ export class HomePage implements OnInit {
 
 	alertButtons = ['Contacter', 'Fermer'];
 
+
 	constructor(public global: GlobalService, private gestureCtrl: GestureController) { }
 
 	ngOnInit() {
-		addIcons({ heartOutline, informationCircleOutline, flagOutline, sendOutline })
+		addIcons({ heartOutline, informationCircleOutline, flagOutline, sendOutline });
 	}
 
 	ngAfterViewInit() {
