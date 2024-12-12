@@ -1,23 +1,23 @@
 <ion-content [fullscreen]="true">
-  <!-- Dernières notifs -->
-  <div class="last-notif">
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-      </ion-thumbnail>
-      <ion-label>
-        <span>Item</span><br />
-        <span>Thumbnail</span>
-      </ion-label>
-    </ion-item>
-  </div>
 
   <!-- Cards (Vidéo Swipe) -->
   <div class="video-container">
 
+    <!-- Dernières notifs -->
+    <div class="last-notif">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+        </ion-thumbnail>
+        <ion-label>
+          <span>Item</span><br />
+          <span>Thumbnail</span>
+        </ion-label>
+      </ion-item>
+    </div>
+
     <swiper-container
       [loop]="true"
-      [pagination]="{ clickable: true }"
       [navigation]="true"
       [freeMode]="true"
       style="margin-bottom: 40px"
