@@ -1,39 +1,51 @@
 <ion-content [fullscreen]="true">
-  <!-- Dernières notifs -->
-  <div class="last-notif">
-    <ion-item>
-      <ion-thumbnail slot="start">
-        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-      </ion-thumbnail>
-      <ion-label>
-        <span>Item</span><br />
-        <span>Thumbnail</span>
-      </ion-label>
-    </ion-item>
-  </div>
-
-  <!-- Bouton nouveau contact -->
-  <div class="icons-list pos-top">
-    <ion-icon size="large" name="send-outline" (click)="this.global.navigate('/contact')"></ion-icon>
-  </div>
 
   <!-- Cards (Vidéo Swipe) -->
   <div class="video-container">
-    <div *ngFor="let video of videos; let i = index" class="video-card" #cardElement>
-      <video [src]="video.url" autoplay muted loop></video>
-      <div class="icons-list pos-bottom">
-        <!-- <ion-icon size="large" name="heart-outline" (click)="this.global.navigate('/notifications')"></ion-icon> -->
-        <ion-icon size="large" name="heart-outline" [ngClass]="{'liked': video.isLiked}" (click)="toggleLike(i)"></ion-icon>
-        <ion-icon size="large" name="information-circle-outline" id="fiche-{{i}}"></ion-icon>
-        <ion-icon size="large" name="flag-outline"></ion-icon>
-      </div>
-      <ion-alert
-        trigger="fiche-{{i}}"
-        header="Nom de l'entreprise {{i}}"
-        subHeader="Sous-titre optionnel"
-        message="Contenu."
-        [buttons]="alertButtons"
-      ></ion-alert>
+
+    <!-- Dernières notifs -->
+    <div class="last-notif">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+        </ion-thumbnail>
+        <ion-label>
+          <span>Item</span><br />
+          <span>Thumbnail</span>
+        </ion-label>
+      </ion-item>
     </div>
+
+    <swiper-container
+      [loop]="true"
+      [navigation]="true"
+      [freeMode]="true"
+      style="margin-bottom: 40px"
+      direction="vertical"
+    >
+      <swiper-slide *ngFor="let video of videos; let i = index" class="video-card">
+        <!-- Bouton nouveau contact -->
+        <div class="icons-list pos-top">
+          <ion-icon size="large" name="send-outline" (click)="this.global.navigate('/contact')"></ion-icon>
+        </div>
+        
+        <video [src]="video.url" autoplay muted loop></video>
+        <div class="icons-list pos-bottom">
+          <!-- <ion-icon size="large" name="heart-outline" (click)="this.global.navigate('/notifications')"></ion-icon> -->
+          <ion-icon size="large" name="heart-outline" [ngClass]="{'liked': video.isLiked}" (click)="toggleLike(i)"></ion-icon>
+          <ion-icon size="large" name="information-circle-outline" id="fiche-{{i}}"></ion-icon>
+          <ion-icon size="large" name="flag-outline"></ion-icon>
+        </div>
+        <ion-alert
+          trigger="fiche-{{i}}"
+          header="Nom de l'entreprise {{i}}"
+          subHeader="Sous-titre optionnel"
+          message="Contenu."
+          [buttons]="alertButtons"
+        ></ion-alert>
+      </swiper-slide>  
+    </swiper-container>
+
+    
   </div>
 </ion-content>
