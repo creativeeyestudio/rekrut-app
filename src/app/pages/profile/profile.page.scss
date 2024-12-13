@@ -2,6 +2,19 @@ ion-thumbnail {
     --border-radius: 3rem;
 }
 
+ion-menu-toggle,
+ion-list {
+    width: 100%;
+    border-bottom: 0;
+
+    ion-item {
+        --padding-start: 0px;
+        --padding-end: 0px;
+        --inner-padding-start: 0px;
+        --inner-padding-end: 0px;
+    }
+}
+
 .infos-profile {
     padding: 44px 0 0;
     align-items: center;
