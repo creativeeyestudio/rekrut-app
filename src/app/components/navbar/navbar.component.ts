@@ -11,12 +11,8 @@ import { GlobalService } from 'src/app/services/global.service';
   standalone: true,
   imports: [IonicModule]
 })
-export class NavbarComponent  implements OnInit {
-
+export class NavbarComponent {
   constructor(public global: GlobalService) {
     addIcons({ homeOutline, notificationsOutline, addCircleOutline, chatbubblesOutline, personCircleOutline })
   }
-
-  ngOnInit() {}
-
 }
