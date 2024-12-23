@@ -16,3 +16,15 @@
     height: 100%;
     border: none;
 }
+
+.gallery {
+    --ion-grid-padding: 0;
+}
+
+.gallery ion-col {
+    --ion-grid-column-padding: 0;
+
+    img {
+        display: block;
+    }
+}

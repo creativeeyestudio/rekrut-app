@@ -5,7 +5,16 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <!-- Video -->
   <div class="video-container">
     <video src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4"></video>
   </div>
+  <!-- Gallery -->
+  <ion-grid class="gallery">
+    <ion-row>
+      <ion-col size="4" *ngFor="let i of numbers">
+        <img src="https://picsum.photos/seed/picsum/600/" alt="">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
