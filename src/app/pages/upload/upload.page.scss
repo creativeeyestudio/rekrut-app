@@ -17,6 +17,23 @@
     border: none;
 }
 
+ion-button {
+    --background: #000;
+    --padding-top: 0;
+    --padding-start: 0;
+    --padding-bottom: 0;
+    --padding-end: 0;
+    margin: 0;
+}
+
+ion-button div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 1rem;
+}
+
 .gallery {
     --ion-grid-padding: 0;
 }
