@@ -10,4 +10,24 @@
       <ion-title size="large">report</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-list>
+    <ion-item>
+      <ion-select label="Type de signalement">
+        <ion-select-option value="Abus">Abus</ion-select-option>
+        <ion-select-option value="Bug">Bug</ion-select-option>
+        <ion-select-option value="Fraude">Fraude</ion-select-option>
+        <ion-select-option value="Contenu inapproprié">Contenu inapproprié</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-input type="file"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-textarea label="Description détaillée du problème..."></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox>J'accepte que les informations saisies soient utilisées dans le cadre du traitement de mon signalement, conformément à la politique de confidentialité.</ion-checkbox>
+    </ion-item>
+    <ion-button>Envoyer</ion-button>
+  </ion-list>
 </ion-content>
