@@ -10,19 +10,54 @@
     <video src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4"></video>
   </div>
 
-  <ion-button expand="full">
-    <div class="ion-text-start">
+  <ion-button class="back-btn" expand="full">
+    <div class="ion-text-start previous" *ngIf="!newPost">
       <ion-icon name="chevron-back-outline" slot="start"></ion-icon>
       Récents
+    </div>
+
+    <div *ngIf="newPost" class="ion-text-center">
+      Ajouter une description
     </div>
   </ion-button>
 
   <!-- Gallery -->
-  <ion-grid class="gallery">
+  <ion-grid class="gallery" *ngIf="!newPost">
     <ion-row>
       <ion-col size="4" *ngFor="let i of numbers">
-        <img src="https://picsum.photos/seed/picsum/600/" alt="">
+        <img src="https://picsum.photos/seed/picsum/600/" alt="" (click)="togglePost()">
       </ion-col>
     </ion-row>
   </ion-grid>
+
+  <!-- New Post -->
+    <ion-list *ngIf="newPost" class="post-form">
+      <ion-item>
+        <ion-select label="Catégorie d'emplois souhaitée (Domaine)" [multiple]="true">
+          <ion-select-option value="">Nom de la catégorie</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-select label="Type de contrat recherché" [multiple]="true">
+          <ion-select-option value="">CDI</ion-select-option>
+          <ion-select-option value="">CDD</ion-select-option>
+          <ion-select-option value="">Alternance</ion-select-option>
+          <ion-select-option value="">Stage</ion-select-option>
+          <ion-select-option value="">Freelance</ion-select-option>
+          <ion-select-option value="">Temps partiel</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Localisation géographique" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-select label="Compétences clés (Mots-clés)" [multiple]="true">
+          <ion-select-option value="">Nom de la catégorie</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <div class="buttons-form">
+        <ion-button expand="block">Partager</ion-button> 
+        <ion-button expand="block" fill="clear" (click)="togglePost()">Retour</ion-button> 
+      </div>
+    </ion-list>
 </ion-content>

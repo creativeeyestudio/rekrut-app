@@ -15,6 +15,12 @@ import { addIcons } from 'ionicons';
 })
 export class UploadPage {
 
+  newPost: boolean = false;
+
+  togglePost() {
+    this.newPost = !this.newPost;
+  }
+
   constructor() {
     addIcons({ chevronBackOutline })
   }
