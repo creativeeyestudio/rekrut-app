@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { addIcons } from 'ionicons';
-import { callOutline, phonePortraitOutline } from 'ionicons/icons';
+import { attachOutline, callOutline, phonePortraitOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-contact',
@@ -15,7 +15,7 @@ import { callOutline, phonePortraitOutline } from 'ionicons/icons';
 export class ContactPage implements OnInit {
 
   constructor() {
-    addIcons({ callOutline })
+    addIcons({ callOutline, attachOutline })
   }
 
   ngOnInit() {
