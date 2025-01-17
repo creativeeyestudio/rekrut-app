@@ -44,11 +44,18 @@
         </ion-toolbar>
       </ion-header>
       <ion-content class="ion-padding">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
-          reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
-          dicta.
-        </p>
+        <ion-grid class="gallery">
+          <ion-row>
+            <ion-col size="4" *ngFor="let i of numbers">
+              <img
+                src="https://picsum.photos/seed/picsum/600/"
+                alt=""
+                [class.selected]="isSelected('https://picsum.photos/seed/picsum/600/')"
+                (click)="toggleImageSelection('https://picsum.photos/seed/picsum/600/')"
+              />
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-content>
     </ng-template>
   </ion-modal>
