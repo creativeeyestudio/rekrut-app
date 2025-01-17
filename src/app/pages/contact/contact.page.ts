@@ -12,13 +12,16 @@ import { attachOutline, callOutline, phonePortraitOutline } from 'ionicons/icons
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule]
 })
-export class ContactPage implements OnInit {
+export class ContactPage {
+
+  isModalOpen = false;
 
   constructor() {
     addIcons({ callOutline, attachOutline })
   }
 
-  ngOnInit() {
+  setOpen(isOpen: boolean) {
+    console.log(isOpen);
+    this.isModalOpen = isOpen;
   }
-
 }
