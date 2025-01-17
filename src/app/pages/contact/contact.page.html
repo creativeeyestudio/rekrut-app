@@ -48,10 +48,10 @@
           <ion-row>
             <ion-col size="4" *ngFor="let i of numbers">
               <img
-                src="https://picsum.photos/seed/picsum/600/"
+                [src]="'https://picsum.photos/id/' + i + '/600'"
                 alt=""
-                [class.selected]="isSelected('https://picsum.photos/seed/picsum/600/')"
-                (click)="toggleImageSelection('https://picsum.photos/seed/picsum/600/')"
+                [class.selected]="isSelected('https://picsum.photos/id/' + i + '/600')"
+                (click)="toggleImageSelection('https://picsum.photos/id/' + i + '/600')"
               />
             </ion-col>
           </ion-row>

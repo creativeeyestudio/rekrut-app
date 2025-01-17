@@ -17,3 +17,8 @@ ion-thumbnail {
     width: calc(100% - 40px);
     border-bottom: 1px solid gray;
 }
+
+img.selected {
+    opacity: .5;
+}
+  

@@ -23,7 +23,6 @@ export class ContactPage {
   }
 
   setOpen(isOpen: boolean) {
-    console.log(isOpen);
     this.isModalOpen = isOpen;
   }
 
