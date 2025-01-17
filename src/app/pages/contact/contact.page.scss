@@ -9,7 +9,7 @@ ion-thumbnail {
     --border-radius: 5rem;
 }
 
-.new-text {
+.form-input {
     position: absolute;
     right: 20px;
     bottom: 20px;
@@ -17,3 +17,8 @@ ion-thumbnail {
     width: calc(100% - 40px);
     border-bottom: 1px solid gray;
 }
+
+img.selected {
+    opacity: .5;
+}
+  
