@@ -13,11 +13,7 @@ import { attachOutline, callOutline, paperPlaneOutline, phonePortraitOutline } f
   imports: [IonicModule, CommonModule, FormsModule]
 })
 export class ContactPage {
-
-  isModalOpen = false;
-  numbers = Array.from({ length: 9 }, (_, i) => i + 1);
-  selectedImages: string[] = []; // Tableau pour stocker les images sélectionnées
-
+  
   constructor() {
     addIcons({ callOutline, attachOutline, paperPlaneOutline })
   }
