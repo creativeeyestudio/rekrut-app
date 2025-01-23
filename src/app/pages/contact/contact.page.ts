@@ -21,23 +21,12 @@ export class ContactPage {
   constructor() {
     addIcons({ callOutline, attachOutline, paperPlaneOutline })
   }
-
-  setOpen(isOpen: boolean) {
-    this.isModalOpen = isOpen;
+  
+  openFileDialog = () => {
+    (document as any).querySelector('#upload-file').click();
   }
 
-  toggleImageSelection(imageUrl: string) {
-    const index = this.selectedImages.indexOf(imageUrl);
-    if (index > -1) {
-      // Si l'image est déjà sélectionnée, on la retire
-      this.selectedImages.splice(index, 1);
-    } else {
-      // Sinon, on l'ajoute
-      this.selectedImages.push(imageUrl);
-    }
-  }
-
-  isSelected(imageUrl: string): boolean {
-    return this.selectedImages.includes(imageUrl);
+  setImages = (_event: any) => {
+    let f = _event.target.files;
   }
 }
