@@ -21,42 +21,27 @@
 
   <ion-grid class="form-input">
     <ion-row>
-      <ion-col size="10">
+      <ion-col size="8">
         <ion-input labelPlacement="floating" label="Ecrire..." fill="outline" class="new-text"></ion-input>
       </ion-col>
       <ion-col size="2">
-        <ion-button aria-label="Show/hide" (click)="setOpen(true)" fill="clear">
+        <ion-button aria-label="Ajouter des fichiers" fill="clear" (click)="openFileDialog()">
           <ion-icon slot="end" name="attach-outline" aria-hidden="true"></ion-icon>
+        </ion-button>
+        <input 
+          type="file" 
+          name="upload-file" 
+          id="upload-file" 
+          multiple
+          (change)="setImages($event)"
+          aria-hidden="true" 
+          aria-label="Liste des pièces jointes" />
+      </ion-col>
+      <ion-col size="2">
+        <ion-button aria-label="Envoyer le message" fill="clear">
+          <ion-icon slot="end" name="paper-plane-outline" aria-hidden="true"></ion-icon>
         </ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
-  
-
-  <ion-modal [isOpen]="isModalOpen">
-    <ng-template>
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Sélectionner des images</ion-title>
-          <ion-buttons slot="end">
-            <ion-button (click)="setOpen(false)">Fermer</ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content class="ion-padding">
-        <ion-grid class="gallery">
-          <ion-row>
-            <ion-col size="4" *ngFor="let i of numbers">
-              <img
-                [src]="'https://picsum.photos/id/' + i + '/600'"
-                alt=""
-                [class.selected]="isSelected('https://picsum.photos/id/' + i + '/600')"
-                (click)="toggleImageSelection('https://picsum.photos/id/' + i + '/600')"
-              />
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-content>
-    </ng-template>
-  </ion-modal>
 </ion-content>
