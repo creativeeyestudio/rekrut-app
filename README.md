@@ -32,3 +32,7 @@ cd ionic-rekrut
 
 #### Lancer l'application en mode développement
 ```ionic serve```
+
+## Contributions
+1. Créer une branche pour votre fonctionnalité `feature/ma-fonctionnalite`
+2. Soumettre une Pull Request avec une description claire
