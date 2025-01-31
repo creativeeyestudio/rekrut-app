@@ -9,8 +9,9 @@ export class GlobalService {
 
   constructor(public router: Router, public nav: NavController) { }
 
-  navigate(link: string) {
-    this.router.navigate([link])
+  navigate(link: string, direction: "forward" | "back" = 'forward') {
+    this.nav.setDirection(direction);
+    this.router.navigateByUrl(link)
   }
 
   goBack() {
