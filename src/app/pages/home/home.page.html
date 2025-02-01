@@ -31,8 +31,13 @@
         
         <video [src]="video.url" autoplay muted loop></video>
         <div class="icons-list pos-bottom">
-          <!-- <ion-icon size="large" name="heart-outline" (click)="this.global.navigate('/notifications')"></ion-icon> -->
-          <ion-icon size="large" name="heart-outline" [ngClass]="{'liked': video.isLiked}" (click)="toggleLike(i)"></ion-icon>
+          <ion-icon 
+            size="large" 
+            [name]="video.isLiked ? 'heart' : 'heart-outline'" 
+            [ngClass]="{'liked': video.isLiked}" 
+            (click)="toggleLike(i)">
+          </ion-icon>
+
           <ion-icon size="large" name="information-circle-outline" id="fiche-{{i}}"></ion-icon>
           <ion-icon size="large" name="flag-outline" (click)="global.navigate('/report')"></ion-icon>
         </div>
