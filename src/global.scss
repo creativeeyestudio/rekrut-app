@@ -40,3 +40,13 @@ ion-content {
     position: relative;
     --offset-bottom: 0px !important;
 }
+
+.input-container {
+    border-bottom: 1px solid #D8DCE1;
+    transition: border-color 0.5s;
+
+    &:focus-within {
+        border-color: #FFF;
+    }
+}
+

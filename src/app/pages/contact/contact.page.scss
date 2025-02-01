@@ -10,12 +10,18 @@ ion-thumbnail {
 }
 
 .form-input {
+    --ion-grid-padding: 0;
     position: absolute;
     right: 20px;
     bottom: 20px;
     left: 20px;
     width: calc(100% - 40px);
-    border-bottom: 1px solid gray;
+    // border-bottom: 1px solid gray;
+
+}
+
+ion-input {
+    --border-color: #000;
 }
 
 img.selected {
