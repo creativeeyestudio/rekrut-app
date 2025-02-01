@@ -13,13 +13,10 @@ import { GlobalService } from 'src/app/services/global.service';
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule]
 })
-export class InfosPage implements OnInit {
+export class InfosPage {
 
   constructor(public global: GlobalService) {
     addIcons({ chevronForwardOutline, chevronBackOutline })
-  }
-
-  ngOnInit() {
   }
 
 }

@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule, GestureController } from '@ionic/angular';
 
 import { addIcons } from 'ionicons';
-import { flagOutline, heartOutline, informationCircleOutline, sendOutline } from 'ionicons/icons';
+import { flagOutline, heart, heartOutline, informationCircleOutline, sendOutline } from 'ionicons/icons';
 import { GlobalService } from 'src/app/services/global.service';
 
 import { register } from "swiper/element/bundle";
@@ -35,7 +35,7 @@ export class HomePage implements OnInit {
 	constructor(public global: GlobalService, private gestureCtrl: GestureController) { }
 
 	ngOnInit() {
-		addIcons({ heartOutline, informationCircleOutline, flagOutline, sendOutline });
+		addIcons({ heart, heartOutline, informationCircleOutline, flagOutline, sendOutline });
 	}
 
 	ngAfterViewInit() {

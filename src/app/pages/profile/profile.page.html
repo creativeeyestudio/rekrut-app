@@ -18,7 +18,7 @@
 
     <ion-content class="ion-padding">
       <ion-list>
-        <ion-item lines="none" (click)="this.globalService.navigate('/profile/update')">
+        <ion-item lines="none" (click)="this.globalService.navigate('/home/profile/update')">
           <ion-menu-toggle class="ion-padding-vertical">
             <ion-label class="ion-padding-bottom"><strong>Modifier mes informations</strong></ion-label>
             <ion-list class="ion-no-padding">
@@ -95,10 +95,10 @@
       <div class="buttons">
         <ion-row>
           <ion-col>
-            <ion-button (click)="globalService.navigate('/profile/hobbies-update')">Modifier le profil</ion-button>
+            <ion-button (click)="globalService.navigate('/home/profile/hobbies-update')" shape="round" class="secondary">Modifier le profil</ion-button>
           </ion-col>
           <ion-col>
-            <ion-button>Partager le profil</ion-button>
+            <ion-button shape="round" class="danger">Partager le profil</ion-button>
           </ion-col>
         </ion-row>  
       </div>

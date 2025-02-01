@@ -36,7 +36,36 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 // @import '@ionic/angular/css/palettes/dark.system.css';
 
+ion-button {
+    --background: #3183F5;
+    --background-activated: #006AAF;
+    --color: #fff;
+
+    &.secondary {
+        --background: #EAF2FC;
+        --background-activated: #006AAF;
+        --color: #006AAF;
+        --color-activated: #EAF2FC;
+    }
+
+    &.danger {
+        --background: #E26B59;
+        --background-activated: #EA1714;
+        --color: #fff;
+    }
+}
+
 ion-content {
     position: relative;
     --offset-bottom: 0px !important;
 }
+
+.input-container {
+    border-bottom: 1px solid #D8DCE1;
+    transition: border-color 0.5s;
+
+    &:focus-within {
+        border-color: #FFF;
+    }
+}
+
