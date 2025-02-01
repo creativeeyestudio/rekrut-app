@@ -3,11 +3,11 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'fr',
     pathMatch: 'full',
   },
   {
-    path: 'home',
+    path: 'fr',
     children: [
       {
         path: '',
@@ -15,58 +15,58 @@ export const routes: Routes = [
       },
       {
         path: 'contact',
-        loadComponent: () => import('./pages/contact/contact.page').then( m => m.ContactPage),
+        loadComponent: () => import('./pages/contact/contact.page').then((m) => m.ContactPage),
       },
       {
         path: 'register',
-        loadComponent: () => import('./pages/register/register.page').then( m => m.RegisterPage)
+        loadComponent: () => import('./pages/register/register.page').then((m) => m.RegisterPage),
       },
       {
         path: 'entreprises',
         children: [
           {
             path: '',
-            loadComponent: () => import('./pages/entreprises/entreprises.page').then( m => m.EntreprisesPage)
+            loadComponent: () => import('./pages/entreprises/entreprises.page').then((m) => m.EntreprisesPage),
           },
           {
             path: ':id',
-            loadComponent: () => import('./pages/entreprises/infos/infos.page').then( m => m.InfosPage)
+            loadComponent: () => import('./pages/entreprises/infos/infos.page').then((m) => m.InfosPage),
           },
-        ]
+        ],
       },
       {
         path: 'profile',
         children: [
           {
             path: '',
-            loadComponent: () => import('./pages/profile/profile.page').then(m => m.ProfilePage)
+            loadComponent: () => import('./pages/profile/profile.page').then((m) => m.ProfilePage),
           },
           {
             path: 'update',
-            loadComponent: () => import('./pages/profile/update/update.page').then( m => m.UpdatePage)
+            loadComponent: () => import('./pages/profile/update/update.page').then((m) => m.UpdatePage),
           },
           {
             path: 'hobbies-update',
-            loadComponent: () => import('./pages/profile/hobbies-update/hobbies-update.page').then( m => m.HobbiesUpdatePage)
-          }
-        ]
+            loadComponent: () => import('./pages/profile/hobbies-update/hobbies-update.page').then((m) => m.HobbiesUpdatePage),
+          },
+        ],
       },
       {
         path: 'offre',
-        loadComponent: () => import('./pages/offre/offre.page').then( m => m.OffrePage)
+        loadComponent: () => import('./pages/offre/offre.page').then((m) => m.OffrePage),
       },
       {
         path: 'notifications',
-        loadComponent: () => import('./pages/notifications/notifications.page').then( m => m.NotificationsPage)
+        loadComponent: () => import('./pages/notifications/notifications.page').then((m) => m.NotificationsPage),
       },
       {
         path: 'upload',
-        loadComponent: () => import('./pages/upload/upload.page').then( m => m.UploadPage)
+        loadComponent: () => import('./pages/upload/upload.page').then((m) => m.UploadPage),
       },
       {
         path: 'report',
-        loadComponent: () => import('./pages/report/report.page').then( m => m.ReportPage)
-      }
-    ]
-  }
+        loadComponent: () => import('./pages/report/report.page').then((m) => m.ReportPage),
+      },
+    ],
+  },
 ];
