@@ -37,9 +37,12 @@
 // @import '@ionic/angular/css/palettes/dark.system.css';
 
 ion-button {
-    --background: #3183F5;
-    --background-activated: #006AAF;
-    --color: #fff;
+    &:not([fill=clear]) {
+        --background: #3183F5;
+        --background-activated: #006AAF;
+        --color: #fff;
+    }
+    
 
     &.secondary {
         --background: #EAF2FC;
