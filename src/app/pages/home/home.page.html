@@ -30,6 +30,7 @@
         </div>
         
         <video [src]="video.url" autoplay muted loop></video>
+
         <div class="icons-list pos-bottom">
           <ion-icon 
             size="large" 
@@ -38,9 +39,11 @@
             (click)="toggleLike(i)">
           </ion-icon>
 
+          <ion-icon size="large" name="information-circle-outline" id="pdf-modal-{{i}}"></ion-icon>
           <ion-icon size="large" name="information-circle-outline" id="fiche-{{i}}"></ion-icon>
           <ion-icon size="large" name="flag-outline" (click)="global.navigate('/report')"></ion-icon>
         </div>
+
         <ion-alert
           trigger="fiche-{{i}}"
           header="Nom de l'entreprise {{i}}"
@@ -48,6 +51,24 @@
           message="Contenu."
           [buttons]="alertButtons"
         ></ion-alert>
+
+        <ion-modal trigger="pdf-modal-{{i}}" [isOpen]="modals[i]">
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-buttons slot="start" (click)="closeModal(i)">
+                  <ion-button>Cancel</ion-button>
+                </ion-buttons>
+                <ion-title>PDF Viewer</ion-title>
+                <ion-buttons slot="end">
+                  <ion-button [strong]="true">Confirm</ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content></ion-content>
+          </ng-template>
+        </ion-modal>
+
       </swiper-slide>  
     </swiper-container>
 
