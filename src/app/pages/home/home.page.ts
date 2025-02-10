@@ -111,14 +111,4 @@ export class HomePage implements OnInit {
   toggleLike(index: number) {
     this.videos[index].isLiked = !this.videos[index].isLiked;
   }
-
-  openModal(index: number) {
-    this.modals[index] = true;
-    this.cdr.detectChanges();
-  }
-
-  closeModal(index: number) {
-    this.modals[index] = false;
-    this.cdr.detectChanges();
-  }
 }

@@ -67,6 +67,11 @@ export const routes: Routes = [
         path: 'report',
         loadComponent: () => import('./pages/report/report.page').then((m) => m.ReportPage),
       },
+      {
+        path: 'pdf-viewer',
+        loadComponent: () => import('./pages/pdf-viewer/pdf-viewer.page').then( m => m.PdfViewerPage)
+      },
     ],
   },
+
 ];

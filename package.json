@@ -30,6 +30,7 @@
     "@capacitor/status-bar": "6.0.1",
     "@ionic/angular": "^8.0.0",
     "ionicons": "^7.2.1",
+    "ng2-pdf-viewer": "^10.4.0",
     "rekrut": "file:",
     "rxjs": "~7.8.0",
     "swiper": "^11.1.15",
