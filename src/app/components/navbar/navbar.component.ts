@@ -5,11 +5,10 @@ import { addCircleOutline, chatbubblesOutline, homeOutline, notificationsOutline
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss'],
-  standalone: true,
-  imports: [IonicModule]
+    selector: 'app-navbar',
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.scss'],
+    imports: [IonicModule]
 })
 export class NavbarComponent {
   constructor(public global: GlobalService) {

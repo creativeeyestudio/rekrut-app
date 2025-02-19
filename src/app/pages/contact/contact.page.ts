@@ -6,11 +6,10 @@ import { addIcons } from 'ionicons';
 import { attachOutline, callOutline, paperPlaneOutline, phonePortraitOutline } from 'ionicons/icons';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.page.html',
-  styleUrls: ['./contact.page.scss'],
-  standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+    selector: 'app-contact',
+    templateUrl: './contact.page.html',
+    styleUrls: ['./contact.page.scss'],
+    imports: [IonicModule, CommonModule, FormsModule]
 })
 export class ContactPage {
   

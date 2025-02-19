@@ -39,7 +39,7 @@
             (click)="toggleLike(i)">
           </ion-icon>
 
-          <ion-icon size="large" name="information-circle-outline" id="pdf-modal-{{i}}"></ion-icon>
+          <ion-icon size="large" name="information-circle-outline" (click)="this.global.navigate('/fr/pdf-viewer')"></ion-icon>
           <ion-icon size="large" name="information-circle-outline" id="fiche-{{i}}"></ion-icon>
           <ion-icon size="large" name="flag-outline" (click)="global.navigate('/report')"></ion-icon>
         </div>

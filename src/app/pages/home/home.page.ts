@@ -25,12 +25,12 @@ import { register } from 'swiper/element/bundle';
 register();
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
-  standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    selector: 'app-home',
+    templateUrl: './home.page.html',
+    styleUrls: ['./home.page.scss'],
+    standalone: true,
+    imports: [IonicModule, CommonModule, FormsModule],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePage implements OnInit {
   @ViewChildren('cardElement') cardElements!: QueryList<ElementRef>;

@@ -6,12 +6,10 @@ import { IonicModule } from '@ionic/angular';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @Component({
-  selector: 'app-pdf-viewer',
-  templateUrl: './pdf-viewer.page.html',
-  styleUrls: ['./pdf-viewer.page.scss'],
-  standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule, PdfViewerModule],
-  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    selector: 'app-pdf-viewer',
+    templateUrl: './pdf-viewer.page.html',
+    styleUrls: ['./pdf-viewer.page.scss'],
+    imports: [IonicModule, CommonModule, FormsModule, PdfViewerModule]
 })
 export class PdfViewerPage {
 

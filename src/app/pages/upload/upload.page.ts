@@ -7,11 +7,10 @@ import { chevronBackOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 
 @Component({
-  selector: 'app-upload',
-  templateUrl: './upload.page.html',
-  styleUrls: ['./upload.page.scss'],
-  standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule],
+    selector: 'app-upload',
+    templateUrl: './upload.page.html',
+    styleUrls: ['./upload.page.scss'],
+    imports: [IonicModule, CommonModule, FormsModule]
 })
 export class UploadPage {
 

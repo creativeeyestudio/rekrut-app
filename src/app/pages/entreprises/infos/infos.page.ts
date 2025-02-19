@@ -7,11 +7,10 @@ import { chevronBackOutline, chevronForwardOutline } from 'ionicons/icons';
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
-  selector: 'app-infos',
-  templateUrl: './infos.page.html',
-  styleUrls: ['./infos.page.scss'],
-  standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+    selector: 'app-infos',
+    templateUrl: './infos.page.html',
+    styleUrls: ['./infos.page.scss'],
+    imports: [IonicModule, CommonModule, FormsModule]
 })
 export class InfosPage {
 
