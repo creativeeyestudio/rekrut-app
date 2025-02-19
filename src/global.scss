@@ -38,6 +38,10 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 // @import '@ionic/angular/css/palettes/dark.system.css';
+:root {
+    --ion-font-family: 'Montserrat'
+}
+
 
 ion-button {
     &:not([fill=clear]) {
@@ -63,10 +67,14 @@ ion-button {
 
 body {
     font-family: 'Montserrat';
+    font-size: .9em;
+    line-height: 1.5em;
 }
 
 ion-content {
     position: relative;
+    font-family: 'Montserrat';
+    font-size: .9em;
     --offset-bottom: 0px !important;
 }
 
