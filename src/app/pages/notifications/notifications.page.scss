@@ -10,6 +10,14 @@ ion-item {
     }
 }
 
+ion-item-divider {
+    --background: white;
+}
+
+ion-item-group {
+    margin: 20px 0 60px 0;
+}
+
 ion-thumbnail {
     --border-radius: 3rem;
 }
