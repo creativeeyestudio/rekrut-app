@@ -30,6 +30,7 @@
         </div>
         
         <video [src]="video.url" autoplay muted loop></video>
+
         <div class="icons-list pos-bottom">
           <ion-icon 
             size="large" 
@@ -38,9 +39,11 @@
             (click)="toggleLike(i)">
           </ion-icon>
 
+          <ion-icon size="large" name="information-circle-outline" (click)="this.global.navigate('/fr/pdf-viewer')"></ion-icon>
           <ion-icon size="large" name="information-circle-outline" id="fiche-{{i}}"></ion-icon>
           <ion-icon size="large" name="flag-outline" (click)="global.navigate('/report')"></ion-icon>
         </div>
+
         <ion-alert
           trigger="fiche-{{i}}"
           header="Nom de l'entreprise {{i}}"
@@ -48,6 +51,7 @@
           message="Contenu."
           [buttons]="alertButtons"
         ></ion-alert>
+
       </swiper-slide>  
     </swiper-container>
 

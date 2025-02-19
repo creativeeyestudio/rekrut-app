@@ -4,10 +4,9 @@ import { IonicModule, AnimationController, createAnimation } from '@ionic/angula
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  standalone: true,
-  imports: [IonicModule, RouterModule, NavbarComponent],
+    selector: 'app-root',
+    templateUrl: 'app.component.html',
+    imports: [IonicModule, RouterModule, NavbarComponent]
 })
 export class AppComponent {
   constructor(

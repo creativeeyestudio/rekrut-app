@@ -7,11 +7,10 @@ import { chevronBackOutline } from 'ionicons/icons';
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
-  selector: 'app-offre',
-  templateUrl: './offre.page.html',
-  styleUrls: ['./offre.page.scss'],
-  standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+    selector: 'app-offre',
+    templateUrl: './offre.page.html',
+    styleUrls: ['./offre.page.scss'],
+    imports: [IonicModule, CommonModule, FormsModule]
 })
 export class OffrePage implements OnInit {
 

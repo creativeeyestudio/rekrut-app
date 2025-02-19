@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#">Retour</ion-back-button>
+    </ion-buttons>
+    <ion-title>pdf-viewer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="outerContainer">
+    <div class="pdf-container">
+      <pdf-viewer
+        [src]="src"
+        [render-text]="true"
+        [original-size]="false"
+        style="width: 100%; height: 100vh;"
+      ></pdf-viewer>
+    </div>
+  </div>  
+</ion-content>

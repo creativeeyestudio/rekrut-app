@@ -5,11 +5,10 @@ import { IonicModule } from '@ionic/angular';
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
-  selector: 'app-update',
-  templateUrl: './update.page.html',
-  styleUrls: ['./update.page.scss'],
-  standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule]
+    selector: 'app-update',
+    templateUrl: './update.page.html',
+    styleUrls: ['./update.page.scss'],
+    imports: [CommonModule, FormsModule, IonicModule]
 })
 export class UpdatePage implements OnInit {
 
