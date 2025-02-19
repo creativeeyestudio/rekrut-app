@@ -6,11 +6,8 @@
     <!-- Dernières notifs -->
     <div class="last-notif">
       <ion-item>
-        <ion-thumbnail slot="start">
-          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-        </ion-thumbnail>
         <ion-label>
-          <span>Item</span><br />
+          <strong>Item</strong><br />
           <span>Thumbnail</span>
         </ion-label>
       </ion-item>
@@ -24,24 +21,38 @@
       direction="vertical"
     >
       <swiper-slide *ngFor="let video of videos; let i = index" class="video-card">
-        <!-- Bouton nouveau contact -->
-        <div class="icons-list pos-top">
-          <ion-icon size="large" name="send-outline" (click)="this.global.navigate('/contact')"></ion-icon>
-        </div>
         
         <video [src]="video.url" autoplay muted loop></video>
 
         <div class="icons-list pos-bottom">
-          <ion-icon 
-            size="large" 
-            [name]="video.isLiked ? 'heart' : 'heart-outline'" 
-            [ngClass]="{'liked': video.isLiked}" 
-            (click)="toggleLike(i)">
-          </ion-icon>
 
-          <ion-icon size="large" name="information-circle-outline" (click)="this.global.navigate('/fr/pdf-viewer')"></ion-icon>
+          <!-- Profile -->
+          <figure class="profile"><img src="https://www.herbeumont.be/macommune/vie-politique/conseil-communal/img/no-profile-image-png.png" alt=""></figure>
+
+          <!-- Send -->
+          <div class="icon-container">
+            <ion-icon size="large" name="send-outline" (click)="this.global.navigate('/contact')"></ion-icon>
+            <span class="ion-text-center">100</span>
+          </div>
+
+          <!-- Like -->
+          <div class="icon-container">
+            <ion-icon 
+              size="large" 
+              [name]="video.isLiked ? 'heart' : 'heart-outline'" 
+              [ngClass]="{'liked': video.isLiked}" 
+              (click)="toggleLike(i)">
+            </ion-icon>
+            <span class="ion-text-center">100</span>
+          </div>
+
+          <div class="icon-container">
+            <ion-icon size="large" name="bookmark-outline"></ion-icon>
+          </div>
+          
+          <!-- <ion-icon size="large" name="information-circle-outline" (click)="this.global.navigate('/fr/pdf-viewer')"></ion-icon>
           <ion-icon size="large" name="information-circle-outline" id="fiche-{{i}}"></ion-icon>
-          <ion-icon size="large" name="flag-outline" (click)="global.navigate('/report')"></ion-icon>
+          <ion-icon size="large" name="flag-outline" (click)="global.navigate('/report')"></ion-icon> -->
         </div>
 
         <ion-alert
@@ -54,7 +65,5 @@
 
       </swiper-slide>  
     </swiper-container>
-
-    
   </div>
 </ion-content>

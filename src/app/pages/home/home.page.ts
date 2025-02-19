@@ -16,6 +16,7 @@ import {
   flagOutline,
   heart,
   heartOutline,
+  bookmarkOutline,
   informationCircleOutline,
   sendOutline,
 } from 'ionicons/icons';
@@ -56,6 +57,7 @@ export class HomePage implements OnInit {
     addIcons({
       heart,
       heartOutline,
+      bookmarkOutline,
       informationCircleOutline,
       flagOutline,
       sendOutline,

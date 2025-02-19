@@ -1,12 +1,13 @@
-// ion-content {
-//     --background: #000 url('../../../assets/images/bg-home.jpg') center / cover no-repeat;
-// }
-
 .last-notif {
     position: absolute;
     bottom: 20px;
     left: 20px;
     z-index: 2;
+
+    ion-label {
+        line-height: 1.5em;
+        font-family: 'Montserrat';
+    }
     
     ion-item {
         --color: #fff;
@@ -25,6 +26,27 @@
     flex-direction: column;
     gap: 20px;  /* Espacement entre les icônes */
     right: 20px;  /* Distance du bord droit */
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.profile {
+    width: 42px;
+    height: 42px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .pos-top {
@@ -73,11 +95,5 @@ swiper-container {
 .video-card video {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
     object-fit: cover;
-}
-  
-pdf-viewer {
-    width: 100vw;
-    height: 100vh;
 }
