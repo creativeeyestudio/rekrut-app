@@ -1,12 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Nom de l'entreprise</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content [fullscreen]="true">
+
   <ion-item (click)="this.global.navigate('fr/entreprises', 'back')">
     <ion-icon name="chevron-back-outline" slot="start"></ion-icon>
     <ion-thumbnail slot="start">
       <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
     </ion-thumbnail>
-    <ion-label>
-      <strong>Nom de l'entreprise</strong><br />
-      <span>Information que vous souhaiter mettre en avant (recherche d’emploi par exemple), liens</span>
+    <ion-label class="fiche-label" slot="end">
+      <strong class="title">Nom de l'entreprise</strong><br />
+      <span class="subtitle">Information que vous souhaiter mettre en avant</span>
     </ion-label>
   </ion-item>
 
