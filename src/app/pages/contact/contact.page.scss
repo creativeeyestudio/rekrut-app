@@ -1,8 +1,15 @@
 ion-item {
     --padding-start: 20px;
     --padding-end: 20px;
-    --padding-top: 20px;
-    --padding-bottom: 20px;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    --border-color: transparent;
+
+    font-size: 14px;
+    
+    &:nth-child(odd) {
+        --background: rgba(49, 131, 245, 0.1);
+    }
 }
 
 ion-thumbnail {
@@ -11,17 +18,18 @@ ion-thumbnail {
 
 .form-input {
     --ion-grid-padding: 0;
+    background: rgba(49, 131, 245, 0.1);
     position: absolute;
     right: 20px;
     bottom: 20px;
     left: 20px;
     width: calc(100% - 40px);
-    // border-bottom: 1px solid gray;
-
+    padding: 0 1rem;
+    border-radius: 20px;
 }
 
 ion-input {
-    --border-color: #000;
+    --border-color: rgba(0, 0, 0, 0);
 }
 
 img.selected {

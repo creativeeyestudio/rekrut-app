@@ -1,5 +1,8 @@
 ion-thumbnail {
-    --border-radius: 3rem;
+    --border-radius: 10rem;
+    border: 2px solid #D8EDEE;
+    width: 100px;
+    height: 100px;
 }
 
 ion-item {
@@ -8,6 +11,16 @@ ion-item {
     --padding-start: 15px;
     --padding-end: 15px;
     --border-style: none;
+
+    ion-icon {
+        margin-right: 15px;
+    }
+}
+
+.fiche-label {
+    font-size: 14px;
+    margin-left: 0;
+    padding-right: 0px;
 }
 
 .title-label {
