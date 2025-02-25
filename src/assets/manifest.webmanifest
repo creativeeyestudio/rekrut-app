@@ -1,0 +1,10 @@
+{
+    "name": "Rekrut",
+    "short_name": "Rekrut",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#1976d2",
+    "description": "Application de relations entreprises / demandeurs"
+  }
+  
