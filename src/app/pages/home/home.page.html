@@ -26,7 +26,7 @@
         <div class="icons-list pos-bottom">
 
           <!-- Profile -->
-          <figure class="profile icon-container">
+          <figure class="profile icon-container" (click)="this.global.navigate('/fr/entreprises/infos')">
             <img src="https://www.herbeumont.be/macommune/vie-politique/conseil-communal/img/no-profile-image-png.png" alt="">
             <span class="ion-text-center">100 %</span>
           </figure>
@@ -51,10 +51,6 @@
           <div class="icon-container">
             <ion-icon size="large" name="bookmark-outline"></ion-icon>
           </div>
-          
-          <!-- <ion-icon size="large" name="information-circle-outline" (click)="this.global.navigate('/fr/pdf-viewer')"></ion-icon>
-          <ion-icon size="large" name="information-circle-outline" id="fiche-{{i}}"></ion-icon>
-          <ion-icon size="large" name="flag-outline" (click)="global.navigate('/report')"></ion-icon> -->
         </div>
 
         <ion-alert
