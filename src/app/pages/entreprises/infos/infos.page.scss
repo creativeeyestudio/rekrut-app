@@ -38,3 +38,19 @@ ion-list {
         }
     }
 }
+
+.main-data {
+    span {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+    }
+}
+
+.actions {
+    font-size: 28px;
+}
