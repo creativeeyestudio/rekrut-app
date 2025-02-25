@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from "@ionic/angular";
 import { addIcons } from 'ionicons';
-import { addCircleOutline, chatbubblesOutline, homeOutline, notificationsOutline, personCircleOutline } from 'ionicons/icons';
+import { addCircleOutline, chatbubblesOutline, homeOutline, notificationsOutline, options, personCircleOutline } from 'ionicons/icons';
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
@@ -12,6 +12,6 @@ import { GlobalService } from 'src/app/services/global.service';
 })
 export class NavbarComponent {
   constructor(public global: GlobalService) {
-    addIcons({ homeOutline, notificationsOutline, addCircleOutline, chatbubblesOutline, personCircleOutline })
+    addIcons({ homeOutline, notificationsOutline, addCircleOutline, chatbubblesOutline, personCircleOutline, options })
   }
 }
