@@ -15,11 +15,16 @@ export const routes: Routes = [
       },
       {
         path: 'messagerie',
-        loadComponent: () => import('./pages/messagerie/messagerie.page').then( m => m.MessageriePage)
-      },
-      {
-        path: 'contact',
-        loadComponent: () => import('./pages/contact/contact.page').then((m) => m.ContactPage),
+        children: [
+          {
+            path: '',
+            loadComponent: () => import('./pages/messagerie/messagerie.page').then( m => m.MessageriePage)
+          },
+          {
+            path: 'contact',
+            loadComponent: () => import('./pages/contact/contact.page').then((m) => m.ContactPage),
+          }
+        ]
       },
       {
         path: 'register',
