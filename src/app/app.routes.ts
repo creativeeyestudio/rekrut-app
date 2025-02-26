@@ -14,6 +14,10 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/home/home.page').then((m) => m.HomePage),
       },
       {
+        path: 'messagerie',
+        loadComponent: () => import('./pages/messagerie/messagerie.page').then( m => m.MessageriePage)
+      },
+      {
         path: 'contact',
         loadComponent: () => import('./pages/contact/contact.page').then((m) => m.ContactPage),
       },
@@ -73,5 +77,6 @@ export const routes: Routes = [
       },
     ],
   },
+
 
 ];

@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Messagerie</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid class="form-input ion-margin-top">
+    <ion-row>
+      <ion-col size="12">
+        <div class="input-container">
+          <ion-input labelPlacement="floating" label="Rechercher..." type="search"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <ion-item>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+      <ion-thumbnail slot="start">
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+      </ion-thumbnail>
+      <ion-label>
+        <strong>Nom de l'interlocuteur</strong><br />
+        <span class="grey">Nom de l'entreprise</span><br />
+        <span class="grey">Vu il y a XX minutes</span>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
