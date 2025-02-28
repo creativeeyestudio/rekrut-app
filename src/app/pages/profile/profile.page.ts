@@ -15,7 +15,7 @@ import { chevronBackOutline, logoIonic, settingsOutline } from 'ionicons/icons';
 })
 export class ProfilePage implements OnInit {
 
-  constructor(public globalService: GlobalService) {
+  constructor(public global: GlobalService) {
     addIcons({ logoIonic, settingsOutline, chevronBackOutline });
   }
 
