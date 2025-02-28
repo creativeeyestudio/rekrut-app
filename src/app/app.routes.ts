@@ -61,6 +61,10 @@ export const routes: Routes = [
         ],
       },
       {
+        path: 'offres',
+        loadComponent: () => import('./pages/offres/offres.page').then( m => m.OffresPage)
+      },
+      {
         path: 'offre',
         loadComponent: () => import('./pages/offre/offre.page').then((m) => m.OffrePage),
       },
@@ -82,6 +86,7 @@ export const routes: Routes = [
       },
     ],
   },
+
 
 
 ];

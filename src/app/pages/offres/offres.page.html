@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-item>
+        <ion-icon name="chevron-back-outline" slot="start"></ion-icon>
+        <ion-thumbnail slot="start">
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+        </ion-thumbnail>
+        <ion-label>
+          <strong>Nom de l'entreprise</strong><br />
+          <span>Description</span>
+        </ion-label>
+      </ion-item>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item>
+    <p><strong>Postes à pourvoir</strong></p>
+  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="send" slot="end" class="ion-margin-left ion-margin-right" (click)="global.navigate('fr/messagerie/contact')"></ion-icon>
+      <ion-icon name="heart-outline" slot="end" class="ion-margin-left ion-margin-right"></ion-icon>
+      <ion-label>
+        <strong>Nom du poste</strong><br />
+        <span class="grey">Lieu : </span><br />
+        <span class="grey">Salaire : </span>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
