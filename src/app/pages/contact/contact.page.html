@@ -7,7 +7,7 @@
 <ion-content [fullscreen]="true">
   <ion-list>
     <ion-item class="contact-item">
-      <ion-icon aria-hidden="true" name="chevron-back-outline" slot="start"></ion-icon>
+      <ion-icon aria-hidden="true" name="chevron-back-outline" slot="start" (click)="this.global.goBack()"></ion-icon>
       <ion-icon aria-hidden="true" name="call-outline" slot="end"></ion-icon>
       <ion-thumbnail slot="start">
         <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
