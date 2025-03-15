@@ -84,8 +84,18 @@ export const routes: Routes = [
         path: 'pdf-viewer',
         loadComponent: () => import('./pages/pdf-viewer/pdf-viewer.page').then( m => m.PdfViewerPage)
       },
+      {
+        path: 'skills-params',
+        loadComponent: () => import('./pages/skills-params/skills-params.page').then( m => m.SkillsParamsPage)
+      },
+      {
+        path: 'skills-recap',
+        loadComponent: () => import('./pages/skills-recap/skills-recap.page').then( m => m.SkillsRecapPage)
+      },
     ],
   },
+
+
 
 
 
