@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonCol, IonGrid, IonRow, IonButton, IonImg, IonInput, IonInputPasswordToggle, IonItem, IonIcon } from '@ionic/angular/standalone';
+import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
     selector: 'app-register',
@@ -13,7 +14,7 @@ export class RegisterPage {
 
   userType: 'student' | 'recruter' | null = null;
 
-  constructor() { }
+  constructor(public global: GlobalService) { }
 
   toggleBlock(blockId: string, userType: 'student' | 'recruter' | null = null) {
     // Changement d'affichage
