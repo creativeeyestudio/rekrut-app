@@ -1,0 +1,22 @@
+ion-item {
+    --padding-bottom: 1rem;
+
+    &.btn-container {
+        --border-style: none;
+        --border-width: 0px;
+        --padding-top: 1rem;
+        width: fit-content;
+        margin: auto;
+    }
+}
+
+ion-select {
+    --border-radius: 1rem;
+    --padding-bottom: 1rem;
+
+    &::part(label) {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: .85rem;
+    }
+}
