@@ -1,13 +1,63 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title>Se connecter</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">login</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <figure class="ion-margin-top">
+    <ion-img
+      class="logo-big"
+      alt="Icon Rekrut"
+      src="../../../assets/images/logo-rekrut.png"
+    ></ion-img>
+  </figure>
+
+  <div class="ion-margin-bottom ion-padding-start ion-padding-end">
+    <label class="ion-margin-bottom" for="ion-input-1"
+      ><strong>Adresse mail</strong></label
+    >
+    <ion-input
+      aria-label="Adresse E-Mail"
+      type="mail"
+      placeholder="Mail"
+    ></ion-input>
+  </div>
+
+  <div class="ion-margin-bottom ion-padding-start ion-padding-end">
+    <label class="ion-margin-bottom" for="ion-input-0"
+      ><strong>Mot de passe</strong></label
+    >
+    <ion-input
+      aria-label="Mot de passe"
+      placeholder="Mot de passe"
+      type="password"
+      fill="outline"
+    >
+      <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+    </ion-input>
+    <p>
+      <a href="" class="ion-no-underline"
+        ><strong>Mot de passe oublié ?</strong></a
+      >
+    </p>
+
+    <ion-button
+      color="secondary"
+      shape="round"
+      expand="block"
+      class="btn--center btn--margin-top">Continuer</ion-button>
+
+    <p class="ion-text-center">
+      Vous n'avez pas de compte ?
+      <a (click)="global.navigate('/fr/register')"><strong>Inscription</strong></a>
+    </p>
+  </div>
+
+  <ion-img
+    class="logo-bottom"
+    src="../../../assets/images/logo-rekrut-full.png"
+  ></ion-img>
+
+  <ion-icon class="icon-help" icon="../../../assets/icon/help.svg"></ion-icon>
 </ion-content>
