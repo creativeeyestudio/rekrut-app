@@ -7,16 +7,18 @@ import { chevronForwardOutline } from 'ionicons/icons';
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
-    selector: 'app-entreprises',
-    templateUrl: './entreprises.page.html',
-    styleUrls: ['./entreprises.page.scss'],
-    imports: [IonicModule, CommonModule, FormsModule]
+  selector: 'app-messagerie',
+  templateUrl: './messagerie.page.html',
+  styleUrls: ['./messagerie.page.scss'],
+  standalone: true,
+  imports: [IonicModule, CommonModule, CommonModule, FormsModule]
 })
-export class EntreprisesPage {
+export class MessageriePage {
 
   constructor(public global: GlobalService) {
-    addIcons({
-      chevronForwardOutline
-    })
-  }
+      addIcons({
+        chevronForwardOutline
+      })
+    }
+
 }

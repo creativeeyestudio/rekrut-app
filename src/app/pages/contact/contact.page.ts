@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import { attachOutline, callOutline, chevronBackOutline, paperPlaneOutline } from 'ionicons/icons';
+import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
     selector: 'app-contact',
@@ -13,7 +14,7 @@ import { attachOutline, callOutline, chevronBackOutline, paperPlaneOutline } fro
 })
 export class ContactPage {
   
-  constructor() {
+  constructor(public global: GlobalService) {
     addIcons({ callOutline, attachOutline, paperPlaneOutline, chevronBackOutline })
   }
   

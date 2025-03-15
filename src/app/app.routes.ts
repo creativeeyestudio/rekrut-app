@@ -14,8 +14,17 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/home/home.page').then((m) => m.HomePage),
       },
       {
-        path: 'contact',
-        loadComponent: () => import('./pages/contact/contact.page').then((m) => m.ContactPage),
+        path: 'messagerie',
+        children: [
+          {
+            path: '',
+            loadComponent: () => import('./pages/messagerie/messagerie.page').then( m => m.MessageriePage)
+          },
+          {
+            path: 'contact',
+            loadComponent: () => import('./pages/contact/contact.page').then((m) => m.ContactPage),
+          }
+        ]
       },
       {
         path: 'register',
@@ -52,6 +61,10 @@ export const routes: Routes = [
         ],
       },
       {
+        path: 'offres',
+        loadComponent: () => import('./pages/offres/offres.page').then( m => m.OffresPage)
+      },
+      {
         path: 'offre',
         loadComponent: () => import('./pages/offre/offre.page').then((m) => m.OffrePage),
       },
@@ -73,5 +86,7 @@ export const routes: Routes = [
       },
     ],
   },
+
+
 
 ];

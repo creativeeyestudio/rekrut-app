@@ -10,7 +10,10 @@ import { provideServiceWorker } from '@angular/service-worker';
 bootstrapApplication(AppComponent, {
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    provideIonicAngular(),
+    provideIonicAngular({
+      rippleEffect: false,
+      mode: 'ios'
+    }),
     importProvidersFrom(RouterModule),
     provideRouter(routes, withPreloading(PreloadAllModules)), provideServiceWorker('ngsw-worker.js', {
       enabled: !isDevMode(),
