@@ -88,8 +88,13 @@ export const routes: Routes = [
         path: 'skills-params',
         loadComponent: () => import('./pages/skills-params/skills-params.page').then( m => m.SkillsParamsPage)
       },
+      {
+        path: 'skills-recap',
+        loadComponent: () => import('./pages/skills-recap/skills-recap.page').then( m => m.SkillsRecapPage)
+      },
     ],
   },
+
 
 
 
