@@ -1,27 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonCol, IonGrid, IonRow, IonButton, IonImg, IonInput } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonCol, IonGrid, IonRow, IonButton, IonImg, IonInput, IonInputPasswordToggle, IonItem, IonIcon } from '@ionic/angular/standalone';
 
 @Component({
     selector: 'app-register',
     templateUrl: './register.page.html',
     styleUrls: ['./register.page.scss'],
-    imports: [IonInput, IonImg, IonButton, IonRow, IonGrid, IonCol, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+    imports: [IonInput, IonInputPasswordToggle, IonImg, IonButton, IonRow, IonGrid, IonCol, IonContent, IonHeader, IonTitle, IonToolbar, IonIcon, CommonModule, FormsModule]
 })
-export class RegisterPage implements OnInit {
+export class RegisterPage {
+
+  userType: 'student' | 'recruter' | null = null;
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
-  toggleBlock(blockId: string) {
+  toggleBlock(blockId: string, userType: 'student' | 'recruter' | null = null) {
+    // Changement d'affichage
     const blocks = document.querySelectorAll('.block');
     blocks.forEach(block => {
       block.classList.add('ion-hide')
     });
     document.getElementById(blockId)?.classList.remove('ion-hide');
+
+    // Sélection du type de profil
+
+    this.userType = userType;
   }
 
 }
