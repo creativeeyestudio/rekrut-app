@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonImg } from '@ionic/angular/standalone';
 import { Title } from '@angular/platform-browser';
+import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
   selector: 'app-tutorial',
@@ -47,13 +48,15 @@ export class TutorialPage  {
     },
   ]
 
-  constructor() { }
+  constructor(public global: GlobalService) { }
 
   goToTheNext() {
     if (this.tutoPos < this.tutoBlocks.length - 1) {
       this.tutoBlocks[this.tutoPos].visible = false;
       this.tutoPos++;
       this.tutoBlocks[this.tutoPos].visible = true;
+    } else {
+      this.global.navigate('fr');
     }
   }
 }
