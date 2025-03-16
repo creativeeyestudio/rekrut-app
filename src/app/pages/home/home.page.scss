@@ -1,8 +1,25 @@
-.last-notif {
+.nav {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
     z-index: 2;
+
+    &--top {
+        top: 20px;
+    }
+
+    &--right {
+        right: 20px;
+    }
+
+    &--bottom {
+        bottom: 20px;
+    }
+
+    &--left {
+        left: 20px;
+    }
+}
+
+.last-notif {
     width: calc(100% - 100px);
 
     ion-label {
@@ -21,39 +38,30 @@
     }
 }
 
-.icons-list {
-    position: absolute;
+.column {
     display: flex;
     flex-direction: column;
+}
+
+.icons-list {
     gap: 20px;  /* Espacement entre les icônes */
-    right: 20px;  /* Distance du bord droit */
 }
 
 .icon-container {
-    display: flex;
-    flex-direction: column;
     color: white;
 }
 
 .profile {
     margin: 0;
-}
 
-.profile img {
-    width: 42px;
-    height: 42px;
-    margin-bottom: 10px;
-    border-radius: 50px;
-    object-fit: cover;
-    object-position: center;
-}
-
-.pos-top {
-    top: 20px; /* Position en haut */
-}
-
-.pos-bottom {
-    bottom: 20px; /* Position en bas */
+    img {
+        width: 42px;
+        height: 42px;
+        margin-bottom: 10px;
+        border-radius: 50px;
+        object-fit: cover;
+        object-position: center;    
+    }
 }
 
 ion-icon {
@@ -85,14 +93,12 @@ swiper-container {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: center;
-    align-items: center;
     transition: transform 0.3s ease, opacity 0.3s ease;
     touch-action: none;
-}
 
-.video-card video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }

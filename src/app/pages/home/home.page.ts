@@ -6,6 +6,7 @@ import {
   ViewChildren,
   CUSTOM_ELEMENTS_SCHEMA,
   ChangeDetectorRef,
+  AfterViewInit,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -19,6 +20,7 @@ import {
   bookmarkOutline,
   informationCircleOutline,
   sendOutline,
+  notificationsOutline,
 } from 'ionicons/icons';
 import { GlobalService } from 'src/app/services/global.service';
 
@@ -33,7 +35,7 @@ register();
     imports: [IonicModule, CommonModule, FormsModule],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class HomePage implements OnInit {
+export class HomePage implements OnInit, AfterViewInit {
   @ViewChildren('cardElement') cardElements!: QueryList<ElementRef>;
   isLiked: boolean = false;
 
@@ -61,6 +63,7 @@ export class HomePage implements OnInit {
       informationCircleOutline,
       flagOutline,
       sendOutline,
+      notificationsOutline,
     });
   }
 
