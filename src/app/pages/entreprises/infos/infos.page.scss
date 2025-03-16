@@ -14,7 +14,21 @@ ion-item {
 
     ion-icon {
         margin-right: 15px;
+        &[name=settings] {
+            margin-left: auto;
+        }
     }
+}
+
+ion-icon {
+    &[name=settings] {
+        margin-left: auto;
+    }
+}
+
+.settings {
+    display: flex;
+    align-items: end;
 }
 
 .fiche-label {
