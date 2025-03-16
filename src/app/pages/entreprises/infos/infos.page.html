@@ -62,8 +62,7 @@
   </ion-grid>
 
   <ion-list>
-    <ion-item (click)="this.global.navigate('fr/offre')">
-      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    <ion-item>
       <ion-label>
         <strong>Nom du poste</strong><br />
         <span>
@@ -71,6 +70,7 @@
         </span><br />
         <span>Salaire : 35000 € / an</span>
       </ion-label>
+      <ion-button fill="outline" size="small" shape="round" class="apply" (click)="this.global.navigate('fr/offre')">Postuler</ion-button>
     </ion-item>
   </ion-list>
 </ion-content>
