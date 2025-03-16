@@ -15,6 +15,9 @@
       <h1 class="ion-text-center" [innerHTML]="block.title"></h1>
       <p class="ion-text-center" [innerHTML]="block.desc"></p>
       <ion-button shape="round" color="secondary" (click)="goToTheNext()">Suivant</ion-button>
+      <p class="ion-margin-top ion-padding-top">
+        <span [innerHTML]="tutoPos + 1"></span> / <span [innerHTML]="tutoBlocks.length"></span>
+      </p>
     </div>
   </div>
 </ion-content>
