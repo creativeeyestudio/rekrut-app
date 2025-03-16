@@ -14,7 +14,7 @@
       <ion-img [src]="'../../../assets/images/tutorials/' + block.image" [alt]="block.title"></ion-img>
       <h1 class="ion-text-center" [innerHTML]="block.title"></h1>
       <p class="ion-text-center" [innerHTML]="block.desc"></p>
-      <ion-button shape="round" color="secondary">Suivant</ion-button>
+      <ion-button shape="round" color="secondary" (click)="goToTheNext()">Suivant</ion-button>
     </div>
   </div>
 </ion-content>

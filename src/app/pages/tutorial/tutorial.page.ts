@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonImg } from '@ionic/angular/standalone';
@@ -12,8 +12,10 @@ import { Title } from '@angular/platform-browser';
   imports: [IonImg, IonButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 export class TutorialPage  {
+  @ViewChildren('tutoElement') tutoElements!: QueryList<ElementRef>;
 
   tutoPos: number = 0;
+  
   tutoBlocks = [
     {
       id: 0, 
@@ -46,4 +48,12 @@ export class TutorialPage  {
   ]
 
   constructor() { }
+
+  goToTheNext() {
+    if (this.tutoPos < this.tutoBlocks.length - 1) {
+      this.tutoBlocks[this.tutoPos].visible = false;
+      this.tutoPos++;
+      this.tutoBlocks[this.tutoPos].visible = true;
+    }
+  }
 }

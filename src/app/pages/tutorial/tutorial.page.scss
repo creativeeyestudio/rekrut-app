@@ -9,11 +9,13 @@
     transform: translate(-50%, -50%);
     visibility: hidden;
     opacity: 0;
+    margin-top: -2rem;
     transition-duration: .5s;
 
     &--visible {
         visibility: visible;
         opacity: 1;
+        margin-top: 0;
     }
 }
 
