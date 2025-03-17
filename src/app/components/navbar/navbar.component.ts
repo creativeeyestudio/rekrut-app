@@ -18,8 +18,10 @@ export class NavbarComponent {
   }
 
   isActiveRoute(route: string): boolean {
-    console.log(this.router.url);
-    
-    return this.router.url === route
+    return this.router.url === route;
+  }
+
+  toggleDarkMode(): boolean {
+    return this.router.url === '/fr';
   }
 }
