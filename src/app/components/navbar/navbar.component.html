@@ -1,17 +1,19 @@
 <ion-tabs>
-  
   <ion-tab-bar>
     <ion-tab-button (click)="global.navigate('fr')">
-      <ion-icon name="home-outline"></ion-icon>
+      <ion-icon name="home-outline" *ngIf="!isActiveRoute('/fr')"></ion-icon>
+      <ion-icon name="home-sharp" *ngIf="isActiveRoute('/fr')"></ion-icon>
     </ion-tab-button>
     <ion-tab-button>
       <ion-icon name="search"></ion-icon>
     </ion-tab-button>
     <ion-tab-button (click)="global.navigate('fr/entreprises')">
-      <ion-icon name="options"></ion-icon>
+      <ion-icon name="options-outline" *ngIf="!isActiveRoute('/fr/entreprises')"></ion-icon>
+      <ion-icon name="options-sharp" *ngIf="isActiveRoute('/fr/entreprises')"></ion-icon>
     </ion-tab-button>
     <ion-tab-button (click)="global.navigate('fr/messagerie')">
-      <ion-icon name="chatbox-ellipses-sharp"></ion-icon>
+      <ion-icon name="chatbox-ellipses-outline" *ngIf="!isActiveRoute('/fr/messagerie')"></ion-icon>
+      <ion-icon name="chatbox-ellipses-sharp" *ngIf="isActiveRoute('/fr/messagerie')"></ion-icon>
     </ion-tab-button>
     <ion-tab-button (click)="global.navigate('fr/profile')">
       <ion-icon name="person-circle-outline"></ion-icon>
