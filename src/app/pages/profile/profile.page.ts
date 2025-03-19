@@ -15,7 +15,7 @@ import { addCircleOutline, cameraOutline, chevronBackOutline, logoIonic, setting
 })
 export class ProfilePage  {
 
-  videosLength: number = 0;
+  videosLength: number = 1;
 
   constructor(public global: GlobalService) {
     addIcons({ logoIonic, settingsOutline, chevronBackOutline, addCircleOutline, cameraOutline });
