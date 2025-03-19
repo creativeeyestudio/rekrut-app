@@ -24,7 +24,15 @@ ion-thumbnail {
 }
 
 ion-input {
-    --border-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+ion-button {
+    --background: rgba(0,0,0,0)
+}
+
+ion-icon {
+    color: #000;
 }
 
 img.selected {

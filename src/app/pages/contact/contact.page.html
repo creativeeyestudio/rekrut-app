@@ -1,9 +1,3 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Nouveau message</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-list>
     <ion-item class="contact-item">
@@ -22,12 +16,12 @@
 
   <ion-grid class="form-input">
     <ion-row>
-      <ion-col size="8">
+      <ion-col size="9">
         <div class="input-container">
           <ion-input labelPlacement="floating" label="Ecrire..." class="new-text"></ion-input>
         </div>
       </ion-col>
-      <ion-col size="2">
+      <ion-col size="1">
         <ion-button aria-label="Ajouter des fichiers" fill="clear" (click)="openFileDialog()">
           <ion-icon slot="end" name="attach-outline" aria-hidden="true"></ion-icon>
         </ion-button>
@@ -40,7 +34,7 @@
           aria-hidden="true" 
           aria-label="Liste des pièces jointes" />
       </ion-col>
-      <ion-col size="2">
+      <ion-col size="1">
         <ion-button aria-label="Envoyer le message" fill="clear">
           <ion-icon slot="end" name="paper-plane-outline" aria-hidden="true"></ion-icon>
         </ion-button>
