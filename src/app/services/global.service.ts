@@ -7,6 +7,8 @@ import { NavController } from '@ionic/angular';
 })
 export class GlobalService {
 
+  public isNavHidden: boolean = false;
+
   constructor(public router: Router, public nav: NavController) { }
 
   navigate(link: string, direction: "forward" | "back" = 'forward') {
