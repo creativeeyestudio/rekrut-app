@@ -64,6 +64,10 @@ ion-button {
         --background-activated: #EA1714;
         --color: #fff;
     }
+
+    &.dark {
+        --background: #0E3E68;
+    }
 }
 
 body {
