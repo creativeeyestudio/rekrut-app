@@ -8,8 +8,5 @@ ion-tab-bar {
   &.dark-mode {
       --ion-background-color: #000000;
       --ion-text-color: #ffffff;
-      
-      --background: var(--ion-background-color);
-      --color: var(--ion-text-color);
   }  
 }
