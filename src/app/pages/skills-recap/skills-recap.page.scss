@@ -1,5 +1,5 @@
 ion-item {
-    &:not(.btn-container) {
+    &:not(.btn-container):not(.bg-transparent) {
         --background: rgba(49, 131, 245, .05);
     }
 

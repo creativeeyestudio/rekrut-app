@@ -1,10 +1,4 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Profil</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="false">
+<ion-content [fullscreen]="true">
 
   <ion-menu contentId="content-page">
     <ion-header [translucent]="true">
@@ -64,11 +58,11 @@
         <ion-col size="10">
           <ion-item>
             <ion-thumbnail slot="start">
-              <img alt="Silhouette of mountains" src="https://img.freepik.com/photos-gratuite/portrait-jeune-etudiant-souriant_23-2148586534.jpg?t=st=1731748530~exp=1731752130~hmac=48f9f28903a4c61f692617dac28542f4e1bb40f6f87fdd4dc43bc44f61a1ea56&w=826" />
+              <ion-img alt="Silhouette of mountains" src="https://img.freepik.com/photos-gratuite/portrait-jeune-etudiant-souriant_23-2148586534.jpg?t=st=1731748530~exp=1731752130~hmac=48f9f28903a4c61f692617dac28542f4e1bb40f6f87fdd4dc43bc44f61a1ea56&" />
             </ion-thumbnail>
             <ion-label>
               <strong>Nom prénom</strong><br />
-              <span>Information que vous souhaiter mettre en avant (recherche d’emploi par exemple), liens</span>
+              <span>Information que vous souhaiter mettre en avant</span>
             </ion-label>
           </ion-item>
         </ion-col>
@@ -131,7 +125,7 @@
             <strong>Partager votre Skill</strong>
           </ion-label><br />
           <ion-label>Pour que les recuteurs puissent vous remarquer</ion-label><br />
-          <ion-label color="primary" (click)="this.global.navigate('fr/upload')">
+          <ion-label color="primary" (click)="this.global.navigate('fr/skills-params')">
             <strong>Uploader votre video skill</strong>
           </ion-label>
         </ion-col>
@@ -139,7 +133,7 @@
 
       <ion-row class="videos-list" *ngIf="videosLength > 0">
         <ion-col size="4"></ion-col>
-        <ion-col size="4" class="add">
+        <ion-col size="4" class="add" (click)="this.global.navigate('fr/skills-params')">
           <ion-icon name="add-circle-outline" size="large"></ion-icon>
         </ion-col>
       </ion-row>

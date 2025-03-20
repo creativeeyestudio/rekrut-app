@@ -1,10 +1,8 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Voici ta question pour ta vidéo (skill)</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
+  <ion-item lines="none" class="bg-transparent ion-margin-top ion-margin-bottom">
+    <strong>Voici ta question pour ta vidéo (skill)</strong>
+  </ion-item>
+
   <ion-list lines="none" class="ion-padding-bottom ion-margin-bottom">
     <ion-item>
       <strong>Secteur :&nbsp;</strong>Finance
@@ -24,6 +22,6 @@
   </ol>
 
   <ion-item class="btn-container">
-    <ion-button color="secondary" shape="round" size="default" class="ion-margin-auto">J'ai compris</ion-button>
+    <ion-button color="secondary" shape="round" size="default" class="ion-margin-auto" (click)="this.global.navigate('fr/upload')">J'ai compris</ion-button>
   </ion-item>
 </ion-content>

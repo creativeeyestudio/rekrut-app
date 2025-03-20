@@ -44,8 +44,7 @@
 
 
 ion-button {
-    &:not([fill=clear]),
-    &:not([fill=outline]) {
+    &:not([fill=clear]):not([fill=outline]) {
         --background: #3183F5;
         --background-activated: #006AAF;
         --color: #fff;

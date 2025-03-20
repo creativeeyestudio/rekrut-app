@@ -1,10 +1,7 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Options de la vidéo (skill)</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding-top">
+  <ion-item lines="none">
+    <strong>Options de la vidéo (skill)</strong>
+  </ion-item>
   <ion-list class="ion-padding-end">
     <ion-item>
       <ion-select label="Pour quel secteur tu postules ?" placeholder="Secteur" label-placement="stacked">
@@ -25,7 +22,7 @@
   </ol>
 
   <ion-item class="btn-container ion-justify-content-center">
-    <ion-button shape="round" size="default" color="secondary">Sauvegarder</ion-button>
+    <ion-button shape="round" size="default" color="secondary" (click)="goToRecap()">Sauvegarder</ion-button>
   </ion-item>
   
 </ion-content>
