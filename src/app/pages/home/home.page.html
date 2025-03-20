@@ -53,7 +53,11 @@
 
           <!-- Bookmark -->
           <div class="icon-container column">
-            <ion-icon size="large" name="bookmark-outline"></ion-icon>
+            <ion-icon 
+              size="large" 
+              [name]="video.isSaved ? 'bookmark' : 'bookmark-outline'"
+              [ngClass]="{'saved': video.isSaved}" 
+              (click)="toggleSave(i)"></ion-icon>
           </div>
         </div>
 

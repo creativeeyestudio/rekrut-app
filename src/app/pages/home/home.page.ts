@@ -17,6 +17,7 @@ import {
   flagOutline,
   heart,
   heartOutline,
+  bookmark,
   bookmarkOutline,
   informationCircleOutline,
   sendOutline,
@@ -40,9 +41,9 @@ export class HomePage implements OnInit, AfterViewInit {
   isLiked: boolean = false;
 
   videos = [
-    { id: 1, url: 'assets/videos/video1.mp4', isLiked: false },
-    { id: 2, url: 'assets/videos/video2.mp4', isLiked: false },
-    { id: 3, url: 'assets/videos/video3.mp4', isLiked: false },
+    { id: 1, url: 'assets/videos/video1.mp4', isLiked: false, isSaved: false },
+    { id: 2, url: 'assets/videos/video2.mp4', isLiked: false, isSaved: false },
+    { id: 3, url: 'assets/videos/video3.mp4', isLiked: false, isSaved: false },
   ];
 
   alertButtons = ['Contacter', 'Fermer'];
@@ -59,6 +60,7 @@ export class HomePage implements OnInit, AfterViewInit {
     addIcons({
       heart,
       heartOutline,
+      bookmark,
       bookmarkOutline,
       informationCircleOutline,
       flagOutline,
@@ -115,5 +117,9 @@ export class HomePage implements OnInit, AfterViewInit {
 
   toggleLike(index: number) {
     this.videos[index].isLiked = !this.videos[index].isLiked;
+  }
+
+  toggleSave(index: number) {
+    this.videos[index].isSaved = !this.videos[index].isSaved;
   }
 }
