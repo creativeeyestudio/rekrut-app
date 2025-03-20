@@ -5,6 +5,14 @@
     width: 100%;
 }
 
+.content-input {
+    margin-bottom: 1rem;
+}
+
+.add-link {
+    color: #3183F5;
+}
+
 ion-item {
     &.title {
         font-size: 20px;
@@ -17,7 +25,7 @@ ion-select {
 
     border-radius: 6px;
     border: 1px solid #C2C8D0;
-    margin-bottom: 1rem;
+    width: 100%;
 }
 
 ion-checkbox {
