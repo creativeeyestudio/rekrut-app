@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { addIcons } from 'ionicons';
-import { chevronForwardOutline } from 'ionicons/icons';
+import { chevronForwardOutline, ellipse } from 'ionicons/icons';
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
@@ -17,7 +17,8 @@ export class MessageriePage {
 
   constructor(public global: GlobalService) {
       addIcons({
-        chevronForwardOutline
+        chevronForwardOutline,
+        ellipse
       })
     }
 
