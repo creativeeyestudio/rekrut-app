@@ -1,0 +1,40 @@
+<ion-content [fullscreen]="true">
+  <ion-item lines="none" class="ion-padding-top ion-padding-bottom title">
+    <strong>Création du profil</strong>
+  </ion-item>
+
+  <ion-list>
+    <ion-item lines="none">
+      <ion-input label="Prénom" type="text" labelPlacement="floating" required></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input label="Nom" type="text" labelPlacement="floating" required></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input label="Âge" type="text" labelPlacement="floating" required></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input label="Adresse E-Mail (Visible sur le profil)" type="mail" labelPlacement="floating" required></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input label="Téléphone" type="tel" labelPlacement="floating">
+        <ion-select slot="start" value="+33" required>
+          <ion-select-option *ngFor="let phone of phoneList.list" [value]="phone.dial_code" [innerHTML]=" '(' + phone.code + ') ' + phone.dial_code"></ion-select-option>
+        </ion-select>
+      </ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-checkbox labelPlacement="end">En m'inscrivant, j'accepte les conditions générales d'utilisation.</ion-checkbox>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="auto">
+            <ion-button color="secondary" size="default" shape="round">Sauvegarder</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+</ion-content>
