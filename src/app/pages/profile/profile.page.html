@@ -1,5 +1,4 @@
 <ion-content [fullscreen]="true">
-
   <ion-menu contentId="content-page">
     <ion-header [translucent]="true">
       <ion-toolbar>
@@ -12,9 +11,14 @@
 
     <ion-content class="ion-padding">
       <ion-list>
-        <ion-item lines="none" (click)="this.global.navigate('/home/profile/update')">
+        <ion-item
+          lines="none"
+          (click)="this.global.navigate('/home/profile/update')"
+        >
           <ion-menu-toggle class="ion-padding-vertical">
-            <ion-label class="ion-padding-bottom"><strong>Modifier mes informations</strong></ion-label>
+            <ion-label class="ion-padding-bottom"
+              ><strong>Modifier mes informations</strong></ion-label
+            >
             <ion-list class="ion-no-padding">
               <ion-item>
                 <ion-label>Paramètres de l'application</ion-label>
@@ -46,19 +50,21 @@
             </ion-list>
           </ion-menu-toggle>
         </ion-item>
-      </ion-list> 
+      </ion-list>
     </ion-content>
   </ion-menu>
 
   <div class="ion-page" id="content-page">
-
     <ion-grid>
       <!-- Thumbnail -->
       <ion-row class="infos-profile">
         <ion-col size="10">
           <ion-item>
             <ion-thumbnail slot="start">
-              <ion-img alt="Silhouette of mountains" src="https://img.freepik.com/photos-gratuite/portrait-jeune-etudiant-souriant_23-2148586534.jpg?t=st=1731748530~exp=1731752130~hmac=48f9f28903a4c61f692617dac28542f4e1bb40f6f87fdd4dc43bc44f61a1ea56&" />
+              <ion-img
+                alt="Silhouette of mountains"
+                src="https://img.freepik.com/photos-gratuite/portrait-jeune-etudiant-souriant_23-2148586534.jpg?t=st=1731748530~exp=1731752130~hmac=48f9f28903a4c61f692617dac28542f4e1bb40f6f87fdd4dc43bc44f61a1ea56&"
+              />
             </ion-thumbnail>
             <ion-label>
               <strong>Nom prénom</strong><br />
@@ -76,68 +82,102 @@
         </ion-col>
       </ion-row>
 
-      <ion-col size="12">
-        <ion-row class="main-data">
-          <ion-col>
-            <span>Dm</span>
-            <span>139</span>
-          </ion-col>
-          <ion-col>
-            <span>Like</span>
-            <span>495</span>
-          </ion-col>
-          <ion-col>
-            <span>Save</span>
-            <span>156</span>
-          </ion-col>
-        </ion-row>
-      </ion-col>
+      <!-- Main numbers -->
+      <ion-row class="main-data">
+        <ion-col>
+          <span>Message</span>
+          <span>139</span>
+        </ion-col>
+        <ion-col>
+          <span>Like</span>
+          <span>495</span>
+        </ion-col>
+        <ion-col>
+          <span>Save</span>
+          <span>156</span>
+        </ion-col>
+      </ion-row>
 
-      <!-- Titre Bord -->
-      <ion-row class="title">
+      <!-- Buttons -->
+      <ion-row>
         <ion-col size="12">
-          <ion-item>
+          <ion-item lines="none">
             <ion-label><strong>Tableau de bord</strong></ion-label>
           </ion-item>
         </ion-col>
-      </ion-row>
-
-      <!-- Boutons -->
-      <div class="buttons">
-        <ion-row>
-          <ion-col>
-            <ion-button (click)="global.navigate('/fr/profile/hobbies-update')" shape="round" class="secondary">Modifier le profil</ion-button>
-          </ion-col>
-          <ion-col>
-            <ion-button shape="round" class="danger">Partager le profil</ion-button>
-          </ion-col>
-        </ion-row>  
-      </div>
-    </ion-grid>
-
-    <ion-grid class="videos">
-      <ion-row class="ion-text-center" *ngIf="videosLength <= 0">
-        <ion-col>
-          <ion-label class="camera">
-            <ion-icon name="camera-outline" size="large"></ion-icon>
-          </ion-label>
-          <ion-label>
-            <strong>Partager votre Skill</strong>
-          </ion-label><br />
-          <ion-label>Pour que les recuteurs puissent vous remarquer</ion-label><br />
-          <ion-label color="primary" (click)="this.global.navigate('fr/skills-params')">
-            <strong>Uploader votre video skill</strong>
-          </ion-label>
+        <ion-col size="6">
+          <ion-button
+            (click)="global.navigate('/fr/profile/hobbies-update')"
+            shape="round"
+            class="secondary"
+            expand="block"
+            >Modifier le profil</ion-button
+          >
+        </ion-col>
+        <ion-col size="6">
+          <ion-button shape="round" class="secondary" expand="block"
+            >Partager le profil</ion-button
+          >
         </ion-col>
       </ion-row>
 
-      <ion-row class="videos-list" *ngIf="videosLength > 0">
-        <ion-col size="4"></ion-col>
-        <ion-col size="4" class="add" (click)="this.global.navigate('fr/skills-params')">
-          <ion-icon name="add-circle-outline" size="large"></ion-icon>
+      <!-- Tab Bar -->
+      <ion-row
+        class="tabs-buttons ion-margin-bottom ion-justify-content-around"
+      >
+        <ion-col size="auto">
+          <ion-button fill="clear">
+            <ion-icon
+              src="../../../assets/icon/skills-grid.svg"
+              aria-hidden="true"
+            ></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col size="auto">
+          <ion-button fill="clear">
+            <ion-icon
+              name="lock-closed-outline"
+              color="#000000"
+              aria-hidden="true"
+            ></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col size="auto">
+          <ion-button fill="clear">
+            <ion-icon
+              name="bookmark-outline"
+              color="#000000"
+              aria-hidden="true"
+            ></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col size="auto">
+          <ion-button fill="clear">
+            <ion-icon
+              name="heart-outline"
+              color="#000000"
+              aria-hidden="true"
+            ></ion-icon>
+          </ion-button>
         </ion-col>
       </ion-row>
+	  <!-- Tab Content-->
+	  <ion-row>
+		<ion-col size="12">
+			<app-tab-1></app-tab-1>
+		</ion-col>
+		<ion-col size="12">
+			<app-tab-2></app-tab-2>
+		</ion-col>
+		<ion-col size="12">
+			<app-tab-3></app-tab-3>
+		</ion-col>
+		<ion-col size="12">
+			<app-tab-4></app-tab-4>
+		</ion-col>
+	  </ion-row>
     </ion-grid>
+
+    
   </div>
-
 </ion-content>
