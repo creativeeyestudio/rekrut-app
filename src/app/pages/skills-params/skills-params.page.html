@@ -1,25 +1,56 @@
 <ion-content [fullscreen]="true" class="ion-padding-top">
   <ion-item lines="none">
-    <strong>Options de la vidéo (skill)</strong>
+    <strong [innerHTML]="global.userType === 'recruiter' ? 'Options pour le candidat' : 'Options de la vidéo (skill)'"></strong>
   </ion-item>
-  <ion-list class="ion-padding-end">
-    <ion-item>
-      <ion-select label="Pour quel secteur tu postules ?" placeholder="Secteur" label-placement="stacked">
+
+  <ion-list class="ion-padding-end" *ngIf="global.userType === 'student'">
+    <div class="ion-padding-start ion-padding-end">
+      <label class="custom-label">Pour quel secteur tu postules ?</label>
+      <ion-select aria-label="Pour quel secteur tu postules ?" placeholder="Secteur" label-placement="stacked">
         <ion-select-option value=""></ion-select-option>
       </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-select label="Quel est ton niveau ?" placeholder="Niveau de la question" label-placement="stacked">
+    </div>
+    <div class="ion-padding-start ion-padding-end">
+      <label class="custom-label">Quel est ton niveau ?</label>
+      <ion-select aria-label="Quel est ton niveau ?" placeholder="Niveau de la question" label-placement="stacked">
         <ion-select-option value=""></ion-select-option>
       </ion-select>
-    </ion-item>
+    </div>
+
+    <ol class="ion-padding-top ion-padding-end">
+      <li>Dans la page qui va suivre, on va te poser une question qui sera determinée par le secteur et le niveau que tu as choisi.</li>
+      <li>Enregistre ta réponse dans une vidéo de 1:30 min. </li>
+      <li>Reste naturel, tu peux le faire en intérieur comme en extérieur, le but est de montrer ta personnalité et ta singularité.</li>
+    </ol>
   </ion-list>
 
-  <ol class="ion-padding-end">
-    <li>Dans la page qui va suivre, on va te poser une question qui sera determinée par le secteur et le niveau que tu as choisi.</li>
-    <li>Enregistre ta réponse dans une vidéo de 1:30 min. </li>
-    <li>Reste naturel, tu peux le faire en intérieur comme en extérieur, le but est de montrer ta personnalité et ta singularité.</li>
-  </ol>
+  <ion-list class="ion-padding-end" *ngIf="global.userType === 'recruiter'">
+    <div class="ion-padding-start ion-padding-end">
+      <label class="custom-label">Quel est le secteur du poste ?</label>
+      <ion-select aria-label="Quel est le secteur du poste ?" placeholder="Secteur" label-placement="stacked">
+        <ion-select-option value=""></ion-select-option>
+      </ion-select>
+    </div>
+
+    <div class="ion-padding-start ion-padding-end">
+      <label class="custom-label">Quel niveau attendez vous ?</label>
+      <ion-select aria-label="Quel niveau attendez vous ?" placeholder="Niveau de la question" label-placement="stacked" class="ion-no-margin">
+        <ion-select-option value=""></ion-select-option>
+      </ion-select>
+    </div>
+
+    <div class="ion-padding-start ion-padding-end" (ionChange)="toggleCustomQuestion()">
+      <ion-toggle labelPlacement="end" class="ion-padding-start ion-margin-bottom">Question aléatoire</ion-toggle>
+    </div>
+
+    <div class="ion-padding-start ion-padding-end ion-margin-top" *ngIf="!this.customQuestion">
+      <ion-input aria-label="Votre question personnalisée" placeholder="Votre question personnalisée" class="ion-padding-top ion-padding-bottom"></ion-input>
+    </div>
+
+    <ol class="ion-padding-top ion-padding-end">
+      <li>Dans la page qui va suivre, le candidat devra répondre à une question qui sera determinée par le secteur et le niveau du poste.</li>
+    </ol>
+  </ion-list>
 
   <ion-item class="btn-container ion-justify-content-center">
     <ion-button shape="round" size="default" color="secondary" (click)="goToRecap()">Sauvegarder</ion-button>

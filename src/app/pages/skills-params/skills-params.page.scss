@@ -14,13 +14,31 @@ ion-item {
     }
 }
 
-ion-select {
-    --border-radius: 1rem;
-    --padding-bottom: 1rem;
+ion-select, ion-input {
+    --padding-start: 1rem;
+    --padding-end: 1rem;
+
+    border: 1px solid #C2C8D0;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+
+    &:not(.ion-no-margin) {
+        margin-bottom: 2rem;
+    }
 
     &::part(label) {
-        font-size: 1.3rem;
         font-weight: bold;
-        margin-bottom: 1rem;
     }
+}
+
+ion-toggle {
+    --track-background-checked: #43B356;
+}
+
+.custom-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }
