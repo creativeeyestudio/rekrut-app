@@ -1,0 +1,11 @@
+.videos {
+    --ion-grid-padding: 0;
+    width: 100%;
+
+    &-list {
+        ion-col {
+            --ion-grid-column-padding: 0;
+            aspect-ratio: 149/201;
+        }
+    }
+}
