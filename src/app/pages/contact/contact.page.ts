@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { addIcons } from 'ionicons';
-import { attachOutline, callOutline, chevronBackOutline, paperPlaneOutline } from 'ionicons/icons';
+import { attachOutline, callOutline, chevronBackOutline, paperPlaneOutline, videocamOutline } from 'ionicons/icons';
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
@@ -15,7 +15,7 @@ import { GlobalService } from 'src/app/services/global.service';
 export class ContactPage {
   
   constructor(public global: GlobalService) {
-    addIcons({ callOutline, attachOutline, paperPlaneOutline, chevronBackOutline })
+    addIcons({ callOutline, attachOutline, paperPlaneOutline, chevronBackOutline, videocamOutline })
   }
   
   openFileDialog = () => {
