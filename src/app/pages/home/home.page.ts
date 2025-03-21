@@ -38,7 +38,7 @@ register();
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
-export class HomePage implements AfterViewInit {
+export class HomePage implements OnInit, AfterViewInit {
   @ViewChildren('cardElement') cardElements!: QueryList<ElementRef>;
   isLiked: boolean = false;
 
@@ -80,6 +80,12 @@ export class HomePage implements AfterViewInit {
       sendOutline,
       notificationsOutline,
     });
+  }
+
+  ngOnInit(): void {
+      if (this.global.userType === null) {
+        this.redirectToRegisterPage();
+      }
   }
 
   ngAfterViewInit() {
@@ -168,5 +174,9 @@ export class HomePage implements AfterViewInit {
 
   toggleDescPost(index: number) {
     this.videos[index].isDescPostOpen = !this.videos[index].isDescPostOpen;
+  }
+
+  redirectToRegisterPage() {
+    this.global.navigate('fr/register');
   }
 }
