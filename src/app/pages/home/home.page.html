@@ -1,14 +1,33 @@
 <ion-content [fullscreen]="true">
-
   <div class="video-container">
     <!-- Alerte -->
-    <div class="nav nav--top nav--right">
-      <ion-icon name="notifications-outline" size="large" (click)="global.navigate('fr/notifications')"></ion-icon>
+    <div class="nav nav--secondary nav--top nav--right">
+      <ion-grid>
+        <ion-row class="ion-justify-content-end">
+          <ion-col size="4" *ngIf="this.global.userType === 'recruiter'">
+            <ion-item lines="none">
+              <ion-label>Demande</ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col size="4" *ngIf="this.global.userType === 'recruiter'">
+            <ion-item lines="none">
+              <ion-label>Pour vous</ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col size="1">
+            <ion-icon
+              name="notifications-outline"
+              size="large"
+              (click)="global.navigate('fr/notifications')"
+            ></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </div>
 
     <!-- Dernières notifs -->
     <div class="last-notif nav nav--bottom nav--left">
-      <ion-item class="ion-margin-bottom">
+      <ion-item>
         <ion-label>
           <strong>Titre</strong><br />
           <span>Sous-titre</span>
@@ -23,45 +42,56 @@
       style="margin-bottom: 40px"
       direction="vertical"
     >
-      <swiper-slide 
-        *ngFor="let video of videos; let i = index" 
+      <swiper-slide
+        *ngFor="let video of videos; let i = index"
         class="video-card ion-justify-content-center ion-align-items-center"
         [id]="'video-' + video.id"
       >
-        
         <video [src]="video.url" autoplay muted loop></video>
 
         <div class="icons-list column nav nav--bottom nav--right">
           <!-- Profile -->
-          <figure class="profile icon-container column" (click)="this.global.navigate('/fr/entreprises/infos')">
-            <img src="https://www.herbeumont.be/macommune/vie-politique/conseil-communal/img/no-profile-image-png.png" alt="">
+          <figure
+            class="profile icon-container column"
+            (click)="this.global.userType === 'student' ? this.global.navigate('/fr/entreprises/infos') : this.global.navigate('/fr/student')"
+          >
+            <img
+              src="https://www.herbeumont.be/macommune/vie-politique/conseil-communal/img/no-profile-image-png.png"
+              alt=""
+            />
             <span class="ion-text-center">100 %</span>
           </figure>
 
           <!-- Send -->
           <div class="icon-container column">
-            <ion-icon size="large" name="send-outline" (click)="this.global.navigate('/fr/messagerie/contact')"></ion-icon>
+            <ion-icon
+              size="large"
+              name="send-outline"
+              (click)="this.global.navigate('/fr/messagerie/contact')"
+            ></ion-icon>
             <span class="ion-text-center">100</span>
           </div>
 
           <!-- Like -->
           <div class="icon-container column">
-            <ion-icon 
-              size="large" 
-              [name]="video.isLiked ? 'heart' : 'heart-outline'" 
-              [ngClass]="{'liked': video.isLiked}" 
-              (click)="toggleLike(i)">
+            <ion-icon
+              size="large"
+              [name]="video.isLiked ? 'heart' : 'heart-outline'"
+              [ngClass]="{'liked': video.isLiked}"
+              (click)="toggleLike(i)"
+            >
             </ion-icon>
             <span class="ion-text-center">100</span>
           </div>
 
           <!-- Bookmark -->
           <div class="icon-container column">
-            <ion-icon 
-              size="large" 
+            <ion-icon
+              size="large"
               [name]="video.isSaved ? 'bookmark' : 'bookmark-outline'"
-              [ngClass]="{'saved': video.isSaved}" 
-              (click)="toggleSave(i)"></ion-icon>
+              [ngClass]="{'saved': video.isSaved}"
+              (click)="toggleSave(i)"
+            ></ion-icon>
           </div>
         </div>
 
@@ -73,7 +103,7 @@
           [buttons]="alertButtons"
         ></ion-alert>
 
-        <ion-alert 
+        <ion-alert
           [isOpen]="video.isDescPostOpen"
           trigger="fiche-{{i}}"
           header="Nom de la description"
@@ -81,8 +111,7 @@
           (didDismiss)="toggleDescPost(i)"
           [buttons]="cvButtons"
         ></ion-alert>
-
-      </swiper-slide>  
+      </swiper-slide>
     </swiper-container>
   </div>
 </ion-content>

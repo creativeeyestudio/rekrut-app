@@ -17,6 +17,23 @@
     &--left {
         left: 20px;
     }
+
+    &--secondary {
+        width: 100%;
+
+        ion-grid {
+            width: 100%;
+        }
+
+        ion-item {
+            --background: rgba(0, 0, 0, 0);
+        }
+
+        ion-label {
+            --color: white;
+            font-weight: bold;
+        }
+    }
 }
 
 .last-notif {
