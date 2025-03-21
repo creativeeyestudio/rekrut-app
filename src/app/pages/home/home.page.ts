@@ -83,12 +83,13 @@ export class HomePage implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-      if (this.global.userType === null) {
-        this.redirectToRegisterPage();
-      }
   }
 
   ngAfterViewInit() {
+    if (this.global.userType === null) {
+      this.redirectToRegisterPage();
+    }
+      
     this.cardElements.forEach((card, index) => {
       const gesture = this.gestureCtrl.create({
         el: card.nativeElement,

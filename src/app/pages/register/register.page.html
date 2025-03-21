@@ -27,7 +27,7 @@
         <ion-button
           expand="block"
           fill="outline"
-          (click)="toggleBlock('form-1', 'recruter')"
+          (click)="toggleBlock('form-1', 'recruiter')"
         >
           <ion-icon
             size="large"
@@ -84,7 +84,7 @@
         </p>
 
         <ion-button
-          (click)="toggleBlock('form-2')"
+          (click)="toggleBlock('form-2', this.global.userType)"
           shape="round"
           expand="block"
           class="btn--center btn--margin-top dark"
@@ -92,7 +92,7 @@
         >
       </ion-col>
 
-      <ion-col size="12" *ngIf="userType === 'recruter'">
+      <ion-col size="12" *ngIf="userType === 'recruiter'">
         <div class="ion-margin-bottom">
           <label class="ion-margin-bottom" for="ion-input-0"
             ><strong>Numéro de téléphone</strong></label
@@ -121,7 +121,7 @@
         </p>
 
         <ion-button
-          (click)="toggleBlock('form-2')"
+          (click)="toggleBlock('form-2', this.global.userType)"
           shape="round"
           expand="block"
           class="btn--center btn--margin-top dark"
@@ -165,6 +165,7 @@
           shape="round"
           expand="block"
           class="btn--center btn--margin-top dark"
+           (click)="global.navigate('/fr/tutorial')"
           >Continuer</ion-button>
       </ion-col>
       <ion-col size="12">
