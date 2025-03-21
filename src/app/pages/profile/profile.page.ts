@@ -23,4 +23,18 @@ export class ProfilePage  {
     addIcons({ settingsOutline, chevronBackOutline, addCircleOutline, cameraOutline, lockClosedOutline, bookmarkOutline, heartOutline });
   }
 
+  changeTab(tabId: string) {
+    // Retrait des onglets actifs
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach((tab) => {
+      tab.classList.remove('active')
+    })
+
+    // Affichage de l'onglet sélectionné
+    const tab = document.getElementById(tabId);
+    tab?.classList.add('active');
+
+    console.log("Called");
+  }
+
 }
