@@ -1,0 +1,47 @@
+.btn-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.content-input {
+    margin-bottom: 1rem;
+}
+
+.add-link {
+    color: #3183F5;
+}
+
+ion-item {
+    &.title {
+        font-size: 20px;
+    }
+}
+
+ion-select {
+    --padding-start: 26px;
+    --padding-end: 26px;
+
+    border-radius: 6px;
+    border: 1px solid #C2C8D0;
+    width: 100%;
+}
+
+ion-checkbox {
+    --size: 18.75px;
+    --border-width: 2px;
+    --border-radius: 5px;
+
+    --checkbox-background-checked: white;
+    --checkmark-color: #3183F5;
+
+
+    &::part(label) {
+        font-size: 14px;
+        font-weight: 600;
+        padding-inline-end: 1rem;
+        text-overflow: inherit;
+        white-space: inherit;
+    }
+}

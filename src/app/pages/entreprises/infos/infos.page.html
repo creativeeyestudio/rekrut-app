@@ -1,28 +1,23 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Nom de l'entreprise</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <div class="settings">
-    <ion-icon name="settings" size="large" class="set-icon ion-margin-top ion-margin-end"></ion-icon>
-  </div>
-  
   <ion-item class="ion-padding-start ion-padding-end">
     <ion-thumbnail slot="start">
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+      <img
+        alt="Silhouette of mountains"
+        src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+      />
     </ion-thumbnail>
     <ion-label class="fiche-label" slot="end">
       <strong class="title">Nom de l'entreprise</strong><br />
-      <span class="subtitle">Information que vous souhaiter mettre en avant</span>
+      <span class="subtitle"
+        >Information que vous souhaiter mettre en avant</span
+      >
     </ion-label>
   </ion-item>
 
   <ion-grid class="main-data">
     <ion-row>
       <ion-col>
-        <span>Dm</span>
+        <span>Messages</span>
         <span>139</span>
       </ion-col>
       <ion-col>
@@ -53,7 +48,10 @@
   <ion-grid class="actions">
     <ion-row>
       <ion-col class="ion-text-center">
-        <ion-icon name="grid-outline" (click)="global.navigate('fr/offres')"></ion-icon>
+        <ion-icon
+          name="grid-outline"
+          (click)="global.navigate('fr/offres')"
+        ></ion-icon>
       </ion-col>
       <ion-col class="ion-text-center">
         <ion-icon name="bookmark-outline"></ion-icon>
@@ -63,14 +61,23 @@
 
   <ion-list>
     <ion-item>
-      <ion-label>
-        <strong>Nom du poste</strong><br />
-        <span>
-          Lieu : <span>Paris</span>
-        </span><br />
-        <span>Salaire : 35000 € / an</span>
-      </ion-label>
-      <ion-button fill="outline" size="small" shape="round" class="apply" (click)="this.global.navigate('fr/offre')">Postuler</ion-button>
+      <div
+        class="content-item ion-padding-top ion-padding-bottom ion-padding-start ion-padding-end"
+      >
+        <ion-label>
+          <strong>Nom du poste</strong><br />
+          <span> Lieu : <span>Paris</span> </span><br />
+          <span>Salaire : 35000 € / an</span>
+        </ion-label>
+        <ion-button
+          fill="outline"
+          size="small"
+          shape="round"
+          class="apply"
+          (click)="this.global.navigate('fr/offre')"
+          >Postuler</ion-button
+        >
+      </div>
     </ion-item>
   </ion-list>
 </ion-content>

@@ -100,8 +100,22 @@ export const routes: Routes = [
         path: 'tutorial',
         loadComponent: () => import('./pages/tutorial/tutorial.page').then( m => m.TutorialPage)
       },
+      {
+        path: 'create-profile',
+        loadComponent: () => import('./pages/create-profile/create-profile.page').then( m => m.CreateProfilePage)
+      },
+      {
+        path: 'create-profile-interests',
+        loadComponent: () => import('./pages/create-profile-interests/create-profile-interests.page').then( m => m.CreateProfileInterestsPage)
+      },
     ],
+  },  {
+    path: 'student',
+    loadComponent: () => import('./pages/student/student.page').then( m => m.StudentPage)
   },
+
+
+
 
 
 

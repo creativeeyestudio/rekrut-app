@@ -16,6 +16,14 @@ export class UploadPage {
 
   newPost: boolean = false;
 
+  domains: Array<string> = [
+    'Marketing', 'Ingénierie', 'Ressources humaines'
+  ]
+
+  keywords: Array<string> = [
+    'Photoshop', 'Python', 'Gestion d\'équipe'
+  ]
+
   togglePost() {
     this.newPost = !this.newPost;
   }

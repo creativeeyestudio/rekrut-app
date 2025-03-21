@@ -1,16 +1,16 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonCol, IonGrid, IonRow, IonButton, IonImg, IonInput, IonInputPasswordToggle, IonItem, IonIcon } from '@ionic/angular/standalone';
+import { IonContent, IonCol, IonGrid, IonRow, IonButton, IonImg, IonInput, IonInputPasswordToggle, IonIcon } from '@ionic/angular/standalone';
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
     selector: 'app-register',
     templateUrl: './register.page.html',
     styleUrls: ['./register.page.scss'],
-    imports: [IonInput, IonInputPasswordToggle, IonImg, IonButton, IonRow, IonGrid, IonCol, IonContent, IonHeader, IonTitle, IonToolbar, IonIcon, CommonModule, FormsModule]
+    imports: [IonInput, IonInputPasswordToggle, IonImg, IonButton, IonRow, IonGrid, IonCol, IonContent, IonIcon, CommonModule, FormsModule]
 })
-export class RegisterPage {
+export class RegisterPage implements AfterViewInit {
 
   userType: 'student' | 'recruter' | null = null;
 
@@ -25,8 +25,11 @@ export class RegisterPage {
     document.getElementById(blockId)?.classList.remove('ion-hide');
 
     // Sélection du type de profil
-
     this.userType = userType;
+  }
+
+  ngAfterViewInit(): void {
+      this.global.isNavHidden = true;
   }
 
 }

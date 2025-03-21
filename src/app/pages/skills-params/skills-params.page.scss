@@ -8,6 +8,10 @@ ion-item {
         width: fit-content;
         margin: auto;
     }
+
+    &.title {
+        --border-width: 0px;
+    }
 }
 
 ion-select {
@@ -17,6 +21,6 @@ ion-select {
     &::part(label) {
         font-size: 1.3rem;
         font-weight: bold;
-        margin-bottom: .85rem;
+        margin-bottom: 1rem;
     }
 }

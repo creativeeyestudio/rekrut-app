@@ -23,7 +23,11 @@
       style="margin-bottom: 40px"
       direction="vertical"
     >
-      <swiper-slide *ngFor="let video of videos; let i = index" class="video-card ion-justify-content-center ion-align-items-center">
+      <swiper-slide 
+        *ngFor="let video of videos; let i = index" 
+        class="video-card ion-justify-content-center ion-align-items-center"
+        [id]="'video-' + video.id"
+      >
         
         <video [src]="video.url" autoplay muted loop></video>
 
@@ -53,7 +57,11 @@
 
           <!-- Bookmark -->
           <div class="icon-container column">
-            <ion-icon size="large" name="bookmark-outline"></ion-icon>
+            <ion-icon 
+              size="large" 
+              [name]="video.isSaved ? 'bookmark' : 'bookmark-outline'"
+              [ngClass]="{'saved': video.isSaved}" 
+              (click)="toggleSave(i)"></ion-icon>
           </div>
         </div>
 
@@ -63,6 +71,15 @@
           subHeader="Sous-titre optionnel"
           message="Contenu."
           [buttons]="alertButtons"
+        ></ion-alert>
+
+        <ion-alert 
+          [isOpen]="video.isDescPostOpen"
+          trigger="fiche-{{i}}"
+          header="Nom de la description"
+          message="Contenu..."
+          (didDismiss)="toggleDescPost(i)"
+          [buttons]="cvButtons"
         ></ion-alert>
 
       </swiper-slide>  

@@ -1,0 +1,29 @@
+<ion-grid class="videos">
+  <ion-row class="ion-text-center" *ngIf="videosLength <= 0">
+    <ion-col>
+      <ion-label class="camera">
+        <ion-icon name="camera-outline" size="large"></ion-icon>
+      </ion-label>
+      <ion-label> <strong>Partager votre Skill</strong> </ion-label><br />
+      <ion-label>Pour que les recuteurs puissent vous remarquer</ion-label
+      ><br />
+      <ion-label
+        color="primary"
+        (click)="this.global.navigate('fr/skills-params')"
+      >
+        <strong>Uploader votre video skill</strong>
+      </ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="videos-list" *ngIf="videosLength > 0">
+    <ion-col size="4"></ion-col>
+    <ion-col
+      size="4"
+      class="add"
+      (click)="this.global.navigate('fr/skills-params')"
+    >
+      <ion-icon name="add-circle-outline" size="large"></ion-icon>
+    </ion-col>
+  </ion-row>
+</ion-grid>

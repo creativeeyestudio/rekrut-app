@@ -21,6 +21,7 @@ ion-icon {
 ion-list {
     padding: 20px 0;
     ion-item {
+        --inner-padding-end: 0;
         &:nth-child(odd) {
             --background: rgba(49, 131, 245, 0.05);
         }
@@ -63,4 +64,13 @@ ion-button {
 
 .actions {
     font-size: 28px;
+}
+
+.content-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #D8E4F8;
+    border-radius: 12px;
 }

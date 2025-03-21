@@ -1,5 +1,6 @@
 ion-thumbnail {
     --border-radius: 3rem;
+    --size: 100px;
 }
 
 ion-menu-toggle,
@@ -52,30 +53,26 @@ ion-list {
     }
 }
 
-.buttons {
-    padding-bottom: 20px;
+.tab {
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: .2s;
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.tabs-buttons {
+    width: 100%;
+
+    ion-button {
+        color: #000000;
+    }
 }
 
 .camera {
     display: block;
-}
-
-.videos {
-    --ion-grid-padding: 0;
-    width: 100%;
-
-    &-list {
-        ion-col {
-            --ion-grid-column-padding: 0;
-            aspect-ratio: 149/201;
-
-            &.add {
-                background-color: rgba($color: #7E7878, $alpha: .19);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-    }
 }
 

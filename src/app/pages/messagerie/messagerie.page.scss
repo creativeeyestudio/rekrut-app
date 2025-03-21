@@ -11,6 +11,11 @@ ion-list {
         --padding-end: 15px;
         --border-style: none;
         font-size: .95em;
+
+        &.not-read {
+            font-weight: bold;
+            --background: #F3F8FE;
+        }
     }
 }
 
