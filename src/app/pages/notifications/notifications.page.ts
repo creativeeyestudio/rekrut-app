@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import { callOutline } from 'ionicons/icons';
+import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
     selector: 'app-notifications',
@@ -11,13 +12,10 @@ import { callOutline } from 'ionicons/icons';
     styleUrls: ['./notifications.page.scss'],
     imports: [IonicModule, CommonModule, FormsModule]
 })
-export class NotificationsPage implements OnInit {
+export class NotificationsPage {
 
-  constructor() {
+  constructor(public global: GlobalService) {
     addIcons({callOutline})
-  }
-
-  ngOnInit() {
   }
 
 }
