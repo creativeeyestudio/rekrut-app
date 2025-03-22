@@ -12,16 +12,24 @@
     </ion-item>
   </ion-list>
 
-  <ion-button size="default" expand="block" class="ion-margin-start ion-margin-end">Pouvez-vous me dérouler le compte de résultat ?</ion-button>
+  <ion-button size="default" expand="block" class="ion-margin-start ion-margin-end ion-margin-bottom">Pouvez-vous me dérouler le compte de résultat ?</ion-button>
 
-  <ol class="ion-padding-top ion-padding-end ion-margin-top">
+  <ol class="ion-padding-top ion-padding-end ion-margin-bottom" *ngIf="this.global.userType === 'student'">
     <li>Tu dois maintenant quitter l’application pour tourner ta réponse en vidéo</li>
     <li>Ne ferme pas l’application en arrière plan</li>
     <li>Une fois cela fait, clique sur “J’ai compris”</li>
     <li>Upload ta vidéo et c’est tout bon !</li>
   </ol>
 
-  <ion-item class="btn-container">
-    <ion-button color="secondary" shape="round" size="default" class="ion-margin-auto" (click)="this.global.navigate('fr/upload')">J'ai compris</ion-button>
+  <ol class="ion-padding-top ion-padding-end ion-margin-top" *ngIf="this.global.userType === 'recruiter'">
+    <li>Vos paramètres vous conviennent et que la question vous plait cliquez sur "Poster l'annonce"</li>
+  </ol>
+
+  <ion-item class="btn-container" *ngIf="this.global.userType === 'student'">
+    <ion-button shape="round" size="default" class="ion-margin-auto dark" (click)="this.global.navigate('fr/upload')">J'ai compris</ion-button>
+  </ion-item>
+
+  <ion-item class="btn-container" *ngIf="this.global.userType === 'recruiter'">
+    <ion-button shape="round" size="default" class="ion-margin-auto dark" (click)="this.global.navigate('fr/skills-desc')">Suivant</ion-button>
   </ion-item>
 </ion-content>

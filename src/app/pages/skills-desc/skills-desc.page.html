@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true">
+  <ion-item lines="none" class="ion-padding-top ion-padding-bottom">
+    <ion-icon slot="start" name="chevron-back-outline" (click)="global.goBack()"></ion-icon>
+    <strong>Description du poste</strong>
+  </ion-item>
+
+  <ion-list>
+    <ion-item lines="none">
+      <ion-select label="Type d'emploi" labelPlacement="floating">
+        <ion-select-option></ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-select label="Code postal" labelPlacement="floating">
+        <ion-select-option></ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-select label="Compétences recherchées (Mots clés)" labelPlacement="floating">
+        <ion-select-option></ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-select label="Durée" labelPlacement="floating">
+        <ion-select-option></ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-textarea aria-label="Description détaillée du poste..." placeholder="Description détaillée du poste..."></ion-textarea>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-checkbox labelPlacement="end">J'accepte que les informations saisies soient utilisées pour trouver des candidats potentiels</ion-checkbox>
+    </ion-item>
+    <ion-item lines="none" class="btn-container">
+      <ion-button shape="round" size="default" class="dark">Poster l'annonce</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

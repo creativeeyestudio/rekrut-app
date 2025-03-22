@@ -1,0 +1,45 @@
+ion-select, 
+ion-textarea {
+    --padding-bottom: 25px;
+    --padding-start: 15px;
+    --padding-end: 15px;
+
+    border-radius: 6px;
+    border: 1px solid #C2C8D0;
+}
+
+ion-select {
+    height: 59px;
+    margin-bottom: 20px;
+}
+
+ion-textarea {
+    --padding-top: 20px;
+    height: 154px;
+    margin-bottom: 10px;
+}
+
+ion-checkbox {
+    --size: 18.75px;
+    --border-width: 2px;
+    --border-radius: 5px;
+
+    --checkbox-background-checked: white;
+    --checkmark-color: #3183F5;
+    --border-color-checked: #3183F5;
+
+    &::part(label) {
+        font-size: 14px;
+        font-weight: 600;
+        padding-inline-end: 1rem;
+        text-overflow: inherit;
+        white-space: inherit;
+    }
+}
+
+ion-item {
+    &.btn-container {
+        width: max-content;
+        margin: 20px auto 0;
+    }
+}
