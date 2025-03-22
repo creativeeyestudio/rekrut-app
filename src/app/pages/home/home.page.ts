@@ -1,7 +1,6 @@
 import {
   Component,
   ElementRef,
-  OnInit,
   QueryList,
   ViewChildren,
   CUSTOM_ELEMENTS_SCHEMA,
@@ -11,8 +10,9 @@ import {
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule, GestureController } from '@ionic/angular';
-import 'hammerjs';
 import { addIcons } from 'ionicons';
+import { GlobalService } from 'src/app/services/global.service';
+import 'hammerjs';
 import {
   flagOutline,
   heart,
@@ -23,7 +23,6 @@ import {
   sendOutline,
   notificationsOutline,
 } from 'ionicons/icons';
-import { GlobalService } from 'src/app/services/global.service';
 
 
 import { register } from 'swiper/element/bundle';
@@ -38,14 +37,15 @@ register();
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
-export class HomePage implements OnInit, AfterViewInit {
+export class HomePage implements AfterViewInit {
   @ViewChildren('cardElement') cardElements!: QueryList<ElementRef>;
   isLiked: boolean = false;
 
   videos = [
-    { id: 1, url: 'assets/videos/video1.mp4', isLiked: false, isSaved: false, isDescPostOpen: false },
-    { id: 2, url: 'assets/videos/video2.mp4', isLiked: false, isSaved: false, isDescPostOpen: false },
-    { id: 3, url: 'assets/videos/video3.mp4', isLiked: false, isSaved: false, isDescPostOpen: false },
+    { id: 1, url: 'assets/videos/video1.mp4', isLiked: false, isSaved: false, isDescPostOpen: false, available: true },
+    { id: 2, url: 'assets/videos/video2.mp4', isLiked: false, isSaved: false, isDescPostOpen: false, available: true },
+    { id: 3, url: 'assets/videos/video3.mp4', isLiked: false, isSaved: false, isDescPostOpen: false, available: true },
+    { id: 3, url: 'assets/videos/video3.mp4', isLiked: false, isSaved: false, isDescPostOpen: false, available: false },
   ];
 
   alertButtons = ['Contacter', 'Fermer'];
@@ -80,9 +80,6 @@ export class HomePage implements OnInit, AfterViewInit {
       sendOutline,
       notificationsOutline,
     });
-  }
-
-  ngOnInit(): void {
   }
 
   ngAfterViewInit() {

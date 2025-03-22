@@ -47,7 +47,11 @@
         class="video-card ion-justify-content-center ion-align-items-center"
         [id]="'video-' + video.id"
       >
-        <video [src]="video.url" autoplay muted loop></video>
+        <video [src]="video.url" autoplay muted loop *ngIf="video.available"></video>
+
+        <ion-img *ngIf="!video.available && global.userType === 'recruiter'" src="'../../../../../assets/images/cv-example.jpg"></ion-img>
+        <div *ngIf="!video.available && global.userType === 'recruiter'" class="bg-notif bg-notif--bottom"></div>
+        <div *ngIf="!video.available && global.userType === 'recruiter'" class="bg-notif bg-notif--right"></div>
 
         <div class="icons-list column nav nav--bottom nav--right">
           <!-- Profile -->
