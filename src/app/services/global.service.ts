@@ -8,7 +8,7 @@ import { NavController } from '@ionic/angular';
 export class GlobalService {
 
   public isNavHidden: boolean = false;
-  public userType: 'student' | 'recruiter' | null = 'student';
+  public userType: 'student' | 'recruiter' | null = 'recruiter';
 
   constructor(public router: Router, public nav: NavController) { }
 

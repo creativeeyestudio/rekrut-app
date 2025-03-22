@@ -11,7 +11,7 @@ import { GlobalService } from 'src/app/services/global.service';
 })
 export class Tab1Component {
 
-  videosLength: number = 0;
+  videosLength: number = 1;
 
   constructor(public global: GlobalService) { }
 
