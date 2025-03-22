@@ -74,3 +74,28 @@ ion-button {
     background-color: #D8E4F8;
     border-radius: 12px;
 }
+
+.icon-share {
+    margin: auto;
+    display: block;
+    width: 32px;
+    height: 32px;
+    padding: 10px;
+    border-radius: 2rem;
+
+    &.bg {
+        &--grey {
+            background-color: #EEEEEF;
+        }
+
+        &--fb {
+            background-color: #1979F3;
+            color: white;
+        }
+
+        &--wsapp {
+            background-color: #26D267;
+            color: white;
+        }
+    }
+}

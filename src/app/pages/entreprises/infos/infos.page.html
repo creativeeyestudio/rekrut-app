@@ -36,11 +36,32 @@
       <ion-col size="12">
         <p class="ion-no-margin"><strong>Tableau de bord :</strong></p>
       </ion-col>
-      <ion-col>
+      <ion-col size="6">
         <ion-button expand="block">Contacter</ion-button>
       </ion-col>
-      <ion-col>
-        <ion-button expand="block">Partager le profil</ion-button>
+      <ion-col size="6">
+        <ion-button expand="block" (click)="toggleShareLinksVisible()">Partager le profil</ion-button>
+      </ion-col>
+
+      <ion-col size="12" *ngIf="isShareLinksVisible" class="ion-margin-top">
+        <ion-row>
+          <ion-col size="3">
+            <ion-icon class="icon-share bg--grey" size="large" name="share-social-outline"></ion-icon>
+            <p class="ion-text-center">Partager</p>
+          </ion-col>
+          <ion-col size="3">
+            <ion-icon class="icon-share bg--wsapp" size="large" name="logo-whatsapp"></ion-icon>
+            <p class="ion-text-center">WhatsApp</p>
+          </ion-col>
+          <ion-col size="3">
+            <ion-icon class="icon-share bg--grey" size="large" name="link-outline"></ion-icon>
+            <p class="ion-text-center">Copier le lien</p>
+          </ion-col>
+          <ion-col size="3">
+            <ion-icon class="icon-share bg--fb" size="large" name="logo-facebook"></ion-icon>
+            <p class="ion-text-center">Facebook</p>
+          </ion-col>
+        </ion-row>
       </ion-col>
     </ion-row>
   </ion-grid>
