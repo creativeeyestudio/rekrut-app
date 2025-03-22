@@ -16,3 +16,28 @@
         }
     }
 }
+
+ion-list {
+    ion-item {
+        &:nth-child(odd) {
+            --background: rgba(49, 131, 245, 0.05);
+        }
+    }
+}
+
+.content-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #D8E4F8;
+    border-radius: 12px;
+    margin: 1rem 0;
+}
+
+.icon-add {
+    margin: 33px auto 0;
+    display: block;
+    width: 42px;
+    height: 42px;
+}
