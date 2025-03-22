@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { chevronBackOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
+import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
     selector: 'app-upload',
@@ -15,6 +16,7 @@ import { addIcons } from 'ionicons';
 export class UploadPage {
 
   newPost: boolean = false;
+  numbers = Array.from({ length: 9 }, (_, i) => i + 1);
 
   domains: Array<string> = [
     'Marketing', 'Ingénierie', 'Ressources humaines'
@@ -24,14 +26,12 @@ export class UploadPage {
     'Photoshop', 'Python', 'Gestion d\'équipe'
   ]
 
-  togglePost() {
-    this.newPost = !this.newPost;
-  }
-
-  constructor() {
+  constructor(public global: GlobalService) {
     addIcons({ chevronBackOutline })
   }
 
-  numbers = Array.from({ length: 9 }, (_, i) => i + 1);
+  togglePost() {
+    this.newPost = !this.newPost;
+  }
 
 }

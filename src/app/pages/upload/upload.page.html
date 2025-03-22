@@ -4,7 +4,7 @@
     <video src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4"></video>
   </div>
 
-  <ion-button class="back-btn" expand="full">
+  <ion-button class="back-btn" expand="full" (click)="global.goBack()">
     <div class="ion-text-start previous" *ngIf="!newPost">
       <ion-icon name="chevron-back-outline" slot="start"></ion-icon>
       Récents
