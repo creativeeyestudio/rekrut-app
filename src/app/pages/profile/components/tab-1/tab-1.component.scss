@@ -17,6 +17,16 @@
     }
 }
 
+.camera {
+    display: flex;
+    margin: auto;
+    width: 71px;
+    height: 71px;
+    border: 2px solid black;
+    border-radius: 6rem;
+    margin-bottom: 30px;
+}
+
 ion-list {
     ion-item {
         &:nth-child(odd) {
