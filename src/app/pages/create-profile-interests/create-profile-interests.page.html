@@ -53,7 +53,7 @@
       </p>
     </div>
     
-    <ion-item lines="none" class="ion-margin-top">
+    <ion-item lines="none" class="ion-margin-top" *ngIf="global.userType === 'student'">
       <ion-checkbox labelPlacement="end">Je certifie que ces informations sont justes et que je peux les prouver lors d'un entretien.</ion-checkbox>
     </ion-item>
 
