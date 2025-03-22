@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true">
   <ion-grid>
     <!-- Thumbnail -->
-    <ion-row class="infos-profile">
+    <ion-row class="infos-profile ion-padding-top">
       <ion-col size="12">
         <ion-thumbnail>
             <ion-img
@@ -21,7 +21,7 @@
     </ion-row>
 
     <!-- Main numbers -->
-    <ion-row class="main-data">
+    <ion-row class="main-data ion-padding-start ion-padding-end">
       <ion-col>
         <span>Message</span>
         <span>139</span>
@@ -37,7 +37,7 @@
     </ion-row>
 
     <!-- Buttons -->
-    <ion-row>
+    <ion-row class="ion-padding-start ion-padding-end">
       <ion-col size="12">
         <ion-item lines="none">
           <ion-label><strong>Tableau de bord</strong></ion-label>
@@ -62,7 +62,7 @@
     <ion-row
       class="tabs-buttons ion-margin-bottom ion-justify-content-around"
     >
-      <ion-col size="auto">
+      <ion-col size="auto" class="no-padding">
         <ion-button fill="clear" (click)="this.changeTab('tab-1')">
           <ion-icon
             src="../../../assets/icon/skills-grid.svg"
@@ -70,7 +70,7 @@
           ></ion-icon>
         </ion-button>
       </ion-col>
-      <ion-col size="auto">
+      <ion-col size="auto" class="no-padding">
         <ion-button fill="clear" (click)="this.changeTab('tab-2')">
           <ion-icon
             name="lock-closed-outline"
@@ -79,7 +79,7 @@
           ></ion-icon>
         </ion-button>
       </ion-col>
-      <ion-col size="auto">
+      <ion-col size="auto" class="no-padding">
         <ion-button fill="clear" (click)="this.changeTab('tab-3')">
           <ion-icon
             name="bookmark-outline"
@@ -88,7 +88,7 @@
           ></ion-icon>
         </ion-button>
       </ion-col>
-      <ion-col size="auto">
+      <ion-col size="auto" class="no-padding">
         <ion-button fill="clear" (click)="this.changeTab('tab-4')">
           <ion-icon
             name="heart-outline"
