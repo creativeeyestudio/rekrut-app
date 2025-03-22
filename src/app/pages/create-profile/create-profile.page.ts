@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonItem, IonList, IonInput, IonSelect, IonSelectOption, IonCheckbox, IonButton, IonGrid, IonRow, IonCol } from '@ionic/angular/standalone';
 import { PhoneIndicatorService } from 'src/app/services/phone-indicator.service';
+import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
   selector: 'app-create-profile',
@@ -13,6 +14,6 @@ import { PhoneIndicatorService } from 'src/app/services/phone-indicator.service'
 })
 export class CreateProfilePage {
 
-  constructor(public phoneList: PhoneIndicatorService) { }
+  constructor(public global: GlobalService, public phoneList: PhoneIndicatorService) { }
 
 }

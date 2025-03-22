@@ -13,6 +13,9 @@
     <ion-item lines="none">
       <ion-input label="Âge" type="text" labelPlacement="floating" required></ion-input>
     </ion-item>
+    <ion-item lines="none" *ngIf="global.userType === 'recruiter'">
+      <ion-input label="Nom de votre entreprise" type="text" labelPlacement="floating" required></ion-input>
+    </ion-item>
     <ion-item lines="none">
       <ion-input label="Adresse E-Mail (Visible sur le profil)" type="mail" labelPlacement="floating" required></ion-input>
     </ion-item>
