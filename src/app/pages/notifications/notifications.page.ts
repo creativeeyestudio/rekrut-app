@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { addIcons } from 'ionicons';
-import { callOutline } from 'ionicons/icons';
+import { callOutline, chevronBack, chevronBackOutline } from 'ionicons/icons';
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
@@ -15,7 +15,7 @@ import { GlobalService } from 'src/app/services/global.service';
 export class NotificationsPage {
 
   constructor(public global: GlobalService) {
-    addIcons({callOutline})
+    addIcons({callOutline, chevronBackOutline})
   }
 
 }

@@ -8,6 +8,10 @@ ion-item {
     &:nth-child(even) {
         --background: rgba(49, 131, 245, 0.05);
     }
+
+    .title {
+        font-size: 1.5em;
+    }
 }
 
 ion-item-divider {

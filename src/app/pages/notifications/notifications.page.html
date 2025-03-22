@@ -1,13 +1,9 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button [text]="'Retour'" defaultHref="/fr"></ion-back-button>
-    </ion-buttons>
-    <ion-title>Notifications</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
+  <ion-item (click)="global.goBack()">
+    <ion-icon name="chevron-back-outline" slot="start"></ion-icon>
+    <strong class="title">Notifications</strong>
+  </ion-item>
+
   <ion-list>
     <!-- Today -->
     <ion-item-group>
