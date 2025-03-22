@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonItem, IonGrid, IonRow, IonCol, IonButton, IonCheckbox, IonSelect, IonSelectOption, IonList, IonIcon } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { addOutline } from 'ionicons/icons';
+import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
   selector: 'app-create-profile-interests',
@@ -14,8 +15,13 @@ import { addOutline } from 'ionicons/icons';
 })
 export class CreateProfileInterestsPage {
 
-  constructor() {
-    addIcons({addOutline})
+  constructor(public global: GlobalService) {
+    addIcons({addOutline});
+  }
+
+  goToHome() {
+    this.global.isNavHidden = false;
+    this.global.navigate('fr')
   }
 
 }

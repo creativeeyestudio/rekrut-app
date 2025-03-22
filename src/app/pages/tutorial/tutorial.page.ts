@@ -62,8 +62,7 @@ export class TutorialPage implements AfterViewInit  {
       this.tutoPos++;
       this.tutoBlocks[this.tutoPos].visible = true;
     } else {
-      this.global.navigate('fr');
-      this.global.isNavHidden = false;
+      this.global.navigate('fr/create-profile');
     }
   }
 

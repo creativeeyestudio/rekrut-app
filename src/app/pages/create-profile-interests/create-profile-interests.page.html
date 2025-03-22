@@ -1,6 +1,7 @@
 <ion-content [fullscreen]="true">
   <ion-item lines="none" class="ion-padding-top ion-padding-bottom title">
-    <strong>Vos centres d'interêts</strong>
+    <strong *ngIf="global.userType === 'student'">Vos centres d'interêts</strong>
+    <strong *ngIf="global.userType === 'recruiter'">Vos centres d'interêts recherchés</strong>
   </ion-item>
 
   <ion-list>
@@ -60,7 +61,7 @@
       <ion-grid>
         <ion-row class="ion-justify-content-center">
           <ion-col size="auto">
-            <ion-button color="secondary" size="default" shape="round">Sauvegarder</ion-button>
+            <ion-button color="secondary" size="default" shape="round" (click)="this.goToHome()">Sauvegarder</ion-button>
           </ion-col>
         </ion-row>
       </ion-grid>
