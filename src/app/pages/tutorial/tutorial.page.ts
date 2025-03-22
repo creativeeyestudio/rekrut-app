@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonImg } from '@ionic/angular/standalone';
+import { IonContent, IonButton, IonImg } from '@ionic/angular/standalone';
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { GlobalService } from 'src/app/services/global.service';
   templateUrl: './tutorial.page.html',
   styleUrls: ['./tutorial.page.scss'],
   standalone: true,
-  imports: [IonImg, IonButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonImg, IonButton, IonContent, CommonModule, FormsModule]
 })
 export class TutorialPage implements AfterViewInit  {
   @ViewChildren('tutoElement') tutoElements!: QueryList<ElementRef>;
