@@ -1,27 +1,19 @@
-ion-select, 
-ion-input {
+ion-select {
     --padding-bottom: 25px;
     --padding-start: 15px;
     --padding-end: 15px;
 
     border-radius: 6px;
     border: 1px solid #C2C8D0;
-
-    &[type=file] {
-        --padding-top: 20px;
-        --padding-bottom: 20px;
-    }
-}
-
-ion-select {
     height: 59px;
     margin-bottom: 20px;
 }
 
-ion-textarea {
-    --padding-top: 20px;
-    height: 154px;
-    margin-bottom: 10px;
+ion-item {
+    &.btn-container {
+        width: max-content;
+        margin: 20px auto 0;
+    }
 }
 
 ion-checkbox {
@@ -40,17 +32,4 @@ ion-checkbox {
         text-overflow: inherit;
         white-space: inherit;
     }
-}
-
-ion-item {
-    &.btn-container {
-        width: max-content;
-        margin: 20px auto 0;
-    }
-}
-
-ion-img {
-    width: 192px;
-    height: auto;
-    margin: 70px auto 0;
 }

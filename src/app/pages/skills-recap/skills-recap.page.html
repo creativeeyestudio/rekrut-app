@@ -30,7 +30,11 @@
   </ion-item>
 
   <ion-item class="btn-container" *ngIf="this.global.userType === 'recruiter'">
-    <ion-button shape="round" size="default" class="ion-margin-auto dark" (click)="this.global.navigate('fr/skills-desc')">Suivant</ion-button>
+    <ion-button shape="round" size="default" class="ion-margin-auto dark" (click)="this.global.navigate('fr/skills-profile')">Suivant</ion-button>
+  </ion-item>
+
+  <ion-item class="btn-container" *ngIf="this.global.userType === 'recruiter'">
+    <ion-button size="default" fill="clear" class="ion-margin-auto" (click)="this.global.goBack()">Retour</ion-button>
   </ion-item>
   
   <ion-img src="../../../assets/images/logo-rekrut-full.png" alt="Logo Rekrut"></ion-img>
