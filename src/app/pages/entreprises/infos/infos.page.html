@@ -33,32 +33,46 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col size="12">
-        <p class="ion-no-margin"><strong>Tableau de bord :</strong></p>
+      <ion-col size="6">
+        <ion-button expand="block" class="dark" shape="round">Contacter</ion-button>
       </ion-col>
       <ion-col size="6">
-        <ion-button expand="block">Contacter</ion-button>
+        <ion-button expand="block" class="dark" shape="round" (click)="toggleShareLinksVisible()"
+          >Partager le profil</ion-button
+        >
       </ion-col>
-      <ion-col size="6">
-        <ion-button expand="block" (click)="toggleShareLinksVisible()">Partager le profil</ion-button>
-      </ion-col>
-
       <ion-col size="12" *ngIf="isShareLinksVisible" class="ion-margin-top">
         <ion-row>
           <ion-col size="3">
-            <ion-icon class="icon-share bg--grey" size="large" name="share-social-outline"></ion-icon>
+            <ion-icon
+              class="icon-share bg--grey"
+              size="large"
+              name="share-social-outline"
+            ></ion-icon>
             <p class="ion-text-center">Partager</p>
           </ion-col>
           <ion-col size="3">
-            <ion-icon class="icon-share bg--wsapp" size="large" name="logo-whatsapp"></ion-icon>
+            <ion-icon
+              class="icon-share bg--wsapp"
+              size="large"
+              name="logo-whatsapp"
+            ></ion-icon>
             <p class="ion-text-center">WhatsApp</p>
           </ion-col>
           <ion-col size="3">
-            <ion-icon class="icon-share bg--grey" size="large" name="link-outline"></ion-icon>
+            <ion-icon
+              class="icon-share bg--grey"
+              size="large"
+              name="link-outline"
+            ></ion-icon>
             <p class="ion-text-center">Copier le lien</p>
           </ion-col>
           <ion-col size="3">
-            <ion-icon class="icon-share bg--fb" size="large" name="logo-facebook"></ion-icon>
+            <ion-icon
+              class="icon-share bg--fb"
+              size="large"
+              name="logo-facebook"
+            ></ion-icon>
             <p class="ion-text-center">Facebook</p>
           </ion-col>
         </ion-row>
@@ -69,36 +83,21 @@
   <ion-grid class="actions">
     <ion-row>
       <ion-col class="ion-text-center">
-        <ion-icon
-          name="grid-outline"
-          (click)="global.navigate('fr/offres')"
-        ></ion-icon>
+        <ion-icon (click)="toggleTab('tab-1')" name="grid-outline"></ion-icon>
       </ion-col>
       <ion-col class="ion-text-center">
-        <ion-icon name="bookmark-outline"></ion-icon>
+        <ion-icon (click)="toggleTab('tab-2')" name="play-circle-outline" size="large"></ion-icon>
       </ion-col>
     </ion-row>
   </ion-grid>
 
-  <ion-list>
-    <ion-item>
-      <div
-        class="content-item ion-padding-top ion-padding-bottom ion-padding-start ion-padding-end"
-      >
-        <ion-label>
-          <strong>Nom du poste</strong><br />
-          <span> Lieu : <span>Paris</span> </span><br />
-          <span>Salaire : 35000 € / an</span>
-        </ion-label>
-        <ion-button
-          fill="outline"
-          size="small"
-          shape="round"
-          class="apply"
-          (click)="this.global.navigate('fr/offre')"
-          >Postuler</ion-button
-        >
-      </div>
-    </ion-item>
-  </ion-list>
+  <div class="tab--container">
+    <div id="tab-1" class="tab active">
+      <app-tab-offers></app-tab-offers>
+    </div>
+
+    <div id="tab-2" class="tab">
+      <app-tab-videos></app-tab-videos>
+    </div>
+  </div>
 </ion-content>

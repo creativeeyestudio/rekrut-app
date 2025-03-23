@@ -1,0 +1,16 @@
+ion-grid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+ion-col {
+    --ion-grid-column-padding: 0;
+
+    aspect-ratio: 149/201;
+
+    ion-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
