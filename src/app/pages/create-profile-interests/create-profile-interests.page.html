@@ -1,56 +1,32 @@
 <ion-content [fullscreen]="true">
   <ion-item lines="none" class="ion-padding-top ion-padding-bottom title">
-    <strong *ngIf="global.userType === 'student'">Vos centres d'interêts</strong>
+    <strong *ngIf="global.userType === 'student'">Votre profil, Votre ADN Professionnel</strong>
     <strong *ngIf="global.userType === 'recruiter'">Vos centres d'interêts recherchés</strong>
   </ion-item>
 
   <ion-list>
     <div class="content-input">
       <ion-item lines="none">
-        <ion-select label="Sport" labelPlacement="floating">
-          <ion-select-option></ion-select-option>
+        <ion-select label="Soft Skills" labelPlacement="floating" multiple>
+          <ion-select-option *ngFor="let skill of softSkills" [value]="skill">{{skill}}</ion-select-option>
         </ion-select>
       </ion-item>
-      <p class="ion-padding-start ">
-        <ion-icon name="add-outline" slot="start" color="primary"></ion-icon>
-        <span class="add-link">Ajouter un sport</span>
-      </p>  
     </div>
 
     <div class="content-input">
       <ion-item lines="none">
-        <ion-select label="Association" labelPlacement="floating">
-          <ion-select-option></ion-select-option>
+        <ion-select label="Style de travail" labelPlacement="floating" multiple>
+          <ion-select-option *ngFor="let style of workStyleSkills" [value]="style">{{style}}</ion-select-option>
         </ion-select>
-      </ion-item>  
-      <p class="ion-padding-start">
-        <ion-icon name="add-outline" slot="start" color="primary"></ion-icon>
-        <span class="add-link">Ajouter une association</span>
-      </p>  
-    </div>
-
-    <div class="content-input">
-      <ion-item lines="none">
-        <ion-select label="Hobby" labelPlacement="floating">
-          <ion-select-option></ion-select-option>
-        </ion-select>
-      </ion-item>  
-      <p class="ion-padding-start">
-        <ion-icon name="add-outline" slot="start" color="primary"></ion-icon>
-        <span class="add-link">Ajouter un hobby</span>
-      </p>  
+      </ion-item>    
     </div>
     
     <div class="content-input">
       <ion-item lines="none">
-        <ion-select label="Vos valeurs" labelPlacement="floating">
-          <ion-select-option></ion-select-option>
+        <ion-select label="Vos valeurs" labelPlacement="floating" multiple>
+          <ion-select-option *ngFor="let value of valuesSkills" [value]='value' [innerHTML]="value"></ion-select-option>
         </ion-select>
       </ion-item>  
-      <p class="ion-padding-start">
-        <ion-icon name="add-outline" slot="start" color="primary"></ion-icon>
-        <span class="add-link">Ajouter une valeur (3 maximum)</span>
-      </p>
     </div>
     
     <ion-item lines="none" class="ion-margin-top" *ngIf="global.userType === 'student'">
