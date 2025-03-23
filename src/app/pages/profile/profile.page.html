@@ -56,9 +56,19 @@
 
   <div class="ion-page" id="content-page">
     <ion-grid>
+      <ion-row class="ion-margin-top">
+        <ion-col>
+          <ion-item lines="none">
+            <ion-menu-toggle slot="end">
+              <ion-icon name="settings-outline" size="large"></ion-icon>
+            </ion-menu-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
       <!-- Thumbnail -->
       <ion-row class="infos-profile">
-        <ion-col size="10">
+        <ion-col size="12">
           <ion-item>
             <ion-thumbnail slot="start">
               <ion-img
@@ -70,14 +80,6 @@
               <strong>Nom prénom</strong><br />
               <span>Information que vous souhaiter mettre en avant</span>
             </ion-label>
-          </ion-item>
-        </ion-col>
-
-        <ion-col size="2">
-          <ion-item>
-            <ion-menu-toggle slot="end">
-              <ion-icon name="settings-outline"></ion-icon>
-            </ion-menu-toggle>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -102,7 +104,7 @@
       <ion-row>
         <ion-col size="12">
           <ion-item lines="none">
-            <ion-label><strong>Tableau de bord</strong></ion-label>
+            <ion-label><strong>Tableau de bord :</strong></ion-label>
           </ion-item>
         </ion-col>
         <ion-col size="6">
@@ -141,9 +143,7 @@
       </ion-row>
 
       <!-- Tab Bar -->
-      <ion-row
-        class="tabs-buttons ion-justify-content-around"
-      >
+      <ion-row class="tabs-buttons ion-justify-content-around">
         <ion-col size="auto">
           <ion-button fill="clear" (click)="this.changeTab('tab-1')">
             <ion-icon
@@ -155,13 +155,14 @@
         <ion-col size="auto">
           <ion-button fill="clear" (click)="this.changeTab('tab-2')">
             <ion-icon
-              name="lock-closed-outline"
+              name="play-circle-outline"
               color="#000000"
               aria-hidden="true"
+              size="large"
             ></ion-icon>
           </ion-button>
         </ion-col>
-        <ion-col size="auto">
+        <ion-col size="auto" *ngIf="global.userType === 'recruiter'">
           <ion-button fill="clear" (click)="this.changeTab('tab-3')">
             <ion-icon
               name="bookmark-outline"
@@ -170,7 +171,7 @@
             ></ion-icon>
           </ion-button>
         </ion-col>
-        <ion-col size="auto">
+        <ion-col size="auto" *ngIf="global.userType === 'recruiter'">
           <ion-button fill="clear" (click)="this.changeTab('tab-4')">
             <ion-icon
               name="heart-outline"
