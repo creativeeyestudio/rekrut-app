@@ -13,7 +13,9 @@ ion-item {
 }
 
 ion-button {
-    --background: #031E45;
+    &:not([fill=clear]) {
+        --background: #031E45;
+    }
 }
 
 ion-img {

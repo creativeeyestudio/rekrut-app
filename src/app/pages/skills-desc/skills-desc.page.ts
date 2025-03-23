@@ -11,7 +11,7 @@ import { GlobalService } from 'src/app/services/global.service';
   templateUrl: './skills-desc.page.html',
   styleUrls: ['./skills-desc.page.scss'],
   standalone: true,
-  imports: [IonImg, IonButton, IonCheckbox, IonTextarea, IonList, IonIcon, IonItem, IonContent, IonSelect, IonSelectOption, CommonModule, FormsModule]
+  imports: [IonImg, IonButton, IonCheckbox, IonTextarea, IonList, IonIcon, IonItem, IonContent, IonSelect, IonSelectOption, IonInput, CommonModule, FormsModule]
 })
 export class SkillsDescPage {
 

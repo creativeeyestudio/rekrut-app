@@ -5,7 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { GlobalService } from 'src/app/services/global.service';
 
 import { addIcons } from 'ionicons';
-import { addCircleOutline, bookmarkOutline, cameraOutline, chevronBackOutline, heartOutline, linkOutline, lockClosedOutline, logoFacebook, logoWhatsapp, settingsOutline, shareSocialOutline } from 'ionicons/icons';
+import { addCircleOutline, bookmarkOutline, cameraOutline, chevronBackOutline, heartOutline, linkOutline, playCircleOutline, logoFacebook, logoWhatsapp, settingsOutline, shareSocialOutline, lockClosedOutline } from 'ionicons/icons';
 import { Tab1Component } from "./components/tab-1/tab-1.component";
 import { Tab2Component } from './components/tab-2/tab-2.component';
 import { Tab3Component } from "./components/tab-3/tab-3.component";
@@ -22,7 +22,7 @@ export class ProfilePage  {
   isShareLinksVisible: boolean = false;
 
   constructor(public global: GlobalService) {
-    addIcons({ settingsOutline, chevronBackOutline, addCircleOutline, cameraOutline, lockClosedOutline, bookmarkOutline, heartOutline, logoFacebook , logoWhatsapp, shareSocialOutline, linkOutline});
+    addIcons({ settingsOutline, chevronBackOutline, addCircleOutline, cameraOutline, playCircleOutline, bookmarkOutline, heartOutline, logoFacebook , logoWhatsapp, shareSocialOutline, linkOutline, lockClosedOutline });
   }
 
   changeTab(tabId: string) {

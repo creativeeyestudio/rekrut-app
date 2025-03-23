@@ -4,16 +4,26 @@
   </ion-item>
 
   <ion-list class="ion-padding-end" *ngIf="global.userType === 'student'">
+    
     <div class="ion-padding-start ion-padding-end">
       <label class="custom-label">Pour quel secteur tu postules ?</label>
-      <ion-select aria-label="Pour quel secteur tu postules ?" placeholder="Secteur" label-placement="stacked">
-        <ion-select-option value=""></ion-select-option>
+      <ion-select [(ngModel)]="selectedSkill" aria-label="Quel est le secteur du poste ?" placeholder="Secteur" label-placement="stacked">
+        <ng-container *ngFor="let sector of skills">
+          <!-- Option principale (secteur) -->
+          <ion-select-option [value]="sector.name"><strong>{{ sector.name }}</strong></ion-select-option>
+    
+          <!-- Options des sous-domaines -->
+          <ion-select-option *ngFor="let sub of sector.sublist" [value]="sub.name">
+            &nbsp;&nbsp;&nbsp;➜ {{ sub.name }}
+          </ion-select-option>
+        </ng-container>
       </ion-select>
     </div>
+
     <div class="ion-padding-start ion-padding-end">
       <label class="custom-label">Quel est ton niveau ?</label>
       <ion-select aria-label="Quel est ton niveau ?" placeholder="Niveau de la question" label-placement="stacked">
-        <ion-select-option value=""></ion-select-option>
+        <ion-select-option *ngFor="let level of skillsLevel" [value]="level" [innerHTML]="level"></ion-select-option>
       </ion-select>
     </div>
 
@@ -27,15 +37,23 @@
   <ion-list class="ion-padding-end" *ngIf="global.userType === 'recruiter'">
     <div class="ion-padding-start ion-padding-end">
       <label class="custom-label">Quel est le secteur du poste ?</label>
-      <ion-select aria-label="Quel est le secteur du poste ?" placeholder="Secteur" label-placement="stacked">
-        <ion-select-option value=""></ion-select-option>
+      <ion-select [(ngModel)]="selectedSkill" aria-label="Quel est le secteur du poste ?" placeholder="Secteur" label-placement="stacked">
+        <ng-container *ngFor="let sector of skills">
+          <!-- Option principale (secteur) -->
+          <ion-select-option [value]="sector.name"><strong>{{ sector.name }}</strong></ion-select-option>
+    
+          <!-- Options des sous-domaines -->
+          <ion-select-option *ngFor="let sub of sector.sublist" [value]="sub.name">
+            &nbsp;&nbsp;&nbsp;➜ {{ sub.name }}
+          </ion-select-option>
+        </ng-container>
       </ion-select>
     </div>
 
     <div class="ion-padding-start ion-padding-end">
       <label class="custom-label">Quel niveau attendez vous ?</label>
       <ion-select aria-label="Quel niveau attendez vous ?" placeholder="Niveau de la question" label-placement="stacked" class="ion-no-margin">
-        <ion-select-option value=""></ion-select-option>
+        <ion-select-option *ngFor="let level of skillsLevel" [value]="level" [innerHTML]="level"></ion-select-option>
       </ion-select>
     </div>
 

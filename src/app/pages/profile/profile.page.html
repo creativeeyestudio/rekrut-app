@@ -56,9 +56,19 @@
 
   <div class="ion-page" id="content-page">
     <ion-grid>
+      <ion-row class="ion-margin-top">
+        <ion-col>
+          <ion-item lines="none">
+            <ion-menu-toggle slot="end">
+              <ion-icon name="settings-outline" size="large"></ion-icon>
+            </ion-menu-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
       <!-- Thumbnail -->
       <ion-row class="infos-profile">
-        <ion-col size="10">
+        <ion-col size="12">
           <ion-item>
             <ion-thumbnail slot="start">
               <ion-img
@@ -70,14 +80,6 @@
               <strong>Nom prénom</strong><br />
               <span>Information que vous souhaiter mettre en avant</span>
             </ion-label>
-          </ion-item>
-        </ion-col>
-
-        <ion-col size="2">
-          <ion-item>
-            <ion-menu-toggle slot="end">
-              <ion-icon name="settings-outline"></ion-icon>
-            </ion-menu-toggle>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -102,38 +104,60 @@
       <ion-row>
         <ion-col size="12">
           <ion-item lines="none">
-            <ion-label><strong>Tableau de bord</strong></ion-label>
+            <ion-label><strong>Tableau de bord :</strong></ion-label>
           </ion-item>
         </ion-col>
         <ion-col size="6">
           <ion-button
             (click)="global.navigate('/fr/profile/hobbies-update')"
             shape="round"
-            class="secondary"
             expand="block"
+            class="dark"
             >Modifier le profil</ion-button
           >
         </ion-col>
         <ion-col size="6">
-          <ion-button shape="round" class="secondary" expand="block" (click)="toggleShareLinksVisible()">Partager le profil</ion-button>
+          <ion-button
+            shape="round"
+            class="dark"
+            expand="block"
+            (click)="toggleShareLinksVisible()"
+            >Partager le profil</ion-button
+          >
         </ion-col>
 
         <ion-col size="12" *ngIf="isShareLinksVisible" class="ion-margin-top">
           <ion-row>
             <ion-col size="3">
-              <ion-icon class="icon-share bg--grey" size="large" name="share-social-outline"></ion-icon>
+              <ion-icon
+                class="icon-share bg--grey"
+                size="large"
+                name="share-social-outline"
+              ></ion-icon>
               <p class="ion-text-center">Partager</p>
             </ion-col>
             <ion-col size="3">
-              <ion-icon class="icon-share bg--wsapp" size="large" name="logo-whatsapp"></ion-icon>
+              <ion-icon
+                class="icon-share bg--wsapp"
+                size="large"
+                name="logo-whatsapp"
+              ></ion-icon>
               <p class="ion-text-center">WhatsApp</p>
             </ion-col>
             <ion-col size="3">
-              <ion-icon class="icon-share bg--grey" size="large" name="link-outline"></ion-icon>
+              <ion-icon
+                class="icon-share bg--grey"
+                size="large"
+                name="link-outline"
+              ></ion-icon>
               <p class="ion-text-center">Copier le lien</p>
             </ion-col>
             <ion-col size="3">
-              <ion-icon class="icon-share bg--fb" size="large" name="logo-facebook"></ion-icon>
+              <ion-icon
+                class="icon-share bg--fb"
+                size="large"
+                name="logo-facebook"
+              ></ion-icon>
               <p class="ion-text-center">Facebook</p>
             </ion-col>
           </ion-row>
@@ -141,9 +165,7 @@
       </ion-row>
 
       <!-- Tab Bar -->
-      <ion-row
-        class="tabs-buttons ion-justify-content-around"
-      >
+      <ion-row class="tabs-buttons ion-justify-content-around">
         <ion-col size="auto">
           <ion-button fill="clear" (click)="this.changeTab('tab-1')">
             <ion-icon
@@ -155,9 +177,18 @@
         <ion-col size="auto">
           <ion-button fill="clear" (click)="this.changeTab('tab-2')">
             <ion-icon
+              name="play-circle-outline"
+              color="#000000"
+              aria-hidden="true"
+              size="large"
+              *ngIf="global.userType === 'recruiter'"
+            ></ion-icon>
+            <ion-icon
               name="lock-closed-outline"
               color="#000000"
               aria-hidden="true"
+              size="default"
+              *ngIf="global.userType === 'student'"
             ></ion-icon>
           </ion-button>
         </ion-col>
@@ -180,7 +211,7 @@
           </ion-button>
         </ion-col>
       </ion-row>
-      
+
       <!-- Tab Content-->
       <ion-row>
         <ion-col id="tab-1" class="tab active" size="12">

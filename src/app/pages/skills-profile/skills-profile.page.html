@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true">
+  <ion-item lines="none" class="ion-margin-top ion-margin-bottom">
+    <strong>Vous recherchez</strong>
+  </ion-item>
+
+  <ion-list>
+    <ion-item lines="none">
+      <ion-select label="Soft Skills" labelPlacement="floating">
+        <ion-select-option></ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-select label="Style de travail" labelPlacement="floating">
+        <ion-select-option></ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-select label="Valeurs" labelPlacement="floating">
+        <ion-select-option></ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-checkbox labelPlacement="end">Je certifie que ces informations sont justes et que je peux les prouver lors d’un entretien.</ion-checkbox>
+    </ion-item>
+
+    <ion-item lines="none" class="btn-container">
+      <ion-button shape="round" class="dark" size="default" (click)="global.navigate('fr/skills-desc')">Suivant</ion-button>
+    </ion-item>
+
+    <ion-item lines="none" class="btn-container">
+      <ion-button fill="clear" size="default" (click)="global.goBack()">Retour</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

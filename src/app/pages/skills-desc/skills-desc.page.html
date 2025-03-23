@@ -25,15 +25,23 @@
         <ion-select-option></ion-select-option>
       </ion-select>
     </ion-item>
-    <ion-item lines="none">
-      <ion-textarea aria-label="Description détaillée du poste..." placeholder="Description détaillée du poste..."></ion-textarea>
+    
+    <ion-item lines="none" class="ion-margin-bottom">
+      <ion-input aria-label="Description détaillée du poste..." placeholder="Description détaillée du poste..." type="file" ></ion-input>
     </ion-item>
+
     <ion-item lines="none">
       <ion-checkbox labelPlacement="end">J'accepte que les informations saisies soient utilisées pour trouver des candidats potentiels</ion-checkbox>
     </ion-item>
+
     <ion-item lines="none" class="btn-container">
       <ion-button shape="round" size="default" class="dark">Poster l'annonce</ion-button>
     </ion-item>
+
+    <ion-item lines="none" class="btn-container">
+      <ion-button shape="round" size="default" fill="clear" (click)="global.goBack()">Retour</ion-button>
+    </ion-item>
+
   </ion-list>
   <ion-img src="../../../assets/images/logo-rekrut-full.png" alt="Logo Rekrut"></ion-img>
 </ion-content>
