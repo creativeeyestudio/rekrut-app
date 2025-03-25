@@ -34,7 +34,8 @@
       <ion-grid>
         <ion-row class="ion-justify-content-center">
           <ion-col size="auto">
-            <ion-button color="secondary" size="default" shape="round" (click)="this.global.navigate('fr/create-profile-interests')">Sauvegarder</ion-button>
+            <ion-button color="secondary" size="default" shape="round" *ngIf="global.userType === 'student'" (click)="this.global.navigate('fr/create-profile-interests')">Sauvegarder</ion-button>
+            <ion-button color="secondary" size="default" shape="round" *ngIf="global.userType === 'recruiter'" (click)="goToHome()">Sauvegarder</ion-button>
           </ion-col>
         </ion-row>
       </ion-grid>

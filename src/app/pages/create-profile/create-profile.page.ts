@@ -16,4 +16,9 @@ export class CreateProfilePage {
 
   constructor(public global: GlobalService, public phoneList: PhoneIndicatorService) { }
 
+  goToHome() {
+    this.global.isNavHidden = false;
+    this.global.navigate('fr')
+  }
+
 }
