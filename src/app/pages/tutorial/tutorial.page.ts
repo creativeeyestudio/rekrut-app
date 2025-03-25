@@ -66,6 +66,11 @@ export class TutorialPage implements AfterViewInit  {
     }
   }
 
+  goToHome() {
+    this.global.isNavHidden = false;
+    this.global.navigate('fr')
+  }
+
   ngAfterViewInit(): void {
       this.global.isNavHidden = true;
   }
