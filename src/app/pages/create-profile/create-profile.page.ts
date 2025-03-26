@@ -16,4 +16,12 @@ export class CreateProfilePage {
 
   constructor(public global: GlobalService, public phoneList: PhoneIndicatorService) { }
 
+  goToNext() {
+    this.global.navigate(
+      this.global.userType === 'student' ? 'fr/create-profile-interests' : 'fr'
+    );
+    
+    if (this.global.userType !== 'student') this.global.isNavHidden = false;
+  }  
+
 }
