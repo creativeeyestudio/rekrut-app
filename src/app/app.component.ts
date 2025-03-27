@@ -11,7 +11,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 export class AppComponent {
   constructor(
     private animationCtrl: AnimationController
-  ) {}
+  ) {
+    document.addEventListener('contextmenu', (event) => event.preventDefault());
+  }
 
   routeAnimation = (baseEl: HTMLElement, opts?: any) => {
     const leavingEl = opts?.leavingEl;
