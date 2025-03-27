@@ -69,7 +69,6 @@
           <!-- Send -->
           <div class="icon-container column">
             <ion-icon
-              size="large"
               name="send-outline"
               (click)="this.global.navigate('/fr/messagerie/contact')"
             ></ion-icon>
@@ -79,7 +78,6 @@
           <!-- Like -->
           <div class="icon-container column">
             <ion-icon
-              size="large"
               [name]="video.isLiked ? 'heart' : 'heart-outline'"
               [ngClass]="{'liked': video.isLiked}"
               (click)="toggleLike(i)"
@@ -91,7 +89,6 @@
           <!-- Bookmark -->
           <div class="icon-container column">
             <ion-icon
-              size="large"
               [name]="video.isSaved ? 'bookmark' : 'bookmark-outline'"
               [ngClass]="{'saved': video.isSaved}"
               (click)="toggleSave(i)"
