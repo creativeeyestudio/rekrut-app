@@ -16,7 +16,7 @@
           </ion-col>
           <ion-col size="1" class="icon-container">
             <ion-icon
-              name="notifications-outline"
+              name="notifications"
               (click)="global.navigate('fr/notifications')"
             ></ion-icon>
           </ion-col>
@@ -68,7 +68,7 @@
           <!-- Send -->
           <div class="icon-container column">
             <ion-icon
-              name="send-outline"
+              name="send"
               (click)="this.global.navigate('/fr/messagerie/contact')"
             ></ion-icon>
             <span class="ion-text-center">100</span>
@@ -77,7 +77,7 @@
           <!-- Like -->
           <div class="icon-container column">
             <ion-icon
-              [name]="video.isLiked ? 'heart' : 'heart-outline'"
+              name="heart"
               [ngClass]="{'liked': video.isLiked}"
               (click)="toggleLike(i)"
             >
@@ -88,7 +88,7 @@
           <!-- Bookmark -->
           <div class="icon-container column">
             <ion-icon
-              [name]="video.isSaved ? 'bookmark' : 'bookmark-outline'"
+              name="bookmark"
               [ngClass]="{'saved': video.isSaved}"
               (click)="toggleSave(i)"
             ></ion-icon>

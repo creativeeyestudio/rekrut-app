@@ -12,40 +12,57 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule, GestureController } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import { GlobalService } from 'src/app/services/global.service';
+import { heart, bookmark, send, notifications } from 'ionicons/icons';
 import 'hammerjs';
-import {
-  flagOutline,
-  heart,
-  heartOutline,
-  bookmark,
-  bookmarkOutline,
-  informationCircleOutline,
-  sendOutline,
-  notificationsOutline,
-} from 'ionicons/icons';
-
 
 import { register } from 'swiper/element/bundle';
 register();
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.page.html',
-    styleUrls: ['./home.page.scss'],
-    standalone: true,
-    imports: [IonicModule, CommonModule, FormsModule],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  selector: 'app-home',
+  templateUrl: './home.page.html',
+  styleUrls: ['./home.page.scss'],
+  standalone: true,
+  imports: [IonicModule, CommonModule, FormsModule],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-
 export class HomePage implements AfterViewInit {
   @ViewChildren('cardElement') cardElements!: QueryList<ElementRef>;
   isLiked: boolean = false;
 
   videos = [
-    { id: 1, url: 'assets/videos/video1.mp4', isLiked: false, isSaved: false, isDescPostOpen: false, available: true },
-    { id: 2, url: 'assets/videos/video2.mp4', isLiked: false, isSaved: false, isDescPostOpen: false, available: true },
-    { id: 3, url: 'assets/videos/video3.mp4', isLiked: false, isSaved: false, isDescPostOpen: false, available: true },
-    { id: 3, url: 'assets/videos/video3.mp4', isLiked: false, isSaved: false, isDescPostOpen: false, available: false },
+    {
+      id: 1,
+      url: 'assets/videos/video1.mp4',
+      isLiked: false,
+      isSaved: false,
+      isDescPostOpen: false,
+      available: true,
+    },
+    {
+      id: 2,
+      url: 'assets/videos/video2.mp4',
+      isLiked: false,
+      isSaved: false,
+      isDescPostOpen: false,
+      available: true,
+    },
+    {
+      id: 3,
+      url: 'assets/videos/video3.mp4',
+      isLiked: false,
+      isSaved: false,
+      isDescPostOpen: false,
+      available: true,
+    },
+    {
+      id: 3,
+      url: 'assets/videos/video3.mp4',
+      isLiked: false,
+      isSaved: false,
+      isDescPostOpen: false,
+      available: false,
+    },
   ];
 
   alertButtons = ['Contacter', 'Fermer'];
@@ -53,13 +70,13 @@ export class HomePage implements AfterViewInit {
   public cvButtons = [
     {
       text: 'Contacter',
-      role: 'contact'
+      role: 'contact',
     },
     {
       text: 'Signaler',
-      role: 'report'
-    }
-  ]
+      role: 'report',
+    },
+  ];
 
   modals: { [key: string]: boolean } = {};
 
@@ -68,17 +85,13 @@ export class HomePage implements AfterViewInit {
   constructor(
     public global: GlobalService,
     private gestureCtrl: GestureController,
-	  private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef
   ) {
     addIcons({
       heart,
-      heartOutline,
       bookmark,
-      bookmarkOutline,
-      informationCircleOutline,
-      flagOutline,
-      sendOutline,
-      notificationsOutline,
+      send,
+      notifications,
     });
   }
 
@@ -86,7 +99,7 @@ export class HomePage implements AfterViewInit {
     if (this.global.userType === null) {
       this.redirectToRegisterPage();
     }
-      
+
     this.cardElements.forEach((card, index) => {
       const gesture = this.gestureCtrl.create({
         el: card.nativeElement,
@@ -103,15 +116,14 @@ export class HomePage implements AfterViewInit {
         const gesture = this.gestureCtrl.create({
           el,
           gestureName: `long-press-${video.id}`,
-          threshold: 0,  // Aucun seuil pour la détection de mouvement
+          threshold: 0, // Aucun seuil pour la détection de mouvement
           onStart: () => this.onPressStart(index),
-          onEnd: () => this.onPressEnd()
+          onEnd: () => this.onPressEnd(),
         });
 
         gesture.enable();
       }
     });
-
   }
 
   onMove(ev: any, card: HTMLElement) {
