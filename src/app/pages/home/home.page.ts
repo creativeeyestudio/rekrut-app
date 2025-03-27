@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule, GestureController } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import { GlobalService } from 'src/app/services/global.service';
-import { heart, bookmark, send, notifications } from 'ionicons/icons';
+import { heart, bookmark, send, notifications, ellipsisHorizontal } from 'ionicons/icons';
 import 'hammerjs';
 
 import { register } from 'swiper/element/bundle';
@@ -92,6 +92,7 @@ export class HomePage implements AfterViewInit {
       bookmark,
       send,
       notifications,
+      ellipsisHorizontal
     });
   }
 

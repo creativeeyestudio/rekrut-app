@@ -9,7 +9,7 @@
               <ion-label>Demande</ion-label>
             </ion-item>
           </ion-col>
-          <ion-col size="4" *ngIf="this.global.userType === 'recruiter'">
+          <ion-col size="5" *ngIf="this.global.userType === 'recruiter'">
             <ion-item lines="none">
               <ion-label>Pour vous</ion-label>
             </ion-item>
@@ -46,11 +46,26 @@
         class="video-card ion-justify-content-center ion-align-items-center"
         [id]="'video-' + video.id"
       >
-        <video [src]="video.url" autoplay muted loop *ngIf="video.available"></video>
+        <video
+          [src]="video.url"
+          autoplay
+          muted
+          loop
+          *ngIf="video.available"
+        ></video>
 
-        <ion-img *ngIf="!video.available && global.userType === 'recruiter'" src="'../../../../../assets/images/cv-example.jpg"></ion-img>
-        <div *ngIf="!video.available && global.userType === 'recruiter'" class="bg-notif bg-notif--bottom"></div>
-        <div *ngIf="!video.available && global.userType === 'recruiter'" class="bg-notif bg-notif--right"></div>
+        <ion-img
+          *ngIf="!video.available && global.userType === 'recruiter'"
+          src="'../../../../../assets/images/cv-example.jpg"
+        ></ion-img>
+        <div
+          *ngIf="!video.available && global.userType === 'recruiter'"
+          class="bg-notif bg-notif--bottom"
+        ></div>
+        <div
+          *ngIf="!video.available && global.userType === 'recruiter'"
+          class="bg-notif bg-notif--right"
+        ></div>
 
         <div class="icons-list column nav nav--bottom nav--right">
           <!-- Profile -->
@@ -93,6 +108,11 @@
               (click)="toggleSave(i)"
             ></ion-icon>
             <span class="ion-text-center">100</span>
+          </div>
+
+          <!-- See more -->
+          <div class="icon-container column">
+            <ion-icon name="ellipsis-horizontal"></ion-icon>
           </div>
         </div>
 
