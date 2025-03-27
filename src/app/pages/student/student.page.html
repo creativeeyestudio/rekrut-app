@@ -4,11 +4,11 @@
     <ion-row class="infos-profile ion-padding-top">
       <ion-col size="12">
         <ion-thumbnail>
-            <ion-img
-              alt="Silhouette of mountains"
-              src="https://img.freepik.com/photos-gratuite/portrait-jeune-etudiant-souriant_23-2148586534.jpg?t=st=1731748530~exp=1731752130~hmac=48f9f28903a4c61f692617dac28542f4e1bb40f6f87fdd4dc43bc44f61a1ea56&"
-            />
-          </ion-thumbnail>
+          <ion-img
+            alt="Silhouette of mountains"
+            src="https://img.freepik.com/photos-gratuite/portrait-jeune-etudiant-souriant_23-2148586534.jpg?t=st=1731748530~exp=1731752130~hmac=48f9f28903a4c61f692617dac28542f4e1bb40f6f87fdd4dc43bc44f61a1ea56&"
+          />
+        </ion-thumbnail>
       </ion-col>
       <ion-col size="12">
         <ion-item>
@@ -37,17 +37,9 @@
     </ion-row>
 
     <!-- Buttons -->
-    <ion-row class="">
-      <ion-col size="12">
-        <ion-item lines="none">
-          <ion-label><strong>Tableau de bord</strong></ion-label>
-        </ion-item>
-      </ion-col>
+    <ion-row>
       <ion-col size="6">
-        <ion-button
-          shape="round"
-          class="dark"
-          expand="block"
+        <ion-button shape="round" class="dark" expand="block"
           >Contacter</ion-button
         >
       </ion-col>
@@ -59,9 +51,7 @@
     </ion-row>
 
     <!-- Tab Bar -->
-    <ion-row
-      class="tabs-buttons ion-margin-bottom ion-justify-content-around"
-    >
+    <ion-row class="tabs-buttons ion-margin-bottom ion-justify-content-around">
       <ion-col size="auto" class="no-padding">
         <ion-button fill="clear" (click)="this.changeTab('tab-1')">
           <ion-icon
