@@ -120,7 +120,7 @@
         class="tabs-buttons ion-justify-content-around ion-margin-top ion-margin-bottom"
       >
         <ion-col size="auto">
-          <ion-button fill="clear" (click)="this.changeTab('tab-1')">
+          <ion-button fill="clear" (click)="goToSlide(0)">
             <ion-icon
               src="../../../assets/icon/skills-grid.svg"
               aria-hidden="true"
@@ -128,7 +128,7 @@
           </ion-button>
         </ion-col>
         <ion-col size="auto">
-          <ion-button fill="clear" (click)="this.changeTab('tab-2')">
+          <ion-button fill="clear" (click)="goToSlide(1)">
             <ion-icon
               name="play-circle-outline"
               color="#000000"
@@ -146,7 +146,7 @@
           </ion-button>
         </ion-col>
         <ion-col size="auto">
-          <ion-button fill="clear" (click)="this.changeTab('tab-3')">
+          <ion-button fill="clear">
             <ion-icon
               name="bookmark-outline"
               color="#000000"
@@ -155,7 +155,7 @@
           </ion-button>
         </ion-col>
         <ion-col size="auto">
-          <ion-button fill="clear" (click)="this.changeTab('tab-4')">
+          <ion-button fill="clear">
             <ion-icon
               name="heart-outline"
               color="#000000"
@@ -167,17 +167,21 @@
 
       <!-- Tab Content-->
       <ion-row>
-        <ion-col id="tab-1" class="tab active" size="12">
-          <app-tab-1></app-tab-1>
-        </ion-col>
-        <ion-col id="tab-2" class="tab" size="12">
-          <app-tab-2></app-tab-2>
-        </ion-col>
-        <ion-col id="tab-3" class="tab" size="12">
-          <app-tab-3></app-tab-3>
-        </ion-col>
-        <ion-col id="tab-4" class="tab" size="12">
-          <app-tab-4></app-tab-4>
+        <ion-col size="12">
+          <swiper-container #swiperRef slides-per-view="1" space-between="0">
+            <swiper-slide>
+              <app-tab-1></app-tab-1>
+            </swiper-slide>
+            <swiper-slide>
+              <app-tab-2></app-tab-2>
+            </swiper-slide>
+            <swiper-slide>
+              <app-tab-3></app-tab-3>
+            </swiper-slide>
+            <swiper-slide>
+              <app-tab-4></app-tab-4>
+            </swiper-slide>
+          </swiper-container>
         </ion-col>
       </ion-row>
     </ion-grid>
