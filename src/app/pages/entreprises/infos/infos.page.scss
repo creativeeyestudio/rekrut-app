@@ -53,7 +53,17 @@ ion-button {
 }
 
 .actions {
-    font-size: 28px;
+    font-size: 40px;
+
+}
+
+.btn-tab {
+    opacity: .5;
+    transition-duration: .5s;
+
+    &.active {
+        opacity: 1;
+    }
 }
 
 .icon-share {
@@ -78,25 +88,5 @@ ion-button {
             background-color: #26D267;
             color: white;
         }
-    }
-}
-
-.tab {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    transform: translateY(20px);
-    transition: .25s;
-
-    &.active {
-        visibility: visible;
-        opacity: 1;
-        // position: relative;
-        transform: translateY(0);
-    }
-
-    &--container {
-        position: relative;
     }
 }
