@@ -1,17 +1,21 @@
 <ion-content [fullscreen]="true">
-
   <div class="ion-page" id="content-page">
-    <ion-grid>
+    <ion-grid class="ion-no-margin ion-no-padding">
       <ion-row class="ion-margin-top">
         <ion-col>
           <ion-item lines="none">
-              <ion-icon slot="end" name="settings-outline" size="large" (click)="global.navigate('fr/parameters')"></ion-icon>
+            <ion-icon
+              slot="end"
+              name="settings-outline"
+              size="large"
+              (click)="global.navigate('fr/parameters')"
+            ></ion-icon>
           </ion-item>
         </ion-col>
       </ion-row>
 
       <!-- Thumbnail -->
-      <ion-row class="infos-profile">
+      <ion-row class="infos-profile ion-margin-start ion-margin-end">
         <ion-col size="12">
           <ion-item>
             <ion-thumbnail slot="start">
@@ -29,7 +33,9 @@
       </ion-row>
 
       <!-- Main numbers -->
-      <ion-row class="main-data">
+      <ion-row
+        class="main-data ion-margin-top ion-margin-end ion-margin-bottom ion-margin-start"
+      >
         <ion-col>
           <span>Message</span>
           <span>139</span>
@@ -45,7 +51,9 @@
       </ion-row>
 
       <!-- Buttons -->
-      <ion-row>
+      <ion-row
+        class="ion-margin-top ion-margin-end ion-margin-bottom ion-margin-start"
+      >
         <ion-col size="6">
           <ion-button
             (click)="global.navigate('/fr/profile/hobbies-update')"
@@ -65,7 +73,11 @@
           >
         </ion-col>
 
-        <ion-col size="12" *ngIf="isShareLinksVisible" class="ion-margin-top">
+        <ion-col
+          size="12"
+          *ngIf="isShareLinksVisible"
+          class="ion-margin-top ion-margin-end ion-margin-bottom ion-margin-start"
+        >
           <ion-row>
             <ion-col size="3">
               <ion-icon
@@ -104,7 +116,9 @@
       </ion-row>
 
       <!-- Tab Bar -->
-      <ion-row class="tabs-buttons ion-justify-content-around">
+      <ion-row
+        class="tabs-buttons ion-justify-content-around ion-margin-top ion-margin-bottom"
+      >
         <ion-col size="auto">
           <ion-button fill="clear" (click)="this.changeTab('tab-1')">
             <ion-icon
