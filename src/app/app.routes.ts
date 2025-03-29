@@ -120,8 +120,13 @@ export const routes: Routes = [
         path: 'student',
         loadComponent: () => import('./pages/student/student.page').then( m => m.StudentPage)
       },
+      {
+        path: 'parameters',
+        loadComponent: () => import('./pages/parameters/parameters.page').then( m => m.ParametersPage)
+      },
     ],
   },
+
 
 
 
