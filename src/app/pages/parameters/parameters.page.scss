@@ -1,0 +1,30 @@
+// Bouton Retour
+ion-icon {
+    &.back {
+        font-size: 2em;
+        margin-inline-start: .85rem;
+    }
+}
+
+ion-item,
+ion-list-header,
+.disconnect-button {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+ion-list-header {
+    margin: 1rem 0;
+    color: #9E9E9E;
+    border-top: .4em solid rgba($color: #3183F5, $alpha: .1);
+}
+
+.disconnect-button {
+    margin: auto;
+}
+
+.logo-rekrut {
+    width: 192px;
+    height: auto;
+    margin: auto;
+}

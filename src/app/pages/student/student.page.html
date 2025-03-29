@@ -4,11 +4,11 @@
     <ion-row class="infos-profile ion-padding-top">
       <ion-col size="12">
         <ion-thumbnail>
-            <ion-img
-              alt="Silhouette of mountains"
-              src="https://img.freepik.com/photos-gratuite/portrait-jeune-etudiant-souriant_23-2148586534.jpg?t=st=1731748530~exp=1731752130~hmac=48f9f28903a4c61f692617dac28542f4e1bb40f6f87fdd4dc43bc44f61a1ea56&"
-            />
-          </ion-thumbnail>
+          <ion-img
+            alt="Silhouette of mountains"
+            src="https://img.freepik.com/photos-gratuite/portrait-jeune-etudiant-souriant_23-2148586534.jpg?t=st=1731748530~exp=1731752130~hmac=48f9f28903a4c61f692617dac28542f4e1bb40f6f87fdd4dc43bc44f61a1ea56&"
+          />
+        </ion-thumbnail>
       </ion-col>
       <ion-col size="12">
         <ion-item>
@@ -21,7 +21,7 @@
     </ion-row>
 
     <!-- Main numbers -->
-    <ion-row class="main-data ion-padding-start ion-padding-end">
+    <ion-row class="main-data ion-padding-horizontal">
       <ion-col>
         <span>Message</span>
         <span>139</span>
@@ -37,17 +37,9 @@
     </ion-row>
 
     <!-- Buttons -->
-    <ion-row class="">
-      <ion-col size="12">
-        <ion-item lines="none">
-          <ion-label><strong>Tableau de bord</strong></ion-label>
-        </ion-item>
-      </ion-col>
+    <ion-row class="buttons ion-margin">
       <ion-col size="6">
-        <ion-button
-          shape="round"
-          class="dark"
-          expand="block"
+        <ion-button shape="round" class="dark" expand="block"
           >Contacter</ion-button
         >
       </ion-col>
@@ -58,48 +50,7 @@
       </ion-col>
     </ion-row>
 
-    <!-- Tab Bar -->
-    <ion-row
-      class="tabs-buttons ion-margin-bottom ion-justify-content-around"
-    >
-      <ion-col size="auto" class="no-padding">
-        <ion-button fill="clear" (click)="this.changeTab('tab-1')">
-          <ion-icon
-            src="../../../assets/icon/skills-grid.svg"
-            aria-hidden="true"
-          ></ion-icon>
-        </ion-button>
-      </ion-col>
-      <ion-col size="auto" class="no-padding">
-        <ion-button fill="clear" (click)="this.changeTab('tab-2')">
-          <ion-icon
-            name="lock-closed-outline"
-            color="#000000"
-            aria-hidden="true"
-          ></ion-icon>
-        </ion-button>
-      </ion-col>
-      <ion-col size="auto" class="no-padding">
-        <ion-button fill="clear" (click)="this.changeTab('tab-3')">
-          <ion-icon
-            name="bookmark-outline"
-            color="#000000"
-            aria-hidden="true"
-          ></ion-icon>
-        </ion-button>
-      </ion-col>
-      <ion-col size="auto" class="no-padding">
-        <ion-button fill="clear" (click)="this.changeTab('tab-4')">
-          <ion-icon
-            name="heart-outline"
-            color="#000000"
-            aria-hidden="true"
-          ></ion-icon>
-        </ion-button>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
+    <ion-row class="ion-margin-top">
       <ion-col id="tab-1" class="tab active" size="12">
         <app-tab-1></app-tab-1>
       </ion-col>

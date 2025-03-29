@@ -15,6 +15,12 @@ ion-list {
     }
 }
 
+.btn-list {
+    ion-button {
+        font-size: 1em;
+    }
+}
+
 .main-data {
     ion-col {
         display: flex;
@@ -67,6 +73,12 @@ ion-list {
 
     ion-button {
         color: #000000;
+        opacity: .5;
+        transition-duration: .5s;
+
+        &.active {
+            opacity: 1;
+        }
     }
 }
 

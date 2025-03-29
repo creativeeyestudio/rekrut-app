@@ -27,6 +27,7 @@
 
         ion-item {
             --background: rgba(0, 0, 0, 0);
+            font-size: 1em;
         }
 
         ion-label {
@@ -38,21 +39,14 @@
 
 .bg-notif {
     position: absolute;
-    background-color: #031E45;
+    background: rgb(14, 62, 104);
+    background: linear-gradient(0deg, rgba(14, 62, 104, 1) 17%, rgba(14, 62, 104, 1) 45%, rgba(9, 9, 121, 0) 100%);
 
     &--bottom {
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 120px;
-    }
-
-    &--right {
-        bottom: 0;
-        right: 0;
-        width: 100px;
-        height: 420px;
-        border-radius: 200px 0 0 0;
+        height: 360px;
     }
 }
 
@@ -63,7 +57,7 @@
         line-height: 1.5em;
         font-family: 'Montserrat';
     }
-    
+
     ion-item {
         --color: #fff;
         --background: rgba($color: #000000, $alpha: 0);
@@ -81,28 +75,35 @@
 }
 
 .icons-list {
-    gap: 20px;  /* Espacement entre les icônes */
+    gap: 10px;
+    /* Espacement entre les icônes */
 }
 
 .icon-container {
     color: white;
+
+    ion-icon {
+        font-size: 1.5em;
+        margin: auto;
+    }
 }
 
 .profile {
     margin: 0;
 
     img {
-        width: 42px;
-        height: 42px;
-        margin-bottom: 10px;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0 auto 10px;
         border-radius: 50px;
         object-fit: cover;
-        object-position: center;    
+        object-position: center;
     }
 }
 
 ion-icon {
-    color: #ffffff; /* Couleur des icônes */
+    color: #ffffff;
+    /* Couleur des icônes */
     border-radius: 4rem;
     padding: .5rem;
 

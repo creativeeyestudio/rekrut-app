@@ -1,0 +1,53 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense" class="ion-margin-top ion-padding-top">
+    <ion-toolbar>
+      <ion-icon name="chevron-back-sharp" slot="start" class="back" (click)="global.goBack()"></ion-icon>
+      <ion-title size="large">Paramètres</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+    <ion-list-header>Gérer votre compte</ion-list-header>
+    <ion-item lines="none">
+      <ion-icon slot="start" name="create-outline"></ion-icon>
+      Modifier vos informations
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon slot="start" name="options-outline"></ion-icon>
+      Personnaliser l'IA (Indisponible en BETA)
+    </ion-item>
+    <ion-list-header>Préférences d'application</ion-list-header>
+    <ion-item lines="none">
+      <ion-icon slot="start" name="settings-outline"></ion-icon>
+      Paramètres de l'application
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon slot="start" name="notifications-outline"></ion-icon>
+      Notifications
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon slot="start" name="shield-checkmark-outline"></ion-icon>
+      Sécurité
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon slot="start" src="../../../assets/icon/payments.svg"></ion-icon>
+      Abonnements et paiements (Indisponible en BETA)
+    </ion-item>
+    <ion-list-header>Plus d'infos et d'aide</ion-list-header>
+    <ion-item lines="none">
+      <ion-icon slot="start" src="../../../assets/icon/support.svg"></ion-icon>
+      Support et assistance
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon slot="start" src="../../../assets/icon/policy.svg"></ion-icon>
+      Politique et informations légales
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon slot="start" name="help-circle-outline"></ion-icon>
+      À propos
+    </ion-item>
+    <ion-item class="ion-margin-bottom ion-padding-bottom" lines="none">
+      <ion-button fill="clear" color="danger" class="disconnect-button">Déconnexion</ion-button>
+    </ion-item>
+  </ion-list>
+  <ion-img src="../../../assets/images/logo-rekrut-full.png" class="logo-rekrut"></ion-img>
+</ion-content>

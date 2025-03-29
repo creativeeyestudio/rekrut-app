@@ -1,73 +1,21 @@
 <ion-content [fullscreen]="true">
-  <ion-menu contentId="content-page">
-    <ion-header [translucent]="true">
-      <ion-toolbar>
-        <ion-menu-toggle>
-          <ion-icon name="chevron-back-outline" slot="start"></ion-icon>
-        </ion-menu-toggle>
-        <ion-title>Paramètres</ion-title>
-      </ion-toolbar>
-    </ion-header>
-
-    <ion-content class="ion-padding">
-      <ion-list>
-        <ion-item
-          lines="none"
-          (click)="this.global.navigate('/home/profile/update')"
-        >
-          <ion-menu-toggle class="ion-padding-vertical">
-            <ion-label class="ion-padding-bottom"
-              ><strong>Modifier mes informations</strong></ion-label
-            >
-            <ion-list class="ion-no-padding">
-              <ion-item>
-                <ion-label>Paramètres de l'application</ion-label>
-              </ion-item>
-              <ion-item>
-                <ion-label>Partenaires</ion-label>
-              </ion-item>
-              <ion-item>
-                <ion-label>Modifier mes informations</ion-label>
-              </ion-item>
-              <ion-item>
-                <ion-label>Personnaliser l'IA</ion-label>
-              </ion-item>
-              <ion-item>
-                <ion-label>Messagerie</ion-label>
-              </ion-item>
-              <ion-item>
-                <ion-label>Abonnements</ion-label>
-              </ion-item>
-              <ion-item>
-                <ion-label>Politique confidentialité</ion-label>
-              </ion-item>
-              <ion-item>
-                <ion-label>A propos</ion-label>
-              </ion-item>
-              <ion-item>
-                <ion-label>Déconnexion</ion-label>
-              </ion-item>
-            </ion-list>
-          </ion-menu-toggle>
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
-
   <div class="ion-page" id="content-page">
-    <ion-grid>
+    <ion-grid class="ion-no-margin ion-no-padding">
       <ion-row class="ion-margin-top">
         <ion-col>
           <ion-item lines="none">
-            <ion-menu-toggle slot="end">
-              <ion-icon name="settings-outline" size="large"></ion-icon>
-            </ion-menu-toggle>
+            <ion-icon
+              slot="end"
+              name="settings-outline"
+              size="large"
+              (click)="global.navigate('fr/parameters')"
+            ></ion-icon>
           </ion-item>
         </ion-col>
       </ion-row>
 
       <!-- Thumbnail -->
-      <ion-row class="infos-profile">
+      <ion-row class="infos-profile ion-margin-start ion-margin-end">
         <ion-col size="12">
           <ion-item>
             <ion-thumbnail slot="start">
@@ -85,7 +33,9 @@
       </ion-row>
 
       <!-- Main numbers -->
-      <ion-row class="main-data">
+      <ion-row
+        class="main-data ion-margin-top ion-margin-end ion-margin-bottom ion-margin-start"
+      >
         <ion-col>
           <span>Message</span>
           <span>139</span>
@@ -101,12 +51,9 @@
       </ion-row>
 
       <!-- Buttons -->
-      <ion-row>
-        <ion-col size="12">
-          <ion-item lines="none">
-            <ion-label><strong>Tableau de bord :</strong></ion-label>
-          </ion-item>
-        </ion-col>
+      <ion-row
+        class="btn-list ion-margin-top ion-margin-end ion-margin-bottom ion-margin-start ion-justify-content-center"
+      >
         <ion-col size="6">
           <ion-button
             (click)="global.navigate('/fr/profile/hobbies-update')"
@@ -126,7 +73,11 @@
           >
         </ion-col>
 
-        <ion-col size="12" *ngIf="isShareLinksVisible" class="ion-margin-top">
+        <ion-col
+          size="12"
+          *ngIf="isShareLinksVisible"
+          class="ion-margin-top ion-margin-end ion-margin-bottom ion-margin-start"
+        >
           <ion-row>
             <ion-col size="3">
               <ion-icon
@@ -165,9 +116,15 @@
       </ion-row>
 
       <!-- Tab Bar -->
-      <ion-row class="tabs-buttons ion-justify-content-around">
+      <ion-row
+        class="tabs-buttons ion-justify-content-around ion-margin-top ion-margin-bottom"
+      >
         <ion-col size="auto">
-          <ion-button fill="clear" (click)="this.changeTab('tab-1')">
+          <ion-button
+            fill="clear"
+            (click)="goToSlide(0)"
+            [ngClass]="{'active': activeSlideIndex === 0}"
+          >
             <ion-icon
               src="../../../assets/icon/skills-grid.svg"
               aria-hidden="true"
@@ -175,56 +132,59 @@
           </ion-button>
         </ion-col>
         <ion-col size="auto">
-          <ion-button fill="clear" (click)="this.changeTab('tab-2')">
+          <ion-button
+            fill="clear"
+            (click)="goToSlide(1)"
+            [ngClass]="{'active': activeSlideIndex === 1}"
+          >
             <ion-icon
               name="play-circle-outline"
-              color="#000000"
-              aria-hidden="true"
-              size="large"
               *ngIf="global.userType === 'recruiter'"
+              size="large"
             ></ion-icon>
             <ion-icon
               name="lock-closed-outline"
-              color="#000000"
-              aria-hidden="true"
-              size="default"
               *ngIf="global.userType === 'student'"
             ></ion-icon>
           </ion-button>
         </ion-col>
         <ion-col size="auto">
-          <ion-button fill="clear" (click)="this.changeTab('tab-3')">
-            <ion-icon
-              name="bookmark-outline"
-              color="#000000"
-              aria-hidden="true"
-            ></ion-icon>
+          <ion-button
+            fill="clear"
+            (click)="goToSlide(2)"
+            [ngClass]="{'active': activeSlideIndex === 2}"
+          >
+            <ion-icon name="bookmark-outline" aria-hidden="true"></ion-icon>
           </ion-button>
         </ion-col>
         <ion-col size="auto">
-          <ion-button fill="clear" (click)="this.changeTab('tab-4')">
-            <ion-icon
-              name="heart-outline"
-              color="#000000"
-              aria-hidden="true"
-            ></ion-icon>
+          <ion-button
+            fill="clear"
+            (click)="goToSlide(3)"
+            [ngClass]="{'active': activeSlideIndex === 3}"
+          >
+            <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
           </ion-button>
         </ion-col>
       </ion-row>
 
       <!-- Tab Content-->
       <ion-row>
-        <ion-col id="tab-1" class="tab active" size="12">
-          <app-tab-1></app-tab-1>
-        </ion-col>
-        <ion-col id="tab-2" class="tab" size="12">
-          <app-tab-2></app-tab-2>
-        </ion-col>
-        <ion-col id="tab-3" class="tab" size="12">
-          <app-tab-3></app-tab-3>
-        </ion-col>
-        <ion-col id="tab-4" class="tab" size="12">
-          <app-tab-4></app-tab-4>
+        <ion-col size="12">
+          <swiper-container #swiperRef slides-per-view="1" space-between="0">
+            <swiper-slide>
+              <app-tab-1></app-tab-1>
+            </swiper-slide>
+            <swiper-slide>
+              <app-tab-2></app-tab-2>
+            </swiper-slide>
+            <swiper-slide>
+              <app-tab-3></app-tab-3>
+            </swiper-slide>
+            <swiper-slide>
+              <app-tab-4></app-tab-4>
+            </swiper-slide>
+          </swiper-container>
         </ion-col>
       </ion-row>
     </ion-grid>

@@ -9,15 +9,14 @@
               <ion-label>Demande</ion-label>
             </ion-item>
           </ion-col>
-          <ion-col size="4" *ngIf="this.global.userType === 'recruiter'">
+          <ion-col size="5" *ngIf="this.global.userType === 'recruiter'">
             <ion-item lines="none">
               <ion-label>Pour vous</ion-label>
             </ion-item>
           </ion-col>
-          <ion-col size="1">
+          <ion-col size="1" class="icon-container">
             <ion-icon
-              name="notifications-outline"
-              size="large"
+              name="notifications"
               (click)="global.navigate('fr/notifications')"
             ></ion-icon>
           </ion-col>
@@ -47,11 +46,22 @@
         class="video-card ion-justify-content-center ion-align-items-center"
         [id]="'video-' + video.id"
       >
-        <video [src]="video.url" autoplay muted loop *ngIf="video.available"></video>
+        <video
+          [src]="video.url"
+          autoplay
+          muted
+          loop
+          *ngIf="video.available"
+        ></video>
 
-        <ion-img *ngIf="!video.available && global.userType === 'recruiter'" src="'../../../../../assets/images/cv-example.jpg"></ion-img>
-        <div *ngIf="!video.available && global.userType === 'recruiter'" class="bg-notif bg-notif--bottom"></div>
-        <div *ngIf="!video.available && global.userType === 'recruiter'" class="bg-notif bg-notif--right"></div>
+        <ion-img
+          *ngIf="!video.available && global.userType === 'recruiter'"
+          src="'../../../../../assets/images/cv-example.jpg"
+        ></ion-img>
+        <div
+          *ngIf="!video.available && global.userType === 'recruiter'"
+          class="bg-notif bg-notif--bottom"
+        ></div>
 
         <div class="icons-list column nav nav--bottom nav--right">
           <!-- Profile -->
@@ -69,8 +79,7 @@
           <!-- Send -->
           <div class="icon-container column">
             <ion-icon
-              size="large"
-              name="send-outline"
+              name="send"
               (click)="this.global.navigate('/fr/messagerie/contact')"
             ></ion-icon>
             <span class="ion-text-center">100</span>
@@ -79,8 +88,7 @@
           <!-- Like -->
           <div class="icon-container column">
             <ion-icon
-              size="large"
-              [name]="video.isLiked ? 'heart' : 'heart-outline'"
+              name="heart"
               [ngClass]="{'liked': video.isLiked}"
               (click)="toggleLike(i)"
             >
@@ -91,12 +99,16 @@
           <!-- Bookmark -->
           <div class="icon-container column">
             <ion-icon
-              size="large"
-              [name]="video.isSaved ? 'bookmark' : 'bookmark-outline'"
+              name="bookmark"
               [ngClass]="{'saved': video.isSaved}"
               (click)="toggleSave(i)"
             ></ion-icon>
             <span class="ion-text-center">100</span>
+          </div>
+
+          <!-- See more -->
+          <div class="icon-container column">
+            <ion-icon name="ellipsis-horizontal"></ion-icon>
           </div>
         </div>
 

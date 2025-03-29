@@ -72,9 +72,8 @@ export class TutorialPage implements AfterViewInit {
     }
   }
 
-  goToHome() {
-    this.global.isNavHidden = false;
-    this.global.navigate('fr');
+  goToRegister() {
+    this.global.navigate('fr/create-profile');
   }
 
   ngAfterViewInit(): void {
