@@ -1,10 +1,10 @@
 <ion-content [fullscreen]="true">
-  <div class="ion-padding-start ion-padding-end">
+  <div class="ion-padding-horizontal">
     <p class="ion-text-end" (click)="goToRegister()">
       <span>Passer</span>
     </p>
 
-    <div *ngFor="let block of tutoBlocks" [class.tuto--visible]="block.visible" class="tuto ion-padding-start ion-padding-end" [attr.data-tuto-block]="block.id">
+    <div *ngFor="let block of tutoBlocks" [class.tuto--visible]="block.visible" class="tuto ion-padding-horizontal" [attr.data-tuto-block]="block.id">
       <ion-img [src]="'../../../assets/images/tutorials/' + block.image" [alt]="block.title"></ion-img>
       <h1 class="ion-text-center" [innerHTML]="block.title"></h1>
       <p class="ion-text-center" [innerHTML]="block.desc"></p>
