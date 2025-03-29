@@ -52,6 +52,7 @@ export class ProfilePage implements AfterViewInit {
   @ViewChild('swiperRef', { static: false }) swiperRef: any;
   swiper!: Swiper;
   isShareLinksVisible: boolean = false;
+  activeSlideIndex: number = 0;
 
   constructor(public global: GlobalService) {
     addIcons({
@@ -84,6 +85,7 @@ export class ProfilePage implements AfterViewInit {
   goToSlide(index: number) {
     if (this.swiper) {
       this.swiper.slideTo(index);
+      this.activeSlideIndex = index;
     }
   }
 

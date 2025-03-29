@@ -116,11 +116,16 @@
       </ion-row>
 
       <!-- Tab Bar -->
+      <!-- Tab Bar -->
       <ion-row
         class="tabs-buttons ion-justify-content-around ion-margin-top ion-margin-bottom"
       >
         <ion-col size="auto">
-          <ion-button fill="clear" (click)="goToSlide(0)">
+          <ion-button
+            fill="clear"
+            (click)="goToSlide(0)"
+            [ngClass]="{'active': activeSlideIndex === 0}"
+          >
             <ion-icon
               src="../../../assets/icon/skills-grid.svg"
               aria-hidden="true"
@@ -128,39 +133,38 @@
           </ion-button>
         </ion-col>
         <ion-col size="auto">
-          <ion-button fill="clear" (click)="goToSlide(1)">
+          <ion-button
+            fill="clear"
+            (click)="goToSlide(1)"
+            [ngClass]="{'active': activeSlideIndex === 1}"
+          >
             <ion-icon
               name="play-circle-outline"
-              color="#000000"
-              aria-hidden="true"
-              size="large"
               *ngIf="global.userType === 'recruiter'"
+              size="large"
             ></ion-icon>
             <ion-icon
               name="lock-closed-outline"
-              color="#000000"
-              aria-hidden="true"
-              size="default"
               *ngIf="global.userType === 'student'"
             ></ion-icon>
           </ion-button>
         </ion-col>
         <ion-col size="auto">
-          <ion-button fill="clear">
-            <ion-icon
-              name="bookmark-outline"
-              color="#000000"
-              aria-hidden="true"
-            ></ion-icon>
+          <ion-button
+            fill="clear"
+            (click)="goToSlide(2)"
+            [ngClass]="{'active': activeSlideIndex === 2}"
+          >
+            <ion-icon name="bookmark-outline" aria-hidden="true"></ion-icon>
           </ion-button>
         </ion-col>
         <ion-col size="auto">
-          <ion-button fill="clear">
-            <ion-icon
-              name="heart-outline"
-              color="#000000"
-              aria-hidden="true"
-            ></ion-icon>
+          <ion-button
+            fill="clear"
+            (click)="goToSlide(3)"
+            [ngClass]="{'active': activeSlideIndex === 3}"
+          >
+            <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
           </ion-button>
         </ion-col>
       </ion-row>

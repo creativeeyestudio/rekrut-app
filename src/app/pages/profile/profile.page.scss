@@ -73,6 +73,12 @@ ion-list {
 
     ion-button {
         color: #000000;
+        opacity: .5;
+        transition-duration: .5s;
+
+        &.active {
+            opacity: 1;
+        }
     }
 }
 
