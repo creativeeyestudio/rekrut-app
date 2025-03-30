@@ -5,3 +5,7 @@ ion-tab-bar {
   --background: var(--ion-background-color);
   --color: var(--ion-text-color);
 }
+
+.not-active {
+  opacity: .7;
+}
