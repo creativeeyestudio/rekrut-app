@@ -9,7 +9,7 @@
               <ion-label>Demande</ion-label>
             </ion-item>
           </ion-col>
-          <ion-col size="5" *ngIf="this.global.userType === 'recruiter'">
+          <ion-col size="4" *ngIf="this.global.userType === 'recruiter'">
             <ion-item lines="none">
               <ion-label>Pour vous</ion-label>
             </ion-item>
@@ -76,15 +76,6 @@
             <strong class="ion-text-center">100 %</strong>
           </figure>
 
-          <!-- Send -->
-          <div class="icon-container column">
-            <ion-icon
-              name="send"
-              (click)="this.global.navigate('/fr/messagerie/contact')"
-            ></ion-icon>
-            <strong class="ion-text-center">100</strong>
-          </div>
-
           <!-- Like -->
           <div class="icon-container column">
             <ion-icon
@@ -93,6 +84,15 @@
               (click)="toggleLike(i)"
             >
             </ion-icon>
+            <strong class="ion-text-center">100</strong>
+          </div>
+
+          <!-- Send -->
+          <div class="icon-container column">
+            <ion-icon
+              name="send"
+              (click)="this.global.navigate('/fr/messagerie/contact')"
+            ></ion-icon>
             <strong class="ion-text-center">100</strong>
           </div>
 
