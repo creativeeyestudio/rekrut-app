@@ -32,13 +32,13 @@
 </ion-grid>
 
 <ion-list *ngIf="global.userType === 'recruiter' && videosLength > 0">
-  <ion-item lines="none" class="ion-padding-vertical">
-    <div class="btn-add-block">
+  <ion-item lines="none">
+    <div class="content-item btn-add-block ion-padding-vertical">
       <ion-button
         fill="clear"
         size="small"
         shape="round"
-        class="apply"
+        class="apply ion-padding-vertical"
         (click)="this.global.navigate('fr/skills-params')"
         ><strong>Créer un poste</strong></ion-button
       >
