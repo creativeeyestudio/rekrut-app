@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
@@ -12,10 +12,14 @@ import { GlobalService } from 'src/app/services/global.service';
     styleUrls: ['./contact.page.scss'],
     imports: [IonicModule, CommonModule, FormsModule]
 })
-export class ContactPage {
+export class ContactPage implements OnInit {
   
   constructor(public global: GlobalService) {
     addIcons({ callOutline, attachOutline, paperPlaneOutline, chevronBackOutline, videocamOutline })
+  }
+
+  ngOnInit(): void {
+      this.global.isNavHidden = true;
   }
   
   openFileDialog = () => {
@@ -24,5 +28,10 @@ export class ContactPage {
 
   setImages = (_event: any) => {
     let f = _event.target.files;
+  }
+
+  goBack() {
+    this.global.isNavHidden = false;
+    this.global.goBack();
   }
 }
