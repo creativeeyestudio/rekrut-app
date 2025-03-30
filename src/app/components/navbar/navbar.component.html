@@ -1,5 +1,5 @@
 <ion-tabs>
-  <ion-tab-bar *ngIf="!global.isNavHidden">
+  <ion-tab-bar *ngIf="!global.isNavHidden" [ngClass]="toggleDarkMode() ? 'dark' : ''">
     <ion-tab-button (click)="global.navigate('fr')">
       <ion-icon class="not-active" name="home-outline" *ngIf="!isActiveRoute('/fr')"></ion-icon>
       <ion-icon name="home-sharp" *ngIf="isActiveRoute('/fr')"></ion-icon>

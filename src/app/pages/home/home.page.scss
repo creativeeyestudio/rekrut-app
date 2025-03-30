@@ -40,7 +40,7 @@
 .bg-notif {
     position: absolute;
     background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 17%, rgba(0, 0, 0, 1) 45%, rgba(9, 9, 121, 0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 12%, rgba(9, 9, 121, 0) 100%);
 
     &--bottom {
         bottom: 0;
@@ -83,7 +83,7 @@
     color: white;
 
     ion-icon {
-        font-size: 1.5em;
+        font-size: 2em;
         margin: auto;
     }
 

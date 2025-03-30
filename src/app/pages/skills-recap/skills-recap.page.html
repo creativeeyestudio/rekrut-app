@@ -1,6 +1,7 @@
 <ion-content [fullscreen]="true">
   <ion-item lines="none" class="bg-transparent ion-margin-top ion-margin-bottom">
-    <strong>Voici ta question pour ta vidéo (skill)</strong>
+    <strong *ngIf="global.userType === 'student'">Voici ta question pour ta vidéo (skill)</strong>
+    <strong *ngIf="global.userType === 'recruiter'">Vérifier les paramètres du poste</strong>
   </ion-item>
 
   <ion-list lines="none" class="ion-padding-bottom ion-margin-bottom">

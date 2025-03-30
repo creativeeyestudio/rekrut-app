@@ -65,7 +65,7 @@ export class TutorialPage implements AfterViewInit {
       id: 0,
       visible: true,
       title: 'Bienvenue sur Rekrut !',
-      desc: 'Rekrut est le premier réseau social gratuit dédié au recrutement instantané, conçu pour t’aider à décrocher une expérience professionnelle rapidement.',
+      desc: 'Rekrut est le premier réseau social dédié au recrutement instantané, conçu pour vous aider à repérer votre prochaine recrue instantanément.',
       image: 'tuto-0.png',
     },
     {

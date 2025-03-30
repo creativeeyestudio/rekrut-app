@@ -14,7 +14,7 @@ import { GlobalService } from 'src/app/services/global.service';
 import {
   heart,
   bookmark,
-  send,
+  paperPlane,
   notifications,
   ellipsisHorizontal,
   chatbubbleEllipses,
@@ -95,7 +95,7 @@ export class HomePage implements AfterViewInit {
     addIcons({
       heart,
       bookmark,
-      send,
+      paperPlane,
       notifications,
       ellipsisHorizontal,
       chatbubbleEllipses,
