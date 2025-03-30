@@ -36,6 +36,15 @@
       </ion-col>
     </ion-row>
 
+    <ion-row class="tabs-btn ion-margin">
+      <ion-col size="6" (click)="goToSlide(0)" [ngClass]="{'active': activeSlideIndex === 0}">
+        <ion-icon src="../../../assets/icon/skills-grid.svg"></ion-icon>
+      </ion-col>
+      <ion-col size="6" (click)="goToSlide(1)" [ngClass]="{'active': activeSlideIndex === 1}">
+        <ion-icon src="../../../assets/icon/read-video.svg"></ion-icon>
+      </ion-col>
+    </ion-row>
+
     <!-- Buttons -->
     <ion-row class="buttons ion-margin">
       <ion-col size="6">
@@ -52,16 +61,20 @@
 
     <ion-row class="ion-margin-top">
       <ion-col id="tab-1" class="tab active" size="12">
-        <app-tab-1></app-tab-1>
-      </ion-col>
-      <ion-col id="tab-2" class="tab" size="12">
-        <app-tab-2></app-tab-2>
-      </ion-col>
-      <ion-col id="tab-3" class="tab" size="12">
-        <app-tab-3></app-tab-3>
-      </ion-col>
-      <ion-col id="tab-4" class="tab" size="12">
-        <app-tab-4></app-tab-4>
+        <swiper-container #swiperRef slides-per-view="1" space-between="0">
+          <swiper-slide>
+            <app-tab-1></app-tab-1>
+          </swiper-slide>
+          <swiper-slide>
+            <app-tab-2></app-tab-2>
+          </swiper-slide>
+          <swiper-slide>
+            <app-tab-3></app-tab-3>
+          </swiper-slide>
+          <swiper-slide>
+            <app-tab-4></app-tab-4>
+          </swiper-slide>
+        </swiper-container>
       </ion-col>
     </ion-row>
   </ion-grid>

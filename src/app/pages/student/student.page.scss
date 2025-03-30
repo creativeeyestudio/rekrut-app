@@ -21,7 +21,6 @@ ion-grid {
 }
 
 .infos-profile {
-    // padding: 44px 0 0;
     align-items: center;
 
     ion-col {
@@ -42,6 +41,20 @@ ion-grid {
         --padding-bottom: 15px;
         --padding-start: 0px;
         --border-style: none;
+    }
+}
+
+.tabs-btn {
+    text-align: center;
+    font-size: 38px;
+
+    ion-col {
+        opacity: .5;
+        transition-duration: .5s;
+
+        &.active {
+            opacity: 1;
+        }
     }
 }
 
