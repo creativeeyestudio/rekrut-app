@@ -1,7 +1,9 @@
 <ion-grid class="videos" *ngIf="global.userType === 'student'">
   <ion-row class="ion-text-center" *ngIf="videosLength <= 0">
     <ion-col>
-      <ion-label class="camera ion-justify-content-center ion-align-items-center">
+      <ion-label
+        class="camera ion-justify-content-center ion-align-items-center"
+      >
         <ion-icon name="camera-outline" size="large"></ion-icon>
       </ion-label>
 
@@ -30,10 +32,21 @@
 </ion-grid>
 
 <ion-list *ngIf="global.userType === 'recruiter' && videosLength > 0">
+  <ion-item lines="none" class="ion-padding-vertical">
+    <div class="btn-add-block">
+      <ion-button
+        fill="clear"
+        size="small"
+        shape="round"
+        class="apply"
+        (click)="this.global.navigate('fr/skills-params')"
+        ><strong>Créer un poste</strong></ion-button
+      >
+    </div>
+  </ion-item>
+
   <ion-item lines="none">
-    <div
-      class="content-item ion-padding-top ion-padding-bottom ion-padding-start ion-padding-end"
-    >
+    <div class="content-item ion-padding">
       <ion-label>
         <strong>Nom du poste</strong><br />
         <span> Lieu : <span>Paris</span> </span><br />
@@ -49,18 +62,11 @@
       >
     </div>
   </ion-item>
-
-  <ion-icon
-    src=" ../../../../../../../assets/icon/en-savoir-plus.svg"
-    class="icon-add"
-    size="large"
-    (click)="global.navigate('fr/skills-params')"
-  ></ion-icon>
 </ion-list>
 
 <div *ngIf="global.userType === 'recruiter' && videosLength === 0">
   <p class="ion-text-center">
-    <strong>Partager la présentation de vos postes</strong><br>
+    <strong>Partager la présentation de vos postes</strong><br />
     <span>Pour que les candidats puissent postuler</span>
   </p>
   <p class="ion-text-center">
