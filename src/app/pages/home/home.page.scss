@@ -8,14 +8,22 @@
 
     &--right {
         right: 20px;
+
+        &--f {
+            right: 10px;
+        }
     }
 
     &--bottom {
-        bottom: 20px;
+        bottom: 10px;
     }
 
     &--left {
         left: 20px;
+
+        &--f {
+            left: 10px;
+        }
     }
 
     &--secondary {
