@@ -71,14 +71,18 @@ ion-list {
 
 .tabs-buttons {
     width: 100%;
+    border-bottom: 1px solid grey;
 
     ion-button {
         color: #000000;
         opacity: .5;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0);
         transition-duration: .5s;
+        margin-bottom: 0;
 
         &.active {
             opacity: 1;
+            border-bottom: 1px solid rgba($color: #000000, $alpha: 1);
         }
     }
 
