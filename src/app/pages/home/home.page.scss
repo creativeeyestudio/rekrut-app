@@ -39,8 +39,8 @@
 
 .bg-notif {
     position: absolute;
-    background: rgb(14, 62, 104);
-    background: linear-gradient(0deg, rgba(14, 62, 104, 1) 17%, rgba(14, 62, 104, 1) 45%, rgba(9, 9, 121, 0) 100%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 17%, rgba(0, 0, 0, 1) 45%, rgba(9, 9, 121, 0) 100%);
 
     &--bottom {
         bottom: 0;
@@ -85,6 +85,13 @@
     ion-icon {
         font-size: 1.5em;
         margin: auto;
+    }
+
+    strong {
+        line-height: 1em;
+        font-size: .8em;
+        font-weight: 600;
+        color: rgba($color: #eaeaea, $alpha: 1);
     }
 }
 
