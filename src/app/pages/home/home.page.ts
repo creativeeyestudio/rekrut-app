@@ -18,6 +18,7 @@ import {
   notifications,
   ellipsisHorizontal,
   chatbubbleEllipses,
+  help,
 } from 'ionicons/icons';
 import 'hammerjs';
 
@@ -93,6 +94,7 @@ export class HomePage implements AfterViewInit {
     private gestureCtrl: GestureController
   ) {
     addIcons({
+      help,
       heart,
       bookmark,
       paperPlane,
