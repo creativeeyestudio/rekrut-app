@@ -5,7 +5,7 @@
     width: 100%;
 }
 
-ion-item {
+p {
     &.title {
         font-size: 20px;
     }
@@ -15,7 +15,7 @@ ion-input {
     --padding-start: 26px;
     --padding-end: 26px;
 
-    border-radius: 6px;
+    border-radius: 20px;
     border: 1px solid #C2C8D0;
     margin-bottom: 1rem;
 }
