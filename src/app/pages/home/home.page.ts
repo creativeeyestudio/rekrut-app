@@ -16,9 +16,9 @@ import {
   bookmark,
   paperPlane,
   notifications,
-  ellipsisHorizontal,
   chatbubbleEllipses,
   help,
+  documentText,
 } from 'ionicons/icons';
 import 'hammerjs';
 
@@ -99,8 +99,8 @@ export class HomePage implements AfterViewInit {
       bookmark,
       paperPlane,
       notifications,
-      ellipsisHorizontal,
       chatbubbleEllipses,
+      documentText,
     });
   }
 
