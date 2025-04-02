@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonList, IonItem, IonButton, IonImg } from '@ionic/angular/standalone';
+import { IonContent, IonList, IonItem, IonButton, IonImg, IonCheckbox } from '@ionic/angular/standalone';
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { GlobalService } from 'src/app/services/global.service';
   templateUrl: './skills-recap.page.html',
   styleUrls: ['./skills-recap.page.scss'],
   standalone: true,
-  imports: [IonImg, IonButton, IonItem, IonList, IonContent, CommonModule, FormsModule]
+  imports: [IonCheckbox, IonImg, IonButton, IonItem, IonList, IonContent, CommonModule, FormsModule]
 })
 export class SkillsRecapPage {
 

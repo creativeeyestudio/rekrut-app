@@ -9,7 +9,16 @@
       <strong>Secteur :&nbsp;</strong>Finance
     </ion-item>
     <ion-item>
-      <strong>Niveau :&nbsp;</strong>Expert
+      <strong>Domaine :&nbsp;</strong>Banque
+    </ion-item>
+    <ion-item>
+      <strong>Niveau :&nbsp;</strong>Avancé
+    </ion-item>
+    <ion-item *ngIf="global.userType === 'recruiter'">
+      <strong>Durée :&nbsp;</strong>NA
+    </ion-item>
+    <ion-item *ngIf="global.userType === 'recruiter'">
+      <strong>Type d'emploi :&nbsp;</strong>CDI
     </ion-item>
   </ion-list>
 
@@ -23,11 +32,15 @@
   </ol>
 
   <ol class="ion-padding-top ion-padding-end ion-margin-top" *ngIf="this.global.userType === 'recruiter'">
-    <li>Vos paramètres vous conviennent et que la question vous plait cliquez sur "Poster l'annonce"</li>
+    <li>Vérifiez que vos paramètres vous conviennent et que la question vous plait. Si oui cliquez sur "Poster l'annonce"</li>
   </ol>
 
   <ion-item class="btn-container" *ngIf="this.global.userType === 'student'">
     <ion-button shape="round" size="default" class="ion-margin-auto dark" (click)="this.global.navigate('fr/upload')">J'ai compris</ion-button>
+  </ion-item>
+
+  <ion-item lines="none" *ngIf="global.userType === 'recruiter'">
+    <ion-checkbox labelPlacement="end">J'accepte que les informations saisies soient utilisées pour trouver des candidats potentiels</ion-checkbox>
   </ion-item>
 
   <ion-item class="btn-container" *ngIf="this.global.userType === 'recruiter'">

@@ -43,11 +43,26 @@
             font-weight: bold;
         }
     }
+
+    &--recruiter {
+        display: flex;
+        width: 100%;
+        text-align: end;
+        height: 100%;
+        gap: 2rem;
+        font-weight: 600;
+        padding-inline-end: 1rem;
+
+        span {
+            width: max-content;
+            color: white;
+        }
+    }
 }
 
 .help-btn {
     padding: .2rem;
-    margin-top: 10px;
+    margin-top: 19px;
     border: 2px solid white;
     border-radius: 3rem;
 }

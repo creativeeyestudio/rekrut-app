@@ -4,15 +4,11 @@
     <div class="nav nav--secondary nav--top nav--right">
       <ion-grid>
         <ion-row class="ion-justify-content-end">
-          <ion-col size="4" *ngIf="this.global.userType === 'recruiter'">
-            <ion-item lines="none">
-              <ion-label>Demande</ion-label>
-            </ion-item>
-          </ion-col>
-          <ion-col size="4" *ngIf="this.global.userType === 'recruiter'">
-            <ion-item lines="none">
-              <ion-label>Pour vous</ion-label>
-            </ion-item>
+          <ion-col size="9" *ngIf="this.global.userType === 'recruiter'">
+            <div lines="none" class="ion-justify-content-end ion-align-items-center nav--recruiter">
+              <span>Demande</span>
+              <span>Pour vous</span>
+            </div>
           </ion-col>
           <ion-col size="1" class="icon-container">
             <ion-icon
@@ -25,7 +21,7 @@
     </div>
 
     <div class="nav nav--top nav--left">
-      <ion-icon name="help" size="large" class="help-btn" (click)="global.navigate('fr/tutorial')"></ion-icon>
+      <ion-icon name="help" size="default" class="help-btn" (click)="global.navigate('fr/tutorial')"></ion-icon>
     </div>
 
     <!-- Dernières notifs -->
