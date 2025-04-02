@@ -1,11 +1,13 @@
 <ion-content [fullscreen]="true">
   <div class="video-container">
     <!-- Alerte -->
+    
+
     <div class="nav nav--secondary nav--top nav--right">
       <ion-grid>
         <ion-row class="ion-justify-content-end">
-          <ion-col size="9" *ngIf="this.global.userType === 'recruiter'">
-            <div lines="none" class="ion-justify-content-end ion-align-items-center nav--recruiter">
+          <ion-col size="9" class="ion-no-padding" *ngIf="this.global.userType === 'recruiter'">
+            <div lines="none" class="ion-justify-content-center ion-align-items-center nav--recruiter nav nav--top nav--center nav--recruiter">
               <span>Demande</span>
               <span>Pour vous</span>
             </div>

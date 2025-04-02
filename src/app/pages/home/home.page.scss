@@ -26,6 +26,11 @@
         }
     }
 
+    &--center {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     &--secondary {
         width: 100%;
 
@@ -48,10 +53,8 @@
         display: flex;
         width: 100%;
         text-align: end;
-        height: 100%;
         gap: 2rem;
         font-weight: 600;
-        padding-inline-end: 1rem;
 
         span {
             width: max-content;
