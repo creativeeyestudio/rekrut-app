@@ -11,7 +11,6 @@ import {
   IonLabel,
   IonThumbnail,
   IonButton,
-  IonIcon,
 } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import {
@@ -33,7 +32,6 @@ register();
   styleUrls: ['./student.page.scss'],
   standalone: true,
   imports: [
-    IonIcon,
     IonButton,
     IonLabel,
     IonThumbnail,
