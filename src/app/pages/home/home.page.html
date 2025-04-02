@@ -63,6 +63,11 @@
           class="bg-notif bg-notif--bottom"
         ></div>
 
+        <div
+          *ngIf="!video.available && global.userType === 'recruiter'"
+          class="bg-notif bg-notif--top"
+        ></div>
+
         <div class="icons-list column nav nav--bottom nav--right--f">
           <!-- Profile -->
           <figure
