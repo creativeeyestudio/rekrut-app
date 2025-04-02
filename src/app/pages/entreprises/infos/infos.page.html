@@ -87,16 +87,16 @@
   </ion-grid>
 
   <ion-grid class="actions">
-    <ion-row>
+    <ion-row class="actions--btns">
       <ion-col
-        class="ion-text-center btn-tab"
+        class="ion-text-center btn-tab ion-padding-bottom"
         (click)="goToSlide(0)"
         [ngClass]="{'active': activeSlideIndex === 0}"
       >
         <ion-icon name="grid-outline"></ion-icon>
       </ion-col>
       <ion-col
-        class="ion-text-center btn-tab"
+        class="ion-text-center btn-tab ion-padding-bottom"
         (click)="goToSlide(2)"
         [ngClass]="{'active': activeSlideIndex === 2}"
       >
