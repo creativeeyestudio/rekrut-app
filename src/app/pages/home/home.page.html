@@ -111,7 +111,8 @@
           </div>
 
           <!-- See more -->
-          <div class="icon-container column">
+          <div class="icon-container column"
+          *ngIf="global.userType === 'recruiter'">
             <ion-icon name="document-text" (click)="toggleDescPost(video.id)"></ion-icon>
           </div>
         </div>
