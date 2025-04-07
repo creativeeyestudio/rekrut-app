@@ -6,7 +6,7 @@
     <div class="nav nav--secondary nav--top nav--right">
       <ion-grid>
         <ion-row class="ion-justify-content-end">
-          <ion-col size="9" class="ion-no-padding" *ngIf="this.global.userType === 'recruiter'">
+          <ion-col size="9" class="ion-no-padding" *ngIf="this.global.userType === 'admin'">
             <div lines="none" class="ion-justify-content-center ion-align-items-center nav--recruiter nav nav--top nav--center nav--recruiter">
               <span>Demande</span>
               <span>Pour vous</span>
@@ -57,16 +57,16 @@
         ></video>
 
         <ion-img
-          *ngIf="!video.available && global.userType === 'recruiter'"
+          *ngIf="!video.available && global.userType === 'admin'"
           src="'../../../../../assets/images/cv-example.jpg"
         ></ion-img>
         <div
-          *ngIf="!video.available && global.userType === 'recruiter'"
+          *ngIf="!video.available && global.userType === 'admin'"
           class="bg-notif bg-notif--bottom"
         ></div>
 
         <div
-          *ngIf="!video.available && global.userType === 'recruiter'"
+          *ngIf="!video.available && global.userType === 'admin'"
           class="bg-notif bg-notif--top"
         ></div>
 
@@ -74,7 +74,7 @@
           <!-- Profile -->
           <figure
             class="profile icon-container column"
-            (click)="this.global.userType === 'student' ? this.global.navigate('/fr/entreprises/infos') : this.global.navigate('/fr/student')"
+            (click)="this.global.userType === 'user' ? this.global.navigate('/fr/entreprises/infos') : this.global.navigate('/fr/student')"
           >
             <img
               src="https://www.herbeumont.be/macommune/vie-politique/conseil-communal/img/no-profile-image-png.png"
@@ -114,7 +114,7 @@
 
           <!-- See more -->
           <div class="icon-container column"
-          *ngIf="global.userType === 'recruiter'">
+          *ngIf="global.userType === 'admin'">
             <ion-icon name="document-text" (click)="toggleDescPost(video.id)"></ion-icon>
           </div>
         </div>

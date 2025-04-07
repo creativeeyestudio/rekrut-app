@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true">
   <ion-item lines="none" class="bg-transparent ion-margin-top ion-margin-bottom">
-    <strong *ngIf="global.userType === 'student'">Voici ta question pour ta vidéo (skill)</strong>
-    <strong *ngIf="global.userType === 'recruiter'">Vérifier les paramètres du poste</strong>
+    <strong *ngIf="global.userType === 'user'">Voici ta question pour ta vidéo (skill)</strong>
+    <strong *ngIf="global.userType === 'admin'">Vérifier les paramètres du poste</strong>
   </ion-item>
 
   <ion-list lines="none" class="ion-padding-bottom ion-margin-bottom">
@@ -14,40 +14,40 @@
     <ion-item>
       <strong>Niveau :&nbsp;</strong>Avancé
     </ion-item>
-    <ion-item *ngIf="global.userType === 'recruiter'">
+    <ion-item *ngIf="global.userType === 'admin'">
       <strong>Durée :&nbsp;</strong>NA
     </ion-item>
-    <ion-item *ngIf="global.userType === 'recruiter'">
+    <ion-item *ngIf="global.userType === 'admin'">
       <strong>Type d'emploi :&nbsp;</strong>CDI
     </ion-item>
   </ion-list>
 
   <ion-button size="default" expand="block" class="ion-margin-start ion-margin-end ion-margin-bottom">Pouvez-vous me dérouler le compte de résultat ?</ion-button>
 
-  <ol class="ion-padding-top ion-padding-end ion-margin-bottom" *ngIf="this.global.userType === 'student'">
+  <ol class="ion-padding-top ion-padding-end ion-margin-bottom" *ngIf="this.global.userType === 'user'">
     <li>Tu dois maintenant quitter l’application pour tourner ta réponse en vidéo</li>
     <li>Ne ferme pas l’application en arrière plan</li>
     <li>Une fois cela fait, clique sur “J’ai compris”</li>
     <li>Upload ta vidéo et c’est tout bon !</li>
   </ol>
 
-  <ol class="ion-padding-top ion-padding-end ion-margin-top" *ngIf="this.global.userType === 'recruiter'">
+  <ol class="ion-padding-top ion-padding-end ion-margin-top" *ngIf="this.global.userType === 'admin'">
     <li>Vérifiez que vos paramètres vous conviennent et que la question vous plait. Si oui cliquez sur "Poster l'annonce"</li>
   </ol>
 
-  <ion-item class="btn-container" *ngIf="this.global.userType === 'student'">
+  <ion-item class="btn-container" *ngIf="this.global.userType === 'user'">
     <ion-button shape="round" size="default" class="ion-margin-auto dark" (click)="this.global.navigate('fr/upload')">J'ai compris</ion-button>
   </ion-item>
 
-  <ion-item lines="none" *ngIf="global.userType === 'recruiter'">
+  <ion-item lines="none" *ngIf="global.userType === 'admin'">
     <ion-checkbox labelPlacement="end">J'accepte que les informations saisies soient utilisées pour trouver des candidats potentiels</ion-checkbox>
   </ion-item>
 
-  <ion-item class="btn-container" *ngIf="this.global.userType === 'recruiter'">
+  <ion-item class="btn-container" *ngIf="this.global.userType === 'admin'">
     <ion-button shape="round" size="default" class="ion-margin-auto dark" (click)="this.global.navigate('fr/skills-profile')">Suivant</ion-button>
   </ion-item>
 
-  <ion-item class="btn-container" *ngIf="this.global.userType === 'recruiter'">
+  <ion-item class="btn-container" *ngIf="this.global.userType === 'admin'">
     <ion-button size="default" fill="clear" class="ion-margin-auto" (click)="this.global.goBack()">Retour</ion-button>
   </ion-item>
   

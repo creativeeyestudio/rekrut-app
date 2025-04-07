@@ -1,4 +1,4 @@
-<ion-grid class="videos" *ngIf="global.userType === 'student'">
+<ion-grid class="videos" *ngIf=this.global.userType === 'user'>
   <ion-row class="ion-text-center" *ngIf="videosLength <= 0">
     <ion-col>
       <ion-label
@@ -31,7 +31,7 @@
   </ion-row>
 </ion-grid>
 
-<ion-list *ngIf="global.userType === 'recruiter' && videosLength > 0">
+<ion-list *ngIf="this.global.userType === 'admin' && videosLength > 0">
   <ion-item lines="none">
     <div class="content-item btn-add-block ion-padding-vertical">
       <ion-button
@@ -64,7 +64,7 @@
   </ion-item>
 </ion-list>
 
-<div *ngIf="global.userType === 'recruiter' && videosLength === 0">
+<div *ngIf="this.global.userType === 'admin' && videosLength === 0">
   <p class="ion-text-center">
     <strong>Partager la présentation de vos postes</strong><br />
     <span>Pour que les candidats puissent postuler</span>

@@ -29,7 +29,7 @@
           <strong>Contenu de la notification</strong><br />
           <ion-label color="medium">Vu il y a 58 minutes</ion-label>
         </ion-label>
-        <ion-icon src="../../../assets/icon/chat-plus.svg" slot="end" *ngIf="global.userType === 'recruiter'" class="chat"></ion-icon>
+        <ion-icon src="../../../assets/icon/chat-plus.svg" slot="end" *ngIf=this.global.userType === 'admin' class="chat"></ion-icon>
       </ion-item>
     </ion-item-group>
 
@@ -46,7 +46,7 @@
           <strong>Contenu de la notification</strong><br />
           <ion-label color="medium">Vu il y a 58 minutes</ion-label>
         </ion-label>
-        <ion-icon src="../../../assets/icon/fire.svg" slot="end" *ngIf="global.userType === 'recruiter'" class="fire"></ion-icon>
+        <ion-icon src="../../../assets/icon/fire.svg" slot="end" *ngIf=this.global.userType === 'admin' class="fire"></ion-icon>
       </ion-item>
     </ion-item-group>
   </ion-list>

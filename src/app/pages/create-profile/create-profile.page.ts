@@ -18,10 +18,10 @@ export class CreateProfilePage {
 
   goToNext() {
     this.global.navigate(
-      this.global.userType === 'student' ? 'fr/create-profile-interests' : 'fr'
+      this.global.userType === 'user' ? 'fr/create-profile-interests' : 'fr'
     );
     
-    if (this.global.userType !== 'student') this.global.isNavHidden = false;
+    if (this.global.userType !== 'user') this.global.isNavHidden = false;
   }  
 
 }

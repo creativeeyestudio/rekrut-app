@@ -12,11 +12,11 @@ import { GlobalService } from 'src/app/services/global.service';
 })
 export class RegisterPage implements AfterViewInit {
 
-  userType: 'student' | 'recruiter' | null = null;
+  userType: 'user' | 'admin' | null = null;
 
   constructor(public global: GlobalService) { }
 
-  toggleBlock(blockId: string, userType: 'student' | 'recruiter' | null = null) {
+  toggleBlock(blockId: string, userType: 'user' | 'admin' | null = null) {
     // Changement d'affichage
     const blocks = document.querySelectorAll('.block');
     blocks.forEach(block => {
@@ -28,6 +28,8 @@ export class RegisterPage implements AfterViewInit {
     this.userType = userType;
     this.global.userType = userType;
   }
+
+
 
   ngAfterViewInit(): void {
       this.global.isNavHidden = true;

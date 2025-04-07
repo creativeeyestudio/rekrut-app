@@ -139,11 +139,11 @@
           >
             <ion-icon
               name="play-circle-outline"
-              *ngIf="global.userType === 'recruiter'"
+              *ngIf=this.global.userType === 'admin'
             ></ion-icon>
             <ion-icon
               name="lock-closed-outline"
-              *ngIf="global.userType === 'student'"
+              *ngIf=this.global.userType === 'user'
             ></ion-icon>
           </ion-button>
         </ion-col>

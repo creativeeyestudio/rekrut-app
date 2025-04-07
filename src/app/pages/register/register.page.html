@@ -13,7 +13,7 @@
         <ion-button
           expand="block"
           fill="outline"
-          (click)="toggleBlock('form-1', 'student')"
+          (click)="toggleBlock('form-1', 'user')"
         >
           <ion-icon
             size="large"
@@ -27,7 +27,7 @@
         <ion-button
           expand="block"
           fill="outline"
-          (click)="toggleBlock('form-1', 'recruiter')"
+          (click)="toggleBlock('form-1', 'admin')"
         >
           <ion-icon
             size="large"
@@ -57,7 +57,7 @@
         ></ion-img>
       </ion-col>
 
-      <ion-col size="12" *ngIf="userType === 'student'">
+      <ion-col size="12" *ngIf="userType === 'user'">
         <div class="ion-margin-vertical">
           <label class="ion-margin-bottom" for="ion-input-0"
             ><strong>Nom d'utilisateur</strong></label
@@ -94,7 +94,7 @@
         >
       </ion-col>
 
-      <ion-col size="12" *ngIf="userType === 'recruiter'">
+      <ion-col size="12" *ngIf="userType === 'admin'">
         <div class="ion-margin-bottom">
           <label class="ion-margin-bottom" for="ion-input-0"
             ><strong>Numéro de téléphone</strong></label

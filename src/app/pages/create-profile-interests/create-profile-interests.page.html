@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true">
   <ion-item lines="none" class="ion-padding-vertical title ion-text-center">
-    <strong *ngIf="global.userType === 'student'">Ton profil, ton ADN Professionnel</strong>
-    <strong *ngIf="global.userType === 'recruiter'">Vos centres d'interêts recherchés</strong>
+    <strong *ngIf="global.userType === 'user'">Ton profil, ton ADN Professionnel</strong>
+    <strong *ngIf="global.userType === 'admin'">Vos centres d'interêts recherchés</strong>
   </ion-item>
 
   <ion-list>
@@ -29,7 +29,7 @@
       </ion-item>  
     </div>
     
-    <ion-item lines="none" class="ion-margin-top" *ngIf="global.userType === 'student'">
+    <ion-item lines="none" class="ion-margin-top" *ngIf="global.userType === 'user'">
       <ion-checkbox labelPlacement="end">Je certifie que ces informations sont justes et que je peux les prouver lors d'un entretien.</ion-checkbox>
     </ion-item>
 
