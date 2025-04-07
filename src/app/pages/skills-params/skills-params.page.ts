@@ -43,7 +43,7 @@ export class SkillsParamsPage {
     'Expert',
   ];
 
-  public selectedSkill: string = '';
+  public selectedSkill: sectorsList | undefined = undefined;
   public skills: sectorsList[] = [
     {
       name: 'Finance et économie',
@@ -86,6 +86,16 @@ export class SkillsParamsPage {
   toggleCustomQuestion(): boolean {
     return (this.customQuestion = !this.customQuestion);
   }
+
+  onSkillChange(event: any) {
+    const selectedName = event.detail.value;
+    this.selectedSkill = this.getSkillByName(selectedName);
+  }
+  
+  getSkillByName(name: string): sectorsList | undefined {
+    return this.skills.find(skill => skill.name === name);
+  }
+  
 }
 
 interface sectorsList {

@@ -6,6 +6,13 @@
         ion-col {
             --ion-grid-column-padding: 0;
             aspect-ratio: 149/201;
+
+            &.add {
+                background-color: rgba($color: #7E7878, $alpha: .19);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
 }

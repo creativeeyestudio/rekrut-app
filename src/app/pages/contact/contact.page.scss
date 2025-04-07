@@ -25,6 +25,9 @@ ion-thumbnail {
 
 ion-input {
     border-color: rgba(0, 0, 0, 0);
+    &:not(.has-focus) {
+        padding-top: 4px !important;
+    }
 }
 
 ion-button {

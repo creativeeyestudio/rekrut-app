@@ -37,16 +37,16 @@
         class="main-data ion-margin-top ion-margin-end ion-margin-bottom ion-margin-start"
       >
         <ion-col>
-          <span>Message</span>
-          <span>139</span>
+          <strong>139</strong>
+          <span>Messages</span>
         </ion-col>
         <ion-col>
-          <span>Like</span>
-          <span>495</span>
+          <strong>495</strong>
+          <span>Likes</span>
         </ion-col>
         <ion-col>
-          <span>Save</span>
-          <span>156</span>
+          <strong>156</strong>
+          <span>Enregistrements</span>
         </ion-col>
       </ion-row>
 
@@ -117,7 +117,7 @@
 
       <!-- Tab Bar -->
       <ion-row
-        class="tabs-buttons ion-justify-content-around ion-margin-top ion-margin-bottom"
+        class="tabs-buttons ion-justify-content-around ion-margin-vertical"
       >
         <ion-col size="auto">
           <ion-button
@@ -140,7 +140,6 @@
             <ion-icon
               name="play-circle-outline"
               *ngIf="global.userType === 'recruiter'"
-              size="large"
             ></ion-icon>
             <ion-icon
               name="lock-closed-outline"
@@ -169,7 +168,7 @@
       </ion-row>
 
       <!-- Tab Content-->
-      <ion-row>
+      <ion-row class="ion-padding-top">
         <ion-col size="12">
           <swiper-container #swiperRef slides-per-view="1" space-between="0">
             <swiper-slide>

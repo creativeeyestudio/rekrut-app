@@ -1,7 +1,16 @@
 ion-tab-bar {
-  --ion-text-color: #ffffff;
-  --ion-background-color: #0E3E68;
+  --ion-text-color: #000000;
+  --ion-background-color: #ffffff;
       
   --background: var(--ion-background-color);
   --color: var(--ion-text-color);
+
+  &.dark {
+    --ion-text-color: #ffffff;
+    --ion-background-color: #000000;
+  }
+}
+
+.not-active {
+  opacity: .6;
 }

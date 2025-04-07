@@ -1,18 +1,16 @@
 <ion-content [fullscreen]="true">
   <div class="video-container">
     <!-- Alerte -->
+    
+
     <div class="nav nav--secondary nav--top nav--right">
       <ion-grid>
         <ion-row class="ion-justify-content-end">
-          <ion-col size="4" *ngIf="this.global.userType === 'recruiter'">
-            <ion-item lines="none">
-              <ion-label>Demande</ion-label>
-            </ion-item>
-          </ion-col>
-          <ion-col size="5" *ngIf="this.global.userType === 'recruiter'">
-            <ion-item lines="none">
-              <ion-label>Pour vous</ion-label>
-            </ion-item>
+          <ion-col size="9" class="ion-no-padding" *ngIf="this.global.userType === 'recruiter'">
+            <div lines="none" class="ion-justify-content-center ion-align-items-center nav--recruiter nav nav--top nav--center nav--recruiter">
+              <span>Demande</span>
+              <span>Pour vous</span>
+            </div>
           </ion-col>
           <ion-col size="1" class="icon-container">
             <ion-icon
@@ -24,8 +22,12 @@
       </ion-grid>
     </div>
 
+    <div class="nav nav--top nav--left">
+      <ion-icon name="help" size="default" class="help-btn" (click)="global.navigate('fr/tutorial')"></ion-icon>
+    </div>
+
     <!-- Dernières notifs -->
-    <div class="last-notif nav nav--bottom nav--left">
+    <div class="last-notif nav nav--bottom nav--left nav--left--f">
       <ion-item>
         <ion-label>
           <strong>Titre</strong><br />
@@ -63,7 +65,12 @@
           class="bg-notif bg-notif--bottom"
         ></div>
 
-        <div class="icons-list column nav nav--bottom nav--right">
+        <div
+          *ngIf="!video.available && global.userType === 'recruiter'"
+          class="bg-notif bg-notif--top"
+        ></div>
+
+        <div class="icons-list column nav nav--bottom nav--right--f">
           <!-- Profile -->
           <figure
             class="profile icon-container column"
@@ -73,17 +80,7 @@
               src="https://www.herbeumont.be/macommune/vie-politique/conseil-communal/img/no-profile-image-png.png"
               alt=""
             />
-            <span class="ion-text-center">100 %</span>
           </figure>
-
-          <!-- Send -->
-          <div class="icon-container column">
-            <ion-icon
-              name="send"
-              (click)="this.global.navigate('/fr/messagerie/contact')"
-            ></ion-icon>
-            <span class="ion-text-center">100</span>
-          </div>
 
           <!-- Like -->
           <div class="icon-container column">
@@ -93,7 +90,16 @@
               (click)="toggleLike(i)"
             >
             </ion-icon>
-            <span class="ion-text-center">100</span>
+            <strong class="ion-text-center">100</strong>
+          </div>
+
+          <!-- Send -->
+          <div class="icon-container column">
+            <ion-icon
+              name="paper-plane"
+              (click)="this.global.navigate('/fr/messagerie/contact')"
+            ></ion-icon>
+            <strong class="ion-text-center">100</strong>
           </div>
 
           <!-- Bookmark -->
@@ -103,12 +109,13 @@
               [ngClass]="{'saved': video.isSaved}"
               (click)="toggleSave(i)"
             ></ion-icon>
-            <span class="ion-text-center">100</span>
+            <strong class="ion-text-center">100</strong>
           </div>
 
           <!-- See more -->
-          <div class="icon-container column">
-            <ion-icon name="ellipsis-horizontal"></ion-icon>
+          <div class="icon-container column"
+          *ngIf="global.userType === 'recruiter'">
+            <ion-icon name="document-text" (click)="toggleDescPost(video.id)"></ion-icon>
           </div>
         </div>
 
