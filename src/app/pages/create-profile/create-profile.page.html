@@ -13,7 +13,7 @@
     <ion-item lines="none">
       <ion-input label="Âge" type="text" labelPlacement="floating" required></ion-input>
     </ion-item>
-    <ion-item lines="none" *ngIf=this.global.userType === 'admin'>
+    <ion-item lines="none" *ngIf="this.global.userType === 'admin'">
       <ion-input label="Nom de votre entreprise" type="text" labelPlacement="floating" required></ion-input>
     </ion-item>
     <ion-item lines="none">

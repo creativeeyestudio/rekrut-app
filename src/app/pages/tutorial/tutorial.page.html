@@ -4,7 +4,7 @@
       <span>Passer</span>
     </p>
 
-    <div *ngIf=this.global.userType === 'user'>
+    <div *ngIf="this.global.userType === 'user'">
       <div
         *ngFor="let block of tutoBlocks"
         [class.tuto--visible]="block.visible"
@@ -31,7 +31,7 @@
       </div>
     </div>
 
-    <div *ngIf=this.global.userType === 'admin'>
+    <div *ngIf="this.global.userType === 'admin'">
       <div
         *ngFor="let block of tutoRecrutBlocks"
         [class.tuto--visible]="block.visible"
