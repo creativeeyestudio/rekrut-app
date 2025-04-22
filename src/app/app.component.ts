@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule, ActivatedRoute } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { IonicModule, AnimationController, createAnimation } from '@ionic/angular';
 import { NavbarComponent } from './components/navbar/navbar.component';
 

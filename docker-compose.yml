@@ -1,13 +1,14 @@
 name: "rekrut"
 
 services:
-  frontend:
+  front:
     build:
       context: ./
-    ports:
-      - "8100:8100"
     env_file:
       - .env
     volumes:
       - ./:/app
       - /app/node_modules  # éviter de monter node_modules local
+    ports:
+      - "8100:8100"
+    command: ionic serve --external

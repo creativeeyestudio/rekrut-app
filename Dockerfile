@@ -1,19 +1,15 @@
-FROM node:23
+FROM node:23-slim
 
-# Installation globale d'Ionic
+# Installer Ionic CLI
 RUN npm install -g @ionic/cli
 
-# Définir le répertoire de travail
 WORKDIR /app
 
-# Copier les fichiers package
+# Copier seulement les package.json au début
 COPY package*.json ./
 
-# Installer les dépendances
+# Installer les deps
 RUN npm install
 
-# Copier le reste du code
+# Copier les fichiers (sera écrasé par le volume ensuite)
 COPY . .
-
-# Lancer l'application Ionic
-CMD ["ionic", "serve", "--host=0.0.0.0", "--port=8100"]
