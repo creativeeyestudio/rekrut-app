@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormsModule } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonContent, IonCol, IonGrid, IonRow, IonButton, IonImg, IonInput, IonInputPasswordToggle, IonIcon } from '@ionic/angular/standalone';
 import { GlobalService } from 'src/app/services/global.service';
 
@@ -8,19 +8,20 @@ import { GlobalService } from 'src/app/services/global.service';
     selector: 'app-register',
     templateUrl: './register.page.html',
     styleUrls: ['./register.page.scss'],
-    imports: [IonInput, IonInputPasswordToggle, IonImg, IonButton, IonRow, IonGrid, IonCol, IonContent, IonIcon, CommonModule, FormsModule]
+    imports: [IonInput, IonInputPasswordToggle, IonImg, IonButton, IonRow, IonGrid, IonCol, IonContent, IonIcon, CommonModule, FormsModule, ReactiveFormsModule]
 })
 export class RegisterPage implements AfterViewInit {
 
   userType: 'user' | 'admin' | null = null;
+  form: FormGroup;
 
   constructor(public global: GlobalService, public _fb: FormBuilder) {
-    const form = this._fb.group({
-      username: '',
-      email_user: '',
-      tel: '',
-      email_admin: '',
-      passsword: ''
+    this.form = this._fb.group({
+      username: new FormControl(),
+      email_user: new FormControl(),
+      tel: new FormControl(),
+      email_admin: new FormControl(),
+      passsword: new FormControl(),
     });
   }
 
@@ -35,6 +36,8 @@ export class RegisterPage implements AfterViewInit {
     // Sélection du type de profil
     this.userType = userType;
     this.global.userType = userType;
+
+    console.log(this.form.value);
   }
 
   ngAfterViewInit(): void {

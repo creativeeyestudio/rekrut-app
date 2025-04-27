@@ -1,5 +1,5 @@
 <ion-content [fullscreen]="true">
-  <form action="">
+  <form [formGroup]="form">
     <ion-grid id="select-user" class="block ion-margin-top ion-padding-top">
       <ion-row>
         <ion-col size="12" class="ion-margin-top">
@@ -67,6 +67,7 @@
               aria-label="Téléphone"
               type="text"
               placeholder="Nom d'utilisateur"
+              formControlName="username"
             ></ion-input>
           </div>
 
@@ -78,6 +79,7 @@
               aria-label="Adresse E-Mail"
               type="mail"
               placeholder="Mail"
+              formControlName="email_user"
             ></ion-input>
           </div>
 
@@ -104,6 +106,7 @@
               aria-label="Téléphone"
               type="tel"
               placeholder="Numéro de téléphone"
+              formControlName="tel"
             ></ion-input>
           </div>
 
@@ -115,6 +118,7 @@
               aria-label="Adresse E-Mail"
               type="mail"
               placeholder="Mail"
+              formControlName="email_admin"
             ></ion-input>
           </div>
 
@@ -151,6 +155,7 @@
             placeholder="Mot de passe"
             type="password"
             fill="outline"
+            formControlName="password"
           >
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
           </ion-input>
@@ -180,7 +185,7 @@
       </ion-row>
     </ion-grid>
   </form>
-  
+
   <ion-img
     class="logo-bottom"
     src="../../../assets/images/logo-rekrut-full.png"
