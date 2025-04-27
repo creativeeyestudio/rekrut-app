@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
@@ -12,13 +12,10 @@ import { GlobalService } from 'src/app/services/global.service';
     styleUrls: ['./offre.page.scss'],
     imports: [IonicModule, CommonModule, FormsModule]
 })
-export class OffrePage implements OnInit {
+export class OffrePage {
 
   constructor(public global: GlobalService) {
     addIcons({ chevronBackOutline })
-  }
-
-  ngOnInit() {
   }
 
 }

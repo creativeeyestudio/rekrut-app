@@ -10,11 +10,9 @@ import { GlobalService } from 'src/app/services/global.service';
     styleUrls: ['./update.page.scss'],
     imports: [CommonModule, FormsModule, IonicModule]
 })
-export class UpdatePage implements OnInit {
+export class UpdatePage {
 
   constructor(public global: GlobalService) { }
-
-  ngOnInit() {}
 
   public submitForm() {
     this.global.navigate('/profile');

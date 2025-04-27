@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
@@ -10,15 +10,12 @@ import { GlobalService } from 'src/app/services/global.service';
     styleUrls: ['./hobbies-update.page.scss'],
     imports: [CommonModule, FormsModule, IonicModule]
 })
-export class HobbiesUpdatePage implements OnInit {
+export class HobbiesUpdatePage {
 
   constructor(public global: GlobalService) { }
 
   public submitForm() {
     this.global.navigate('/profile');
-  }
-
-  ngOnInit() {
   }
 
 }

@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule } from '@angular/forms';
 import { IonContent, IonCol, IonGrid, IonRow, IonButton, IonImg, IonInput, IonInputPasswordToggle, IonIcon } from '@ionic/angular/standalone';
 import { GlobalService } from 'src/app/services/global.service';
 
@@ -14,14 +14,22 @@ export class RegisterPage implements AfterViewInit {
 
   userType: 'user' | 'admin' | null = null;
 
-  constructor(public global: GlobalService) { }
+  constructor(public global: GlobalService, public _fb: FormBuilder) {
+    const form = this._fb.group({
+      username: '',
+      email_user: '',
+      tel: '',
+      email_admin: '',
+      passsword: ''
+    });
+  }
 
   toggleBlock(blockId: string, userType: 'user' | 'admin' | null = null) {
     // Changement d'affichage
-    const blocks = document.querySelectorAll('.block');
-    blocks.forEach(block => {
+    document.querySelectorAll('.block').forEach(block => {
       block.classList.add('ion-hide')
     });
+
     document.getElementById(blockId)?.classList.remove('ion-hide');
 
     // Sélection du type de profil
@@ -29,10 +37,7 @@ export class RegisterPage implements AfterViewInit {
     this.global.userType = userType;
   }
 
-
-
   ngAfterViewInit(): void {
       this.global.isNavHidden = true;
   }
-
 }
