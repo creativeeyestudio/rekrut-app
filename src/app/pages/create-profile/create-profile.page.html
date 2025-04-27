@@ -2,42 +2,50 @@
   <p lines="none" class="ion-padding-vertical title ion-text-center">
     <strong class="ion-text-center">Création du profil</strong>
   </p>
+  <form [formGroup]="form">
+    <ion-list>
+      <ion-item lines="none">
+        <ion-input label="Prénom" formControlName="first_name" type="text" labelPlacement="floating" required></ion-input>
+      </ion-item>
 
-  <ion-list>
-    <ion-item lines="none">
-      <ion-input label="Prénom" type="text" labelPlacement="floating" required></ion-input>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-input label="Nom" type="text" labelPlacement="floating" required></ion-input>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-input label="Âge" type="text" labelPlacement="floating" required></ion-input>
-    </ion-item>
-    <ion-item lines="none" *ngIf="this.global.userType === 'admin'">
-      <ion-input label="Nom de votre entreprise" type="text" labelPlacement="floating" required></ion-input>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-input label="Adresse E-Mail (Visible sur le profil)" type="mail" labelPlacement="floating" required></ion-input>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-input label="Téléphone" type="tel" labelPlacement="floating">
-        <ion-select slot="start" value="+33" required>
-          <ion-select-option *ngFor="let phone of phoneList.list" [value]="phone.dial_code" [innerHTML]=" '(' + phone.code + ') ' + phone.dial_code"></ion-select-option>
-        </ion-select>
-      </ion-input>
-    </ion-item>
-    <ion-item lines="none" class="ion-margin-top">
-      <ion-checkbox labelPlacement="end">En m'inscrivant, j'accepte les conditions générales d'utilisation.</ion-checkbox>
-    </ion-item>
+      <ion-item lines="none">
+        <ion-input label="Nom" formControlName="last_name" type="text" labelPlacement="floating" required></ion-input>
+      </ion-item>
 
-    <ion-item lines="none">
-      <ion-grid>
-        <ion-row class="ion-justify-content-center">
-          <ion-col size="auto">
-            <ion-button class="dark" size="default" shape="round" (click)="goToNext()">Sauvegarder</ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>
-  </ion-list>
+      <ion-item lines="none">
+        <ion-input label="Âge" formControlName="year" type="text" labelPlacement="floating" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="none" *ngIf="this.global.userType === 'admin'">
+        <ion-input label="Nom de votre entreprise" type="text" labelPlacement="floating" required></ion-input>
+      </ion-item>
+      
+      <ion-item lines="none">
+        <ion-input label="Adresse E-Mail (Visible sur le profil)" formControlName="email" type="mail" labelPlacement="floating" required></ion-input>
+      </ion-item>
+      
+      <ion-item lines="none">
+        <ion-input label="Téléphone" type="tel" labelPlacement="floating" formControlName="phone">
+          <ion-select slot="start" value="+33" required>
+            <ion-select-option *ngFor="let phone of phoneList.list" [value]="phone.dial_code" [innerHTML]=" '(' + phone.code + ') ' + phone.dial_code"></ion-select-option>
+          </ion-select>
+        </ion-input>
+      </ion-item>
+
+      <ion-item lines="none" class="ion-margin-top">
+        <ion-checkbox labelPlacement="end">En m'inscrivant, j'accepte les conditions générales d'utilisation.</ion-checkbox>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-grid>
+          <ion-row class="ion-justify-content-center">
+            <ion-col size="auto">
+              <ion-button class="dark" size="default" shape="round" (click)="createUser()">Sauvegarder</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+  </form>
+  
 </ion-content>
