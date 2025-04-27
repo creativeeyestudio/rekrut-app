@@ -22,6 +22,7 @@ export class CreateProfilePage {
       last_name: '',
       year: '',
       email: localStorage.getItem('email_user'),
+      indicator: '',
       phone: ''
     })
   }
@@ -31,7 +32,7 @@ export class CreateProfilePage {
     localStorage.setItem('first_name', values.first_name)
     localStorage.setItem('last_name', values.last_name)
     localStorage.setItem('year', values.year)
-    localStorage.setItem('phone', values.phone)
+    localStorage.setItem('phone', values.indicator + values.phone)
   }
 
   createUser() {

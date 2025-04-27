@@ -26,7 +26,7 @@
       
       <ion-item lines="none">
         <ion-input label="Téléphone" type="tel" labelPlacement="floating" formControlName="phone">
-          <ion-select slot="start" value="+33" required>
+          <ion-select slot="start" value="+33" formControlName="indicator" required>
             <ion-select-option *ngFor="let phone of phoneList.list" [value]="phone.dial_code" [innerHTML]=" '(' + phone.code + ') ' + phone.dial_code"></ion-select-option>
           </ion-select>
         </ion-input>
