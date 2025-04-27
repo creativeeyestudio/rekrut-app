@@ -21,7 +21,7 @@ export class RegisterPage implements AfterViewInit {
       email_user: new FormControl(),
       tel: new FormControl(),
       email_admin: new FormControl(),
-      passsword: new FormControl(),
+      pass: new FormControl(),
     });
   }
 
@@ -36,9 +36,24 @@ export class RegisterPage implements AfterViewInit {
     // Sélection du type de profil
     this.userType = userType;
     this.global.userType = userType;
-
-    console.log(this.form.value);
   }
+
+  goToTutorial() {
+    const values = this.form.value;
+    const fields = ['username', 'email_user', 'tel', 'email_admin', 'password'];
+  
+    fields.forEach(field => {
+		const value = values[field]?.trim()
+		if (value) {
+			localStorage.setItem(field, value);
+		} else {
+			localStorage.removeItem(field);
+		}
+    });
+  
+    this.global.navigate('/fr/tutorial');
+  }
+  
 
   ngAfterViewInit(): void {
       this.global.isNavHidden = true;

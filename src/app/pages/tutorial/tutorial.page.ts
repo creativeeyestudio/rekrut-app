@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  OnInit,
   QueryList,
   ViewChildren,
 } from '@angular/core';
@@ -17,7 +18,7 @@ import { GlobalService } from 'src/app/services/global.service';
   standalone: true,
   imports: [IonImg, IonButton, IonContent, CommonModule, FormsModule],
 })
-export class TutorialPage implements AfterViewInit {
+export class TutorialPage implements OnInit, AfterViewInit {
   @ViewChildren('tutoElement') tutoElements!: QueryList<ElementRef>;
 
   tutoPos: number = 0;
@@ -105,7 +106,11 @@ export class TutorialPage implements AfterViewInit {
     },
   ];
 
-  constructor(public global: GlobalService) {}
+  constructor(public global: GlobalService) { }
+
+  ngOnInit() {
+    console.log(localStorage);
+  }
 
   goToTheNext() {
     if (this.tutoPos < this.tutoBlocks.length - 1) {
