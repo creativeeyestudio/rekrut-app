@@ -37,7 +37,7 @@ export class CreateProfilePage {
 
   createUser() {
     this.initUserData()
-    console.log(localStorage)
+    this.goToNext();
   }
 
   goToNext() {

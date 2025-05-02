@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonItem, IonGrid, IonRow, IonCol, IonButton, IonCheckbox, IonSelect, IonSelectOption, IonList, IonListHeader } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { addOutline } from 'ionicons/icons';
 import { GlobalService } from 'src/app/services/global.service';
+import { createClient } from '@supabase/supabase-js'
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-create-profile-interests',
@@ -20,7 +22,7 @@ export class CreateProfileInterestsPage {
   valuesSkills: string[] = ['Inclusion', 'Solidarité', 'Égalité', 'Bienveillance', 'Justice', 'Partage', 'Persévérance', 'Ambition', 'Créativité', 'Innovation', 'Éthique', 'Passion', 'Stabilité', 'Audace', 'Exigence', 'Excellence', 'Curiosité', 'Optimisme', 'Proactivité', 'Intégrité', 'Discrétion', 'Polyvalence', 'Discipline', 'Vision', 'Indépendance', 'Loyauté', 'Réalisme', 'Esprit critique', 'Esprit entrepreneurial'];
 
   constructor(public global: GlobalService) {
-    addIcons({addOutline});
+    addIcons({ addOutline });
   }
 
   goToHome() {
@@ -28,4 +30,18 @@ export class CreateProfileInterestsPage {
     this.global.navigate('fr')
   }
 
+  async createUser() {
+    const supabase = createClient(environment.supabaseUrl, environment.supabaseKey)
+
+    let { data, error } = await supabase
+      .from('users')
+      .insert([{
+        email: localStorage.getItem('email_user'),
+        password_hash: localStorage.getItem('password'),
+        first_name: localStorage.getItem('first_name'),
+        last_name: localStorage.getItem('last_name'),
+        role: 'user'
+      }])
+      .select();
+  }
 }
